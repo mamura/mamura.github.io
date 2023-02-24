@@ -169,5 +169,69 @@ Em linhas gerais, a HTML é uma linguagem de marcação simples, composta por el
 
 Como mostrado, as tags \<header\>, \<nav\>, \<main\> e \<footer\> desempenham um papel semântico, uma vez que estruturam a página em sessões. Como seus nomes indicam, elas separam o conteúdo em partes lógicas que formam o esqueleto da maioria das páginas HTML.
 
+### HTML5
+A versão mais recente do HTML é a 5, que trouxe algumas importantes evoluções em relação às santeriores. Entre elas, destacam-se:
+- Novos atributos e elementos, com foco sobretudo na semântica.
+- Melhorias de conectividade.
+- Possibilidade de armazenamento de dados do lado do cliente.
+- Otimização nas operações off-line.
+- Suporte extendido a multimídia - áudio e vídeo.
+
+### CSS
+o CSS corresponde à segunda camada do tripé de tecnologias que formam o lado cliente, no ambiente web. Trata-se de uma linguagem declarativa cuja função é controlar a apresentação visual de páginas web. Com isso, têm-se a separação de funções em relação à HTML.
+
+#### Sintaxe
+A sintaxe do CSS consiste em uma declaração em que são definidos o(s) elemento(s) e o(s) estilo(s) que desenjamos aplicar a ele(s) ou, em outras palavras:
+- **O seletor:** Um elemento HTML (body, div, p, etc.) ou o seu identificador (atributo ID) ou class (atributo class).
+- **A propriedade:** Característica di elemento (cor, fonte, posição, etc.).
+- **O valor:** Novo parâmetro a ser aplicado à característica do elemento.
+
+Por exemplo, para alterar a cor da fonte de um texto inserido em um parágrafo, poderíamos utilizar uma das variações apresentadas abaixo:
+```html
+<p id="paragrafo_exemplo">Texto do parágrafo de exemplo</p>
+```
+```css
+#paragrafo_exemplo{
+    color: #ff0000; // vermelho
+}
+
+// OU
+
+p {
+    color: #ff0000; // vermelho
+}
+```
+No exemplo apresentado, vimos duas formas para definir o estilo de uma tag de parágrafo. No primeiro, o elemento ao qual o estilo foi aplicado foi definido com a utilização de seu atributo ID. A respeito dos seletores, propriedades existentes e mais detalhes sobre a CSS, é recomendado ler o Guia de Referência do próprio W3C.
+
+#### Como inserir o CSS na página web
+Há quatro formas de inserir o CSS em um documento:
+- **Inline:** Os estilos, nesse caso, são aplicados com a utilização de atribulo "style" seguido de uma ou mais propriedades/valores.
+- **Interno:** Os estilos são definidos com a utilização da tag \<style\>, dentro da tag \<head\> no documento.
+- **Externo:** Essa é a forma preferencial de inserir estilos. Nela é utilizado um arquivo externo, com a extensão ".css", contendo apenas estilos. Para vincular esse arquivo externo ao documento, é utilizada a tag \<link\> dentro a tag \<head\>.
+- **Escopo:** Essa forma foi introduzida pelo HTML5. Com ela,um estilo pode ser definido em nível de escopo, ou seja, declarado em seções específicas do documento. Sua declaração é feita da mesma forma qwue a inline. Entretanto, no lugar de ser declarada no \<head\>, é declarada dentro da tag à qual se quer aplicar os estilos.
+
+#### Seletores CSS
+A CSS permite uma série de combinações para a aplicação de estilos. Pode-se usar aplicações simples, como as vistas até aqui, nas quais apenas um elemento foi selecionado, ou combinações mais complexas, em que vários elementos podem ser agrupados a fim de receberem um mesmo estilo.
+
+#### Boas práticas relacionadas ao CSS
+É boa prática e fortemente recomendado utilizar a forma externa para incluir CSS em uma página web. Entre outras vantagens, como uma melhor organização do código, separando o HTML do estilo, devemos ter em mente que um mesmo arquivo CSS pode ser usado em várias páginas de um site.
+
+Outra boa prática, tendo em vista o desempenho do carregamento da página web é compactar o arquivo — normalmente chamamos este processo de minificação. Existem softwares e até mesmo sites que fazem esse trabalho, que consiste em, resumidamente, diminuir os espaços e as linhas no arquivo .css, reduzindo assim o seu tamanho final.
+
+#### Outras considerações sobre CSS
+Uma nova funcionalidade tem ganhado bastante espaço ultimamente no que diz respeito à CSS: os pré-processadores, como Sass, Less, Stylus etc. Em linhas gerais, um pré-processador é um programa que permite gerar CSS a partir de uma sintaxe — própria de cada pré-processador —, que inclui inúmeras facilidades não suportadas naturalmente pelo CSS, como variáveis, funções, regras aninhadas, entre outras.
+
+O fluxo de gerar CSS por meio de um pré-processador consiste na escrita do código contendo as regras a serem aplicadas, fazendo uso da sintaxe de cada pré-processador. Ao final, esse código será compilado, gerando então o código CSS normal.
+
+### Javascript
+O JavaScript completa o tripé de tecnologias web que rodam no lado cliente. Trata-se de uma linguagem de programação que, assim como o CSS, é interpretada pelo navegador. Entre suas principais características, destaca-se o fato de ser multiparadigma (orientação a objetos, protótipos, funcional etc.).
+
+Sua função é, sobretudo, fornecer interatividade a páginas web, e foi criada com o intuito de diminuir a necessidade de requisições ao lado servidor, permitindo a comunicação assíncrona e a alteração de conteúdo sem que seja necessário recarregar uma página inteira.
+
+#### Sintaxe
+O JavaScript é, ao mesmo, amigável, mas também completo e poderoso. Embora criado para ser leve, uma vez que é interpretado nativamente pelos navegadores, trata-se de uma linguagem de programação completa e, como já mencionado, multiparadigma. Logo, seus códigos podem ser tanto estruturados quanto orientados a objetos. Além disso, permitem que bibliotecas, como Jquery, Prototype etc. sejam criadas a partir de seu core, estendendo assim a sua funcionalidade. Vejamos algumas características dessa linguagem:
+- **Eventos e manipulação DOM:** Essa linguagem oferece amplo suporte à manipulação de eventos relacionados a elementos HTML. É possível, por exemplo, utilizar um elemento \<button\> (botão) que, ao ser clicado, exiba uma mensagem na tela. Ou ainda aumentar o tamanho de uma fonte ou diminuí-lo.
+- **Mensagem e entrada de dados:** O JavaScript possui suporte a funções nativas para a exibição de caixas de diálogo para entrada de dados ou exibição de mensagens, como alertas, por exemplo.
+
 ## Tecnologias do lado do servidor
 
