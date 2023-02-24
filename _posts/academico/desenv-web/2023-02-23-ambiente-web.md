@@ -111,6 +111,63 @@ A partir da definição de mobile first podemos identificar o seu contraponto co
 A aplicação prática do mobile first consiste em planejar o desenvolvimento de um site priorizando os recursos e as características presentes nos dispositivos móveis, como o tamanho de tela, a largura de banda disponível e até mesmo recursos específicos, como os de localização, por exemplo.
 
 ## Tecnologias do lado do cliente
+### As tecnologias HTML
+#### HTML
+HTML é considerada a tecnologia fundamental da web, pois sua função é definir a estrutura de uma página web. Essa linguagem de marcação, criada port Tim Berners-Lee na década de 1990, inicialmente objetivava permitir a disseminação de pesquisas entre Lee e seus colegas pesquisadores, mas foi rapidamente difundida até formar a rede que, posteriormente, veio a se tornar a World Wide Web como a conhecemos atualmente.
+
+Em linhas gerais, a HTML é uma linguagem de marcação simples, composta por elementos, chamados tags, que são relacionadas a textos e outros conteúdos a fim de lhes dar significado. Por exemplo: podemos marcar um texto como sendo um parágrafi, uma lista ou uma tabela. É possível, ainda, inserir vídeos e imagens. Além disso, também utilizamos essa marcação para definir a estrutura de um documento de forma lógica: menu de navegação, cabeçalho, rodapé, etc. As tags podem ser agrupadas nos seguintes tipos:
+- **Estruturais:** Juntamente com o elemento de definição do DocType, como pode ser visto logo abaixo, compõem a estrutura obrigatória de uma página web.
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>
+```
+- **De conteúdo:** Como o nome sugere, têm o papel de marcar o conteúdo pelo seu tipo.
+```html
+<body>
+    <h1>Minha página</h1>
+    <p><strong>Conteúdo da página</strong></p>
+    <img src="images/image1.jpg" alt="imagem 1 da página">
+    <hr/>
+</body>
+```
+- **Semânticas:** Relacionadas ao tipo de conteúdo e à criação de sessões para agrupálo de acordo com sua função no documento. Para melhor entender esse conceito, veja o código abaixo:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titulo da página</title>
+    </head>
+
+    <body>
+        <header>
+            Cabeçalho da página
+        </header>
+
+        <nav>
+            Navegação da página
+        </nav>
+
+        <main>
+            Conteúdo da página
+
+            <aside>
+                Barra lateral
+            </aside>
+        </main>
+    </body>
+</html>
+```
+
+Como mostrado, as tags \<header\>, \<nav\>, \<main\> e \<footer\> desempenham um papel semântico, uma vez que estruturam a página em sessões. Como seus nomes indicam, elas separam o conteúdo em partes lógicas que formam o esqueleto da maioria das páginas HTML.
 
 ## Tecnologias do lado do servidor
 
