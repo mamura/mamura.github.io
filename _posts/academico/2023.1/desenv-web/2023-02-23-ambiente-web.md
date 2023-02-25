@@ -234,4 +234,76 @@ O JavaScript é, ao mesmo, amigável, mas também completo e poderoso. Embora cr
 - **Mensagem e entrada de dados:** O JavaScript possui suporte a funções nativas para a exibição de caixas de diálogo para entrada de dados ou exibição de mensagens, como alertas, por exemplo.
 
 ## Tecnologias do lado do servidor
+Uma das principais funções das linguagens de programação server side é permitir o acesso a informações armazenadas em bancos de dados. Uma vez que apenas utilizando HTML e JavaScript isso não é possível, faz-se necessária a utilização de uma linguagem no lado servidor. Entre as diversas linguagens disponíveis no lado servidor estão o Java, o Python, o ASP, o .NET e o PHP, que conheceremos um pouco mais ao longo deste estudo.
 
+### PHP
+PHP (Hypertext Preprocessor) é uma linguagem de programação baseada em script, open source e destinada, sobretudo, ao desenvolvimento web. Trata-se de uma linguagem criada para ser simples, tendo nascida estruturada e, posteriormente, adotado o paradigma de orientação a objetos — apenas 10 anos depois da sua criação.
+
+#### Como o PHP funciona
+O PHP é uma linguagem interpretada, ou seja, ela precisa “rodar” sobre um servidor web. Com isso, todo o código gerado é interpretado pelo servidor, convertido em formato HTML e então exibido no navegador.
+1. **Etapa 1:** O código PHP é gerado pelo servidor.
+2. **Etapa 2:** Esse código é convertido em formato HTML.
+3. **Etapa 3:** O código é exibido no navegador.
+
+Logo, o código-fonte não pode ser visto no lado cliente, mas apenas o HTML gerado.
+
+Outra característica importante do PHP é poder ser utilizado na maior parte dos sistemas operacionais, assim como em vários servidores web diferentes, como o Apache, o IIS e o Nginx, entre outros.
+
+#### Anatomia de um script PHP
+Um script PHP é composto por código delimitado pelas tags <?php e ?>. A última, de fechamento, não é obrigatória. Devido à sua simplicidade, um mesmo script PHP pode conter tanto código estruturado quanto orientado a objetos. Pode até conter código de marcação HTML. Neste último caso, o código próprio do PHP deverá ficar entre as tags de abertura e fechamento.
+
+#### Sintaxe
+Veja a seguir um resumo sobre a sintaxe do PHP:
+- **Variáveis:** No PHP, as variáveis são criadas com a utilização do símbolo de cifrão ($). Além disso, PHP é case sensitive, ou seja, sensível a letras maiúsculas e minúsculas, pois faz diferença quando utilizamos uma e outra.
+- **Tipos de dados:** O PHP é uma linguagem fracamente tipada. Logo, embora possua suporte para isto, não é necessário definir o tipo de uma variável em sua declaração. Os tipos de dados disponíveis em PHP são: booleanos, inteiros, números de ponto flutuante, strings, arrays, interáveis (iterables), objetos, recursos, NULL e call-backs.
+- **Operadores condicionais:** No PHP, há suporte às condicionais if, else, if e else ternários, if else e switch.
+- **Laços de repetição:** No PHP estão disponíveis os laços for, foreach, while e do-while.
+- **Funções e métodos:** O código PHP possui uma grande quantidade de funções e métodos nativos.
+
+#### Inclusão de scripts dentro de scripts
+O PHP permite a inclusão de um script dentro de outro script. Isso é muito útil, sobretudo se pensarmos no paradigma de orientação a objetos, em que temos, em um programa, diversas classes, codificadas em diferentes scripts. Logo, sempre que precisarmos fazer uso de uma dessas classes, de seus métodos ou atributos, basta incluí-la no script desejado. Para incluir um script em outro, o PHP disponibiliza algumas funções:
+- include
+- require
+- include_once
+- require_once
+
+#### Acesso ao sistema de arquivos
+Por meio do PHP é possível ter acesso ao sistema de arquivos do servidor web. Com isso, pode-se por exemplo, manipular arquivos e diretórios, desde a simples listagem à inclusão ou exclusão de dados.
+
+#### Páginas dinâmicas
+Se fôssemos implementar em uma página web tudo o que estudamos até aqui, teríamos uma página HTML básica, com um pouco de interação no próprio navegador, graças ao JavaScript, e também com um pouco de estilo, este devido ao CSS. Além disso, já sabemos que é possível enviar dados do HTML para o PHP mediante um formulário. Para prosseguirmos, é importante definirmos o que são páginas dinâmicas. A melhor forma de fazer isso, porém, é definindo o que seria o seu antônimo, ou seja, as páginas estáticas.
+
+***HTML + JavaScript + CSS, sem conexão com uma linguagem de programação, formam o que podemos chamar de páginas estáticas. Embora seja até possível termos um site inteiro composto por páginas estáticas, isso seria muito trabalhoso e também nada usual.***
+
+A combinação das tecnologias do lado cliente com as tecnologias do lado servidor produzem páginas dinâmicas. Nelas, é possível receber as informações provenientes do cliente, processá-las, guardá-las, recuperá-las e utilizá-las sempre que desejarmos. E não é só isso: podemos guardar todo o conteúdo do nosso blog no banco de dados. Com isso, teríamos apenas uma página PHP que recuperaria nosso conteúdo no banco e o exibiria no navegador.
+
+#### Acesso a dados
+Como mencionado anteriormente, o ambiente web é composto por tecnologias que rodam do lado cliente e do lado servidor. Complementando o que vimos até aqui, temos ainda, do lado servidor, o banco de dados. De forma resumida, podemos defini-lo como um repositório em que diversas informações podem ser armazenadas e posteriormente recuperadas.
+
+Para realizar a gestão desses dados, existem os SGBD, ou sistemas gerenciadores de bancos de dados. Se, por um lado, o SGBD é responsável por montar a estrutura do banco de dados — entre outras funções —, por outro lado, para recuperarmos uma informação guardada em um banco de dados e exibi-la em uma página web, é necessário utilizar uma linguagem do lado servidor, como o PHP. Em outras palavras, não é possível acessar o banco de dados utilizando apenas HTML ou mesmo JavaScript. Sempre será necessária a utilização de uma linguagem server side para o acesso aos dados.
+
+#### Formas de acesso a dados
+A partir das tecnologias vistas até aqui, há algumas formas de acessar os dados guardados em um banco de dados.
+- **A partir do HTML:** Uma das maneiras mais comuns de enviar e recuperar dados a partir do HTML é fazendo uso de formulários. Com eles, é possível submetermos nossos dados para uma linguagem no lado servidor/PHP. Este, então, recebe as informações e as armazena no banco de dados. Da mesma forma acontece o caminho inverso. Podemos ter um formulário em nossa página HTML que solicite dados ao PHP e este as envie de volta, após recuperá-las do banco de dados.
+
+Vale lembrar ainda o que vimos sobre o PHP: ele permite a utilização de códigos HTML diretamente em seus scripts. Logo, uma página web feita em PHP pode recuperar dados do banco de dados toda vez que é carregada. É isso o que acontece na maioria dos sites. Cada página visualizada é composta por conteúdo armazenado em banco de dados e código HTML produzidos por uma linguagem do lado servidor. Com isso, cada página que abrimos em sites dinâmicos implica em uma chamada/requisição ao lado servidor — script e banco de dados.
+- **A partir do JavaScript:** O JavaScript possui, essencialmente, duas formas para se comunicar com linguagens do lado servidor: por meio das APIs (Application Programming Interface) XMLHttpRequest e Fetch API. A primeira é amplamente utilizada, sendo a forma mais comum de realizar essa comunicação. É normalmente associada a uma técnica de desenvolvimento web chamada AJAX. Já a segunda é mais recente e oferece algumas melhorias, embora não seja suportada por todos os navegadores.
+
+A comunicação em ambas consiste em, mediante algum evento no navegador, normalmente originado em uma ação disparada pelo usuário, é enviada uma requisição ao lado servidor, como recuperar algum dado, por exemplo, tratar o seu retorno e o exibir na tela. Isso tudo sem que seja necessário recarregar toda a página.
+
+## Referências
+- BENYON, D. Interação humano-computador. São Paulo: Pearson Prentice Hall, 2011.
+
+- STAT COUNTER GLOBAL STATS. Screen resolution stats Brazil. S. d.
+
+- FRIEDMAN, V. Responsive web design: what it is and how to use it. Smashing Magazine, 11 ago. 2018. Consultado na internet em: 13 jun. 2022.
+
+- MOZILLA. MDN web docs: CSS Preprocessor. S. d.
+
+- PAIXÃO, A. Notas de aula sobre ambiente web cliente X servidor e as tecnologias do professor alexandre paixão. Disponível sob licença Creative Commons BR Atribuição – CC BY, 2020.
+
+- SILVA, M. S. Web design responsivo: aprenda a criar sites que se adaptam automaticamente a qualquer dispositivo, desde desktop até telefones celulares. São Paulo: Novatec, 2014.
+
+- WROBLEWSKI, L. Mobile first. S. d.
+
+- W3SCHOOLS. CSS reference. S. d.
