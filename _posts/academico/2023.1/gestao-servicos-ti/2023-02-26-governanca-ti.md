@@ -145,10 +145,10 @@ A implantação da Governança de TI em uma organização não é uma tarefa em 
 
 Abaixo segue uma sugestão de um roteiro genérico para a implantação da Governança de TI.
 
-1. Sensibilizar a alta direção
+#### 1. Sensibilizar a alta direção
 É indispensável que a alta administração seja a patrocinadora da Governança de TI. Lembre-se de que não é fácil, a implantação possui custos e envolve toda a organização. Algumas das formas de sensibilizá-la é promovendo palestras com especialistas; visitar empresas que já implementaram a Governança de TI; evidenciar os riscos, caso não sejam definidas ações que garantam a continuidade do negócio; expor as vulnerabilidades atuais quanto à segurança da informação, entre outras. Um bom respaldo, também, é utilizar os relatórios de auditoria (interna e externa). Porém, a melhor estratégia e o que mais a organização leva em consideração é quando traduzimos as ideias em informações financeiras.
 
-2. Definir o foco do programa
+#### 2. Definir o foco do programa
 A partir da análise estratégica da organização é possível identificar os requisitos e os fatores críticos de sucesso do negócio que possuem relação direta com TI. Os exemplos apresentados no Quadro 1 relacionam o requisito de negócio, o qual a empresa pode estar sensibilizada no momento, e o foco para a implantação da Governança de TI. Ou seja, se o requisito de negócio importante naquele momento for, por exemplo, Disponibilidade, o que precisa ser priorizado na implantação da governança de TI deve ser: infraestrutura, ger. de capacidade, ger. de configuração, ger. de problemas e ger. de incidentes.
 
 | Requisito de negócio | Foco |
@@ -158,5 +158,156 @@ A partir da análise estratégica da organização é possível identificar os r
 | Lançamento de Produtos | Gerenciamento de demandas, Gerenciamento de portfólio, Gerenciamento de mudanças |
 | Custos | Gerência de projetos |
 
-3. Definir papéis, estrutura e relacionamentos com interessados relevantes
+#### 3. Definir papéis, estrutura e relacionamentos com interessados relevantes
 Nessa hora, pode ser definido se a Governança de TI terá uma área própria, quantos recursos humanos serão disponibilizados ou se as atividades serão distribuídas no corpo diretivo ou gerencial existente na TI. Devem ser definidos papéis, estrutura e relacionamentos com as partes interessadas.
+
+#### 4. Estruturar preliminarmente o programa
+Esboçar como será a implantação da Governança de TI, e como envolve custos e mudanças culturais, o indicado é ser implantada por etapas. 
+
+#### 5. Implantar estrutura e responsabilidades
+A criação de um Comitê Estratégico de TI é muito válida para estruturar os relacionamentos da TI e ter as a definições das políticas e dos canais de comunicação que facilitarão as tomadas de decisão. Entre as responsabilidades desse Comitê podemos destacar:
+- Prover direção estratégica para alinhamento da TI com o negócio;
+- Estabelecer uma política organizacional que seja um guia e suporte;
+- Supervisionar a entrega de valor da TI ao negócio;
+- Supervisionar os investimentos da TI a nível corporativo;
+- Confirmar que os riscos críticos estão sendo administrados corretamente.
+
+#### 6. Estabelecer direitos decisórios
+Definir modelos de direitos decisórios sobre prioridades, investimentos e orçamentos da TI. Como a TI tem orçamento limitado, igual a qualquer área da empresa, os projetos estratégicos da empresa é que devem ser priorizados. Junto à alta administração, deve ser definido o modelo de direitos decisórios da TI. Ou seja, quem irá aprovar e tomar as decisões em relação à TI quanto a orçamento, investimentos, prioridades etc.
+
+#### 7. Realizar avaliação dos processos-foco
+Avaliar o andamento da Governança de TI no foco selecionado para ser implantado. Dependendo do resultado da avaliação, tomar as decisões devidas dentro da criticidade encontrada.
+
+#### 8. Estabelecer metas, indicadores de progresso e de resultado
+O processo de Governança de TI deve avaliar se está ou não atingindo o que foi proposto. Os benefícios devem ser alcançados. Se o processo de TI não tiver atingido a meta que foi definida ou seu nível de maturidade estiver abaixo do esperado, a meta precisa ser revista e novos planos de ações estabelecidos. 
+
+#### 9. Estabelecer roadmap de implementação
+Definir as metas em curto, médio e longo prazo das melhorias necessárias e dos novos processos a serem implantados.
+
+#### 10. Elaborar plano do programa
+O plano deve conter os projetos a serem implantados, prioridades de implantação, escopo, sequência de implantação e resultado esperado.
+
+#### 11. Definir parcerias (auditoria, risco e compliance)
+É relevante que sejam mapeadas as vulnerabilidades/probabilidades e, consequentemente, os riscos da TI. Essas áreas podem ser aliadas para a viabilidade da implantação em todas as etapas e, posteriormente, para mantê-la eficiente.
+
+#### 12. Aprovar o programa
+Sem a aprovação não há liberação de recursos financeiros para dar prosseguimento ao programa. Lembre-se de que a implantação da Governança de TI é um projeto e, como tal, deve ser aprovado.
+
+#### 13. Elaborar plano de gerenciamento de mudanças da cultura organizacional da TI
+Ter apoio de outras áreas como Marketing e RH, por exemplo, para juntos conseguirem divulgar o plano e suas necessidades. Sempre há resistências. Os stakeholders negativos devem ser identificados e neutralizados.
+
+#### 14. Elaborar o plano dos projetos de implantação da Governança de TI
+Reconhecer que a implantação é um programa que tem vários projetos, e como um projeto, deve ter um plano. É recomendada a utilização do PMBOK.
+
+#### 15. Implantar as ações do plano de gerenciamento de mudanças da cultura organizacional da TI
+Colocar em prática o que foi planejado para gerenciar a mudança da cultura da TI. Até mesmo na TI vai existir resistência à implantação da Governança de TI.
+
+#### 16. Executar os projetos de implantação da Governança de TI
+Executar o que foi planejado referente ao projeto. É recomendada a utilização do PMBOK ou outro modelo de gerenciamento de projetos.
+
+#### 17. Monitorar a execução dos projetos de implantação da Governança de TI
+Monitorar os projetos específicos da Governança de TI. Será verificado o andamento, a qualidade dos entregáveis, os riscos envolvidos etc. 
+
+#### 18. Avaliar os resultados dos projetos de implantação da Governança de TI
+Avaliar os projetos entregues em relação ao que foi planejado, aferindo se os resultados foram alcançados ou não. 
+
+#### 19. Comunicar o valor gerado pela TI ao negócio
+Explicitar para todos os resultados alcançados ou não. O valor que a TI agrega deve ser divulgado, pois a percepção, nas empresas, é que TI não agrega quase nada pelo custo que é. 
+
+#### 20. Revisar e evoluir o programa
+Assim como em qualquer projeto ou processo, o programa deve ser revisto e melhorado. É a melhoria contínua. À medida que os resultados positivos forem sendo divulgados, a cultura começa a ser transformada.
+
+## Boas práticas e recomendações internacionais
+Cada empresa, dependendo do seu porte e disponibilidade para investimentos em TI, implementa a Governança de TI de uma forma diferente. Na maioria das vezes, por meio de um modelo disponível no mercado, pela combinação de vários modelos ou até mesmo por um modelo próprio. 
+
+As empresas que possuem uma Governança de TI forte são as que implantaram a Governança de TI há um bom tempo e já conseguiram um certo nível de maturidade da TI. Estas empresas implementaram componentes, modelos (frameworks) como Cobit, ITIL etc., seguiram as orientações da norma de Governança de TI 38500, o que impulsionou a TI ao encontro da sua missão, do seu objetivo estratégico, adequaram a sua cultura, gerando valores para a empresa. São TIs eficazes e eficientes.
+
+### Modelos de governança de TI
+No mercado, existem diversos modelos para Governança de TI que podem auxiliar o gerenciamento da TI. E como já vimos anteriormente, cada empresa, dependendo da sua disponibilidade financeira e do seu porte, deve implementar o que lhe for mais adequado.
+
+O mais relevante é que o modelo selecionado fortaleça o alinhamento da TI com o negócio, de modo que propicie o uso eficiente da TI, pois devido à competitividade, as áreas de negócios precisam de produtos e serviços com mais qualidade, informações acessíveis e que sejam implantados com maior agilidade e, além disso, a um valor cada vez mais baixo. 
+
+Os modelos são considerados boas práticas e não metodologia. Pelo dicionário Infopédia, temos a seguinte definição de boas práticas:
+
+> Conjunto das técnicas, processos, procedimentos e atividades identificados, utilizados, comprovados e reconhecidos por diversas organizações, em determinada área do saber, como sendo os melhores quanto ao mérito, eficácia e sucesso alcançados pela sua aplicação na realização de uma tarefa. (Dicionãrio Infopédia 2020)
+
+Isso quer dizer que não são regras obrigatórias, mas que já foram utilizadas e tiveram êxito. Vamos falar um pouco sobre alguns desses modelos, com uma breve apresentação. O importante é que você saiba que existe e, caso considere importante para seu desenvolvimento profissional, procure se especializar no *framework* específico.
+
+#### NBR ISO/IEC 38500:2018
+A norma NBR ISO/IEC 38500:2018: Tecnologia da Informação – Governança de TI para a Organização, foi publicada em 2009 e em 2018 teve uma nova edição, com mudanças muito sutis.
+
+A norma é baseada em seis princípios e deve ser utilizada para avaliar, gerenciar e monitorar o uso da TI dentro da organização.
+Seu propósito é promover o uso eficaz, eficiente e aceitável da TI nas organizações para: garantir às partes interessadas que a Governança de TI é confiável; informar e orientar os dirigentes quanto ao uso da TI e fornecer uma base para uma avaliação objetiva de Governança de TI.
+
+A norma se constitui de seis princípios, que devem ser utilizados para as tomadas de decisão:
+- **Responsabilidade:** As pessoas envolvidas entendem e aceitam suas responsabilidades. Quem é responsável pelas ações também possui autonomia para executá-las.
+- **Estratégia:** O plano estratégico de TI deve atender às necessidades atuais e futuras.
+- **Aquisição:** As aquisições devem ser realizadas por necessidades reais e sempre se levando em consideração custo x benefícios, oportunidades e riscos, tanto de adquirir ou de não adquirir.
+- **Desempenho:** A TI deve atender e satisfazer aos requisitos de negócio e da TI atuais e futuros, com a qualidade esperada.
+- **Conformidade:** A TI deve definir, implantar e controlar as políticas e normas e garantir a conformidade com a legislação.
+- **Comportamento Humano:** O comportamento humano deve ser respeitado, incluindo as necessidades de todos os envolvidos no processo.
+
+O comportamento humano deve ser respeitado, incluindo as necessidades de todos os envolvidos no processo.
+- **Avaliar:** Os dirigentes de TI devem avaliar o uso atual e futuro da TI, incluindo: estratégias, infraestrutura, recursos humanos, fornecimentos etc.
+- **Dirigir:** As responsabilidades devem ser definidas, assim como planos e políticas, direcionamento dos investimentos e as operações de TI, para que o uso da TI esteja alinhado com o negócio.
+- **Monitorar:** A execução dos planos deve ser monitorada para aferir se eles estão em conformidade com as políticas e normas estabelecidas. E com o objetivo do negócio.
+
+A norma correlaciona cada princípio com cada ciclo do modelo. Essa relação pode ser vista diretamente na norma.
+
+#### COBIT - CONTROL OBJECTIVES FOR INFORMATION AND RELATED TECHNOLOGY
+O COBIT  é um modelo (framework) corporativo para Governança e Gestão de TI dirigida para toda Organização, foi desenvolvido pela ISACA (Information System Audit and Control Association), que é líder mundial no fornecimento de conhecimento, certificações, comunidade, treinamento em garantia e segurança de sistemas de informação, Governança Corporativa e Gestão de TI, bem como risco e conformidade de TI. A ISACA foi fundada em 1969 e é uma entidade independente e sem fins lucrativos.
+
+Segundo a ISACA, o COBIT fornece um modelo abrangente que auxilia as organizações a atingirem seus objetivos de Governança e Gestão de TI. Ele ajuda as organizações a criarem valores por meio da TI, mantendo o equilíbrio entre a realização de benefícios e a otimização dos níveis de risco e de utilização dos recursos. Permite, também, que a TI seja governada e gerida de forma completa para toda a organização, consegue alcançar o negócio de ponta a ponta, bem como, as áreas de TI, levando em consideração os interesses internos e externos relacionados à TI.
+
+Um conceito que veio com o COBIT 2019 é o I&T – Informação e Tecnologia ‒, pois eles consideram que o acrônimo TI – Tecnologia da Informação ‒ está voltado diretamente para a área de TI. Para eles, I&T remete à informação e à tecnologia empregada para tratar e gerar as informações, e que abrange todas as áreas da organização. 
+
+#### ITIL
+O ITIL é um modelo para Gerenciamento de Serviços de TI. Tem como objetivos principais: alinhar os serviços de TI com os objetivos do negócio; aumentar a qualidade dos serviços de TI e reduzir os custos. O ITIL busca promover a gestão com foco no cliente e na qualidade dos serviços da TI. 
+
+No final do ano de 1980, a Central Computer and Telecommunications Agency (CCTA): coletou, analisou informações de diversas organizações e selecionou as orientações mais úteis para a CCTA e seus clientes no governo britânico. Empresas fora do governo perceberam que as orientações eram geralmente aplicáveis.
+
+Em julho de 2013, a propriedade da ITIL foi transferida para a AXELOS, que mantém os livros de ITIL e gerencia o programa de qualificação profissional.
+
+#### CMMI
+O CMMI - Capability Maturity Model Integration foi desenvolvido pelo Software Engineering Institute — SEI, um departamento de pesquisa ligado à Universidade Carnegie Mellon na Pensilvânia - USA. O CMMI é uma ferramenta criada na década de 1980 para gerir projetos de software. Seu objetivo principal é garantir a qualidade dos softwares. Ele cobre todo o ciclo de vida dos produtos desde a concepção, passando pelo desenvolvimento, aquisição, entrega e manutenção. 
+
+Existem três modelos de CMMI, são eles:
+- **CMMI for development (CMMI-DEV):** Tem como foco os processos relacionados ao desenvolvimento de produtos e serviços.
+- **CMMI for acquisition (CMMI-ACQ):** Para processos de compra e terceirização de bens e serviços.
+- **CMMI for services (CMMI-SVC):** Utilizados por organizações prestadoras de serviço.
+
+#### PMBOK
+O PMI – Project Management Institute publicou o PMBOK – Guia de Conhecimentos em Gerência de Projetos, em 1996, o guia é um framework com as boas práticas em gerenciamento de projetos.
+
+O PMBOK não é uma metodologia, conforme o próprio guia afirma. Ele é uma base de conhecimentos no assunto gerenciamento de projetos. A partir do PMBOK, as organizações podem criar políticas, normas, metodologias, procedimentos, regras, que serão o alicerce para o gerenciamento de projetos.
+
+Quando o gerenciamento de projetos é bem implantado e executado, ele cria valor ao negócio de uma organização, pois a tendência é que os projetos fiquem dentro do prazo, escopo, custo e qualidade planejados.
+
+Os benefícios de um projeto podem ser tangíveis, como o retorno de um investimento, quando o projeto foi para auxiliar as vendas de um produto lançado no mercado, por exemplo, ou intangíveis, como um projeto de criação de uma praça pública, que beneficiará uma comunidade.
+
+
+Geralmente, os projetos empresa surgem para atender a requisitos regulatórios, legais ou sociais; atender aos requisitos das áreas de negócio; criar, melhorar ou corrigir produtos, processos ou serviços e, também, podem surgir para implementar ou alterar estratégias de negócio ou tecnológicas.
+
+## Referências
+ABNT. ABNT NBR ISO/IEC 38500:2018 : Tecnologia da Informação – Governança de TI para Organização. Rio de Janeiro, 2018.
+
+BOAS PRÁTICAS. In: Infopédia. Porto, 2020. Consultado em meio eletrônico em: 14 jul. 2020
+
+FERNANDES, A. A. Implantando a Governança de TI: da estratégia à gestão dos processos e serviços. 3. ed. Rio de Janeiro: Brasport, 2012. 40 p, 204 p.
+
+FERNANDES, Aguinaldo A.; ABREU, Vladimir F. de. Implantando a Governança de TI: da Estratégia à Gestão dos Processos e Serviços. 4. ed. Brasport, 2014. 652 p.
+
+Governança de TI. In: Fsidiário – all about technology. Consultado em meio eletrônico em: 21 jun. 2020.
+
+HENDERSON, J. C.; VENKATRAMAN, N. Strategic alignment: leveraging information technology for transformation organizations. IBM Systems Journal, v. 32, n.1, p.4, 1993.
+
+ISACA - Information Systems Audit and Control Association. In: ISACA. Consultado em meio eletrônico em: 5 jun. 2020.
+
+LUNARDI, G. L. Um Estudo Empírico e Analítico do Impacto da Governança de TI no Desempenho Organizacional, 2008. Tese (Doutorado em Administração). Universidade Federal do Rio Grande do Sul. Porto Alegre.
+
+MEDINA, E. A contribuição da auditoria de sistemas de informações para governança de ti: Estudo de Caso em uma Seguradora no Rio de Janeiro, 2013. Dissertação (Mestrado em Administração e Desenvolvimento Empresarial). Universidade Estácio de Sá, Rio de Janeiro.
+
+VERHOEF, C. Quantifying the effects of IT ‒ governance rules. In: Science of Computer Programming, v. 67, n. 2-3, p. 247-277, 2007.
+
+WEILL, P.; ROSS, J. W. Governança de TI – Tecnologia da Informação. São Paulo: M.Books do Brasil, 2006. 4p.
+
