@@ -55,27 +55,7 @@ A tabela, a seguir, exibe, à esquerda, um programa-fonte, escrito numa linguage
 
 | Linguagem Python | Assembly | Linguagem de máquina |
 | ---------------- | -------- | -------------------- |
-| ```
-def swap(self, v, k):
-temp = self.v[k];
-self.v[k] =
-self.v[k+1];
-self.v[k+1]= temp; | ```
-swap:
-Muli $2,$5,4
-Add $2,$4,$2
-Lw $15,0($2)
-Lw $16,4($2)
-Sw $16,0($2)
-Sw $15,4($2)
-Jr $31 | ```
-00000000001111111111100000000001
-00011111111000000111000011111101
-11111000001100000111111110000000
-10000000100000001000000010000000
-00000000010000000001000000000010
-00000000000000001111000010010101
-00000000111000111111001111111111 |
+| <pre language="python">def swap(self, v, k):<br> temp = self.v[k];<br> self.v[k] =<br> self.v[k+1];<br> self.v[k+1]= temp;<br> </pre>| <pre language="assembly">swap:<br> Muli <br> $2,$5,4<br> Add $2,$4,$2<br> Lw $15,0($2)<br> Lw $16,4($2)<br> Sw $16,0($2)<br> Sw $15,4($2)<br> Jr $31</pre> | <pre>00000000001111111111100000000001<br> 00011111111000000111000011111101<br> 11111000001100000111111110000000<br> 10000000100000001000000010000000<br> 00000000010000000001000000000010<br> 00000000000000001111000010010101<br> 00000000111000111111001111111111 |
 
 ## Critérios de avaliação de linguagens
 
