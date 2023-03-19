@@ -3,7 +3,7 @@ layout: post
 title:  "Paradigmoas e linguagem Python"
 tree: "Paradigmoas e linguagem Python"
 image: ''
-date:   2023-03-20 14:31:27
+date:   2023-03-19 14:31:27
 tags:
 - faculdade, sistemas de informação
 description: ''
