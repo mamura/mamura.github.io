@@ -112,6 +112,7 @@ Outra forma de classificar as linguagens, amplamente difundida, é por geraçõe
 - **Linguagem de 2ª Geração (Linguagem de montagem - Assembly):** As linguagens de segunda geração são denominadas Assembly e são traduzidas para a linguagem de máquina por um programa especial (montador), chamado Assembler. A partir dessa geração, toda linguagem vai precisar de um processo de conversão do código nela escrito, para o código em linguagem de máquina.
 
 Acompanhe o exemplo abaixo para uma CPU abstrata. Considere a seguinte sequência de 3 instruções em linguagem Assembly:
+
 | Código em Assembly | O que faz cada linha de código |
 | ------------------ | ------------------------------ |
 | <pre>Mov #8, A</pre> | Lê um valor da posição de memória 8 para o registrador A |
@@ -119,6 +120,7 @@ Acompanhe o exemplo abaixo para uma CPU abstrata. Considere a seguinte sequênci
 | <pre>ADD A, B</pre> | Soma os valores armazenados nos registradores A e B |
 
 Em linguagem de máquina, depois de traduzidas pelo Assembler, as instruções poderiam ser representadas pelas seguintes sequências de palavras binárias:
+
 | Código em Assembly | O que faz cada linha de código |
 | ------------------ | ------------------------------ |
 | <pre>Mov #8, A</pre> | 01000011 11001000 01100001 |
