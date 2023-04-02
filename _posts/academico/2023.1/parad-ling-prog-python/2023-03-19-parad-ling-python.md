@@ -151,7 +151,298 @@ O melhor exemplo de linguagens de 4ª geração é a SQL (Structured Query Langu
 
 - **Linguagem de 5ª Geração (Voltadas à Inteligência Artificial):** São linguagens declarativas e não algorítmicas. Exemplos: Lisp e Prolog. As linguagens de 5ª geração são usadas para desenvolvimento de sistemas especialistas (área da IA), de sistemas de reconhecimento de voz e machine learning.
 ## Critérios de avaliação de linguagens
+Considerando as diversaslinguagens de programação existentes hoje no mercado, atendendo a propósitos comuns, vamos destacar os domínios da programação, que são seis:
+- **Aplicações científicas (máquinas de calcular com alta precisão):** O primeiro computador, o ENIAC, foi desenvolvido por 3 anos e ficou pronto no ano de 1946. Sua principal finalidade eram cálculos balísticos. Os computadores seguintes, nas décadas de 1940 e 1950, também focaram em cálculos científicos complexos.
 
+As linguagens de programação nessa época eram a linguagem de máquina e Assembly. Na década de 1960 surgem as primeiras linguagens de programação de alto nível, com destaque para Fortran (iniciais de FORmula TRANslator) e posteriormente para ALGOL60. As principais características dessas linguagens eram:
+    - Estruturas de dados simples.
+    - Alto volume de cálculos com aritmética de ponto flutuante (precisão).
+    - Preocupação com a eficiência, pois sucederam a linguagem Assembly.
+
+- **Aplicações comerciais:** A segunda onda de aplicativos foi para suprir as demandas das empresas a partir de meados da década de 1950. Em 1960, surge a linguagem que seria o ícone das aplicações comerciais de computadores de grande porte, naquele momento, o COBOL. As linguagens de programação que apoiaram o crescimento das aplicações comerciais têm como características:
+    - Facilidade para produzir relatórios, fundamentais nos controles das operações contábeis, bancárias, estoque e financeiras (primeiros focos da época).
+    - Precisão com números decimais e ponto flutuante, para representar as altas cifras das grandes empresas, as primeiras a investirem nessas aplicações.
+    - Capacidade de especificar operações aritméticas comerciais.
+
+Cabe destacar que as linguagens destinadas a aplicações comerciais ganham força com a microcomputação a partir dos anos 1980, levando as aplicações comerciais aos médios e pequenos empresários.
+
+- **Aplicações com Inteligência Artificial:** As linguagens que sustentam o desenvolvimento de aplicações apoiadas na Inteligência Artificial (IA) ganham força nos dias de hoje.
+A grande ruptura no pensamento computacional é que as linguagens que apoiam a IA usam a computação simbólica e não numérica, como a maioria das linguagens da época. Em 1959, surge a linguagem Lisp, primeira linguagem projetada para apoio à computação simbólica, primeira referência da computação funcional. Prolog, criada em 1977, foi a primeira linguagem para apoio da computação lógica, essência dos sistemas especialistas (sistemas que usam IA para simular o comportamento humano).
+
+- **Programação de sistemas:** A programação de sistemas cabe a linguagens de programação que tenham comandos e estruturas para acessar, diretamente, o hardware. Tais linguagens são usadas para desenvolver softwares básicos, como sistemas operacionais, tradutores e interpretadores de linguagens de programação. Antes de surgir a linguagem C, usada para desenvolver o sistema operacional Linux, Assembly era a linguagem usada para esse fim. A linguagem C++ também é usada com essa finalidade.
+
+- **Programação para web:** Com o crescimento da internet e tecnologias adjacentes, o uso dos sistemas se desloca do ambiente desktop (domínio dos anos 1980 e 1990) para o ambiente Web.
+
+No contexto de programação para Web, temos 2 diferentes ambientes de desenvolvimento: a camada de apresentação, que roda no navegador (lado cliente) e a camada de lógica do negócio, que roda nos servidores web (lado servidor), juntamente com a camada de persistência, considerando o modelo de desenvolvimento em 3 camadas (apresentação, lógica do negócio e persistência de dados).
+
+Para a camada de apresentação, usa-se as linguagens HTML (linguagem de marcação) e CSS (usada em conjunto com HTML para definir a apresentação da página web), além de JavaScript (programação de scripts), no lado cliente (navegadores).
+
+Para o desenvolvimento das camadas de lógica do negócio, as principais LP são: C#, PHP, ASP, .NET, Java, Ruby e Python.
+
+- **Programação mobile:** Considerando que hoje em dia, grande parte da população, no Brasil e no Mundo, tem acesso à internet pelo celular, cresceu vertiginosamente a quantidade de apps (aplicativos) para uso de aplicações via celular. Os apps, na verdade, são interfaces que rodam no lado cliente.
+
+As principais (não todas) linguagens que apoiam o desenvolvimento de apps para o mundo mobile, oficialmente indicadas por seus fabricantes, são:
+    - Android: Java e Kotlin.
+    - iOS: Swift (oficial da Apple) e Objective-C (código nativo para iOS).
+    - Windows: C#, Visual Basic (VB), C++, HTML, CSS, JavaScript e Java.
+
+O desenvolvimento de APP para iOS é baseado numa IDE chamada Xcode que permite o desenvolvimento de APP em várias linguagens, como: C, C++, Java e Python, mas oficialmente orienta o Swift e Objective-C.
+
+A Google, por sua vez, tem por base o Android SDK, orienta a usar as linguagens Kotlin, Java e C++, mas as linguagens Python, Shell script, Basic4Android, LiveCode (para iOS e Windows também), App Inventor (não necessita conhecer programação) e Unity (motor para games) e GO, também são usadas para desenvolver app para Android.
+
+No contexto de desenvolvimento de APP para Windows, foi lançado no Windows 8.1 e atualizado para atender também ao Windows 10, o App Studio, que permite a qualquer pessoa criar em poucos passos um app Windows e publicá-lo na loja.
+
+Importante destacar que hoje existem plataformas de desenvolvimento mobile conectadas a nuvem que fomentam o desenvolvimento de apps nativos para iOS, Android e Windows.
+
+### Avaliação de linguagens de programação
+Segundo Sebesta (2018) são quatro grandes critérios para avaliação das linguagens de programação, dentro de um mesmo domínio de programação. Cada critério é influenciado por algumas características da linguagem.
+- **Legibilidade:** Um dos critérios mais relevantes é a “facilidade com que os programas podem ser lidos e entendidos” pelas pessoas que não necessariamente participaram do desenvolvimento.
+
+- **Facilidade de escrita:** O quão facilmente uma linguagem pode ser usada para desenvolver programas para o domínio do problema escolhido.
+
+- **Confiabilidade:** Um programa é dito confiável se ele se comporta conforme a sua especificação, repetidas vezes.
+
+- **Custo:** O custo final de uma linguagem de programação é em função de muitas de suas propriedades e características.
+
+#### Legibilidade
+Um dos critérios mais relevantes para avaliar uma linguagem de programação diz respeito à capacidade com que os programas podem ser lidos e entendidos pela sintaxe e construção da linguagem, sem considerar as possíveis influências da má programação.
+
+As características que influenciam a legibilidade de uma linguagem de programação são:
+- **Simplicidade:** Quanto mais simples for uma linguagem, melhor será a legibilidade do código por ela produzido. Uma linguagem com número elevado de construções básicas é mais difícil de ser aprendida do que uma que tenha poucas. Tende a ser subutilizada. Uma segunda característica que afeta negativamente a legibilidade é a multiplicidade de recursos. Por exemplo, em Python, o programador pode incrementar uma variável, de duas formas distintas:
+```python
+cont = cont + 1;
+cont += 1;
+```
+Nas linguagens C e Java, ainda podemos usar para incrementar variáveis as seguintes estruturas: ++cont e cont++.
+
+Muita simplicidade pode tornar menos legíveis os códigos escritos. Na linguagem Assembly, a maioria das sentenças são simples, porém não são altamente legíveis devido à ausência de estruturas de controle.
+
+Uma terceira característica que afeta negativamente a legibilidade é a sobrecarga de operadores, como por exemplo o “+”, usado para somar inteiros, reais, concatenar cadeias de caracteres (strings), somar vetores, dentre outras construções permitidas pela linguagem.
+
+- **Ortogonalidade:** A ortogonalidade de uma linguagem refere-se a um conjunto relativamente pequeno de construções primitivas que pode ser combinado em um número, também, pequeno de maneiras para construir as estruturas de controle e de dados de uma linguagem de programação.
+
+Em outras palavras: possibilidade de combinar, entre si, sem restrições, as construções básicas da linguagem para construir estruturas de dados e de controle.
+    - Boa ortogonalidade: Permitir, por exemplo, que haja um vetor, cujos elementos sejam do tipo registro (estrutura heterogênea).
+    - Má ortogonalidade: Não permitir que um vetor seja passado como argumento para uma rotina (procedimento ou função). Ou que uma função não possa retornar um vetor.
+    - Uma linguagem ortogonal tende a ser mais fácil de aprender e tem menos exceções.
+
+A falta de ortogonalidade leva a muitas exceções às regras da linguagem e ao excesso, o contrário (menos exceções às regras). Menos exceções implicam um maior grau de regularidade no projeto da linguagem, tornando-a mais fácil de ler, entender e aprender.
+
+- **Instruções de controle:** Instruções como Goto (desvio incondicional) limitam a legibilidade dos programas, pois essa instrução pode levar o controle do código a qualquer ponto do programa, limitando o entendimento e, consequentemente, a legibilidade do código escrito na linguagem. As linguagens modernas não implementam desvio incondicional, assim sendo, o projeto de estruturas de controle é menos relevante na legibilidade do que anos atrás, quando surgiram as primeiras linguagens de alto nível.
+
+- **Tipos e estruturas de dados:** A facilidade oferecida pela linguagem para definir tipos e estruturas de dados é outra propriedade que aumenta a legibilidade do código escrito. Por exemplo, uma linguagem que permita definir registros e vetores, mas não permite que um vetor tenha registros como seus elementos, terá a legibilidade afetada.
+
+A linguagem C não possui o tipo de dado lógico ou booleano. Muitas vezes, usa-se variáveis inteiras, permitindo apenas que receba os valores 0 e 1 para conteúdo, simulando o tipo booleano. Por exemplo, para localizar um elemento em uma das posições de um vetor, usa-se uma variável lógica se a linguagem permitir e, assim, teríamos a instrução “achou=false” em determinado trecho de código. Em outra linguagem que não permita o tipo de dado lógico, a instrução poderia ser “achou=0”, em que achou seria uma variável inteira. Qual das duas sentenças é mais clara a quem lê o código? A primeira, não é? “achou=false”.
+
+- **Sintaxe:** A sintaxe tem efeito sobre a legibilidade. Um exemplo é a restrição do tamanho (quantidade de caracteres) para um identificador (tipo, variável, constante, rotina – procedimento e função), impedindo que recebam nomes significativos sobre sua utilidade. Na linguagem Fortran, o nome do identificador pode ser até 6 caracteres.
+
+Outra propriedade de sintaxe que afeta a legibilidade é o uso de palavras reservadas da linguagem. Por exemplo, em Pascal, os blocos de instrução são iniciados e encerrados com BEGIN-END, respectivamente. A linguagem C usa chaves para iniciar e encerrar blocos de instruções. Já a linguagem Python usa a endentação obrigatória para marcar blocos de comandos, aumentando a legibilidade, naturalmente.
+
+##### Facilidade de escrita (redigibilidade)
+A facilidade de escrita é a medida do quão fácil a linguagem permite criar programas para um domínio da aplicação.
+
+A maioria das características que afeta a legibilidade também afeta a facilidade de escrita, pois se a escrita do código não flui, haverá dificuldade para quem for ler o código.
+
+As características que influenciam na facilidade de escrita são:
+- **Simlicidade e ortogonalidade:** Quanto mais simples e ortogonal for a linguagem, melhor sua facilidade para escrever programas. O ideal são linguagens com poucas construções primitivas. Imagina que uma linguagem de programação possui grande número de construções. Alguns programadores podem não usar todas, deixando de lado, eventualmente, as mais eficientes e elegantes.
+
+- **Expressividade:** Uma linguagem de programação com boa expressividade contribui para o aumento da facilidade de escrita dos códigos.
+    - Assembly: Baixa expressividade.
+    - Pascal e C, boa expressividade: Ricas estruturas de controle. Exemplo: o comando FOR mais adequado que WHILE e REPEAT para representar lações com número fixo de vezes. Da mesma forma que o C, em que o FOR é mais indicado que o WHILE e DO-WHILE. Na linguagem Python, ocorre o mesmo entre os comandos FOR e WHILE.
+    - Na linguagem C, temos construções diversas para incremento de variável: i++ é mais simples e conveniente de usar do que i=i+1, sendo i, uma variável inteira.
+Uma linguagem expressiva possibilita escrever linhas de código de uma forma mais conveniente ao invés de deselegante.
+
+- **Siuporte para a abstração:** O grau de abstração em uma linguagem é uma propriedade fundamental para aumentar a facilidade de escrita. Abstração pode ser de:
+    - Processos, como o conceito de subprograma.
+    - Dados, como uma árvore ou lista simplesmente encadeada.
+
+##### Confiabilidade
+Dizemos que um programa é confiável se ele se comportar conforme sua especificação, sob todas as condições, todas as vezes em que for executado. Abaixo, alguns recursos das linguagens que exercem efeito sobre a confiabilidade de programas.
+    - ***Verificação de tipos:*** Significa verificar, em tempo de compilação ou execução, se existem erros de tipo. Por exemplo, atribuir um valor booleano a uma variável do tipo inteira, vai resultar em erro. As linguagens fortemente tipadas, em tempo de compilação, como Python e Java, tendem a ser mais confiáveis, pois apenas valores restritos aos tipos de dados declarados poderão ser atribuídos e diminuem os erros em tempo de execução. Linguagens, como C, em que não é verificado se o tipo de dado do argumento é compatível com o parâmetro, em tempo de compilação, podem gerar erros durante a execução, afetando a confiabilidade. A verificação de tipos em tempo de compilação é desejável, já em tempo de execução é dispendiosa (mais lenta e requer mais memória), e mais flexível (menos tipada).
+
+    - ***Tratamento de exceção:*** O tratamento de exceção em uma linguagem de programação garante a correta execução, aumentando a confiabilidade. As linguagens Python, C++ e Java possuem boa capacidade de tratar exceções, ao contrário da linguagem C. A linguagem deve permitir a identificação de eventos indesejáveis (estouro de memória, busca de elemento inexistente, overflow etc.) e especificar respostas adequadas a cada evento. O comportamento do programa torna-se previsível com a possibilidade de tratamento das exceções, o que tende a aumentar a confiabilidade do código escrito na linguagem de programação.
+
+    - ***Aliasing (Apelidos):*** Aliasing é o fato de ter dois ou mais nomes, referenciando a mesma célula de memória, o que é um recurso perigoso e afeta a confiabilidade. Restringir Aliasing é prover confiabilidade aos programas.
+
+    - ***Legibilidade e facilidade de escrita:*** Ambos influenciam a confiabilidade. A legibilidade afeta tanto na fase de codificação como na fase de manutenção. Programas de difícil leitura são difíceis de serem escritos também. Uma linguagem com boa legibilidade e facilidade de escrita gera códigos claros, que tendem a aumentar a confiabilidade.
+
+##### Custo
+O custo de uma linguagem de programação varia em função das seguintes despesas: de treinamento, de escrita do programa, do compilador, de execução do programa, de implementação da linguagem e o de manutenção do código.
+| Custo de | Características |
+| -------- | --------------- |
+| Treinamento | Custo de Treinamento para programadores varia em função da expertise do programador, simplicidade e ortogonalidade da linguagem. |
+| Escrever programa | Custo para escrever programas na linguagem varia em função da facilidade de escrita. |
+| Compilar o programa | Esse custo varia em função do custo de aquisição do compilador, hoje minimizado, em linguagens open source, como é o caso do Python. |
+| Executar o programa | Custo para executar programas, varia em função do projeto da linguagem. |
+| Implementar a linguagem | A popularidade da LP vai depender de um econômico sistema de implementação. Por exemplo, Python e Java possuem compiladores e interpretadores gratuitos. |
+| Confiabilidade | O custo da má confiabilidade: se um sistema crítico falhar, o custo será elevado. Exemplos: sistema de controle de consumo de água e sistemas de usina nuclear. |
+| Manutenção | Custo de manutenção: depende de vários fatores, mas principalmente da legibilidade, já que a tendência é que a manutenção seja dada por pessoas que não participaram do desenvolvimento do software. |
+
+Os custos em treinamento e de escrever o programa podem ser minimizados se a linguagem oferecer bom ambiente de programação. Pythom e uma linguagem com alta legibilidade, facilidade de escrita, além de confiável. Seu custo não é elevado, pois além de ser open source, é fácil de aprender.
+
+Existem outros critérios, como por exemplo a portabilidade ou a capacidade que os programas têm de rodarem em ambientes diferentes (sistema operacional e hardware), o que é altamente desejável. A reusabilidade, ou seja, o quanto um código pode ser reutilizado em outros programas ou sistemas aumenta o nível de produtividade da linguagem. Além da facilidade de aprendizado, que é fortemente afetada pela legibilidade e facilidade de escrita.
 ## Paradigmas e suas características
+O agrupamento por paradigmas é outra forma de classificar as linguagens de programação. Um paradigma agrupa linguagens com características semelhantes que surgiram em uma mesma época.
+
+### Paradigma Imperativo
+O paradigma imperativo agrega três paradigmas: estruturado, orientado a objeto e concorrente, os quais possuem em comum o fato de especificarem passo a passo o que deve ser feito para a solução do problema. As linguagens do paradigma imperativo são dependentes da arquitetura do computador, pois especificam em seus programas como a computação é realizada.
+#### Paradigma Estruturado
+Caracteriza as principais linguagens de programação da década de 1970 e 1980 que seguiram os princípios da programação estruturada:
+1. Não usar descios incondicionais (Goto, característico de linguagens como BASIC e versões iniciais do COBOL)
+2. Desenvolver programas por refinamentos sucessivos (metodologia top down), motivando o desenvolvimento de rotinas (procedimentos e funções) e a visão do programa partindo do geral para o particular, ou seja, o programa vai sendo refinado à medida que se conhece melhor o problema e seus detalhes.
+3. Desenvolver programas usando três tipos de estruturas: sequenciais, condicionais e repetição.
+4. Visando eficiência, o paradigma estruturado baseia-se nos princípios da arquitetura de Von Neumann, onde:
+    - Programas e dados residem, na memória (durante a execução).
+    - Instruções e dados trafegam da memória para CPU e vice-versa.
+    - Resultados das operações trafegam da CPU para a memória.
+
+As linguagens Pascal e C caracterizam bem esse paradigma. A linguagem Python, multiparadigma, tem o estilo básico do paradigma estruturado.
+
+#### Paradigma Orientado a Objeto
+Com o crescimento do tamanho do código e complexidade dos programas, o paradigma estruturado começou a apresentar limitações nos sistemas que passaram a ter dificuldade de manutenção e reuso de programas e rotinas padronizadas.
+
+A orientação a objetos surge como solução a esses problemas, permitindo, através de propriedades como abstração, encapsulamento, herança e polimorfismo, maior organização, reaproveitamento e extensibilidade de código e, consequentemente, programas mais fáceis de serem escritos e mantidos. O principal foco desse paradigma foi possibilitar o desenvolvimento mais rápido confiável.
+
+As classes são abstrações que definem uma estrutura que encapsula dados (chamados de atributos) e um conjunto de operações possíveis de serem usados, chamados métodos. Os objetos são instâncias das classes. Por exemplo, a classe ALUNO encapsula um conjunto de dados que os identifiquem: matrícula, nome, endereço (rua, número, complemento, bairro, estado e CEP) e um conjunto de métodos: Incluir Aluno, Matricular Aluno, Cancelar Matrícula, dentre outros.
+
+O paradigma orientado a objetos, por sua vez, usa os conceitos do paradigma estruturado na especificação dos comandos de métodos. Por isso, é considerado uma evolução do paradigma estruturado.
+
+#### Paradigma Concorrente
+Caracterizado quando processos executam simultaneamente e concorrem aos recursos de hardware (processadores, discos e outros periféricos), características cada vez mais usuais em sistemas de informação. O paradigma concorrente pode valer-se de apenas um processador ou vários.
+- **Um processador:** Os processos concorrem ao uso do processador e recursos.
+- **Vários processadores:** Estamos caracteriando o paralelismo na medida em que podem executar em diferentes processadores (e de fato, ao mesmo tempo), os quais podem estar em uma mesma máquina ou distribuídos em mais de um computador.
+
+Ada e Java são as linguagens que melhor caracterizam esse paradigma, possibilitando suporte à concorrência.
+### Paradigma Declarativo
+Diferentemente do paradigma imperativo, no declarativo o programador diz o que o programa deve fazer (qual a tarefa), ao invés de descrever como o programa deve fazer. O programador declara, de forma abstrata, a solução do problema. Essas linguagens não são dependentes de determinada arquitetura de computador. As variáveis são incógnitas, tal qual na Matemática e não células de memória.
+
+O paradigma declarativo agrega o paradigmas funcional e lógico.
+
+#### Paradigma Funciona
+Abrange linguagens que operam tão somente funções que recebem um conjunto de valores e retornam um valor. O resultado que a função retorna é a solução do problema (foca o processo de resolução de problemas).
+
+O programa resume-se em chamadas de funções, que por sua vez podem usar outras funções. Uma função pode invocar outra, ou o resultado de uma função pode ser argumento para outra função. Usa-se também chamadas recursivas de funções. Naturalmente, esse paradigma gera programas menores (pouco código).
+
+LISP é a LP funcional mais usada, especialmente em programas que usem os conceitos de Inteligência Artificial (sistemas especialistas, processamento de linguagem natural e representação do conhecimento), devido à facilidade de interpretação recursiva.
+
+Exemplo: O código abaixo implementa em Python uma função que calcula quantos números inteiros pares existem de 0 a n.
+```
+p = 0
+
+for num in range(n+1)
+    if num % 2 == 0:
+        p += 1
+
+return p
+```
+Abaixo, o mesmo código usando o conceito de função recursiva. Repare que a função de nome conta_numeros chama ela mesma em seu código (isso é a recursão).
+```
+def conta_numeros(n):
+    if n == 0: return 1 # 0 é par
+    elif n % 2 == 0: return 1 + conta_numeros(n - 1);
+    else: return conta_numeros(n - 1)
+```
+Python não é uma linguagem funcional nativa, seria exagerado afirmar isso, porém sofreu influência desse paradigma ao permitir: recursividade, uso de funções anônimas, com a função lambda, dentre outros recursos, além, claro, de ser uma linguagem com enorme biblioteca de funções.
+
+#### Paradigma Lógico
+Um programa lógico expressa a solução da maneira como o ser humano raciocina sobre o problema: baseado em fatos, derivam-se conclusões e novos fatos. Quando um novo questionamento é feito, através de um mecanismo inteligente de inferência, deduz novos fatos a partir dos existentes. A execução dos programas escritos em linguagens de programação lógica segue, portanto, um mecanismo de dedução automática (máquina de inferência), sendo Prolog a linguagem do paradigma lógico mais conhecida.
+
+O paradigma lógico é usado no desenvolvimento de linguagens de acesso a banco de dados, sistemas especialistas (IA), tutores inteligentes etc.
 
 ## Métodos de implementação das linguagens
+Todo programa, a menos que seja escrito em linguagem de máquina, o que hoje em dia está totalmente fora dos propósitos, precisará ser convertido para linguagem de máquina antes de ser executado. Essa conversão precisa de um programa que receba o código-fonte escrito na linguagem e gere o respectivo código em linguagem de máquina. Esse programa, que fará a tradução do código-fonte em linguagem de máquina, é que vai determinar como os programas são implementados e como vão executar.
+
+Existem duas formas de realizar essa conversão: tradução e interpretação. É fundamental que se saiba e se entenda qual o processo de conversão usado na respectiva linguagem de programação.
+
+### Tradução
+Nesse processo de conversão, o programa escrito em uma linguagem de alto nível é traduzido para uma versão equivalente em linguagens de máquina, antes de ser executado. O processo de tradução pode ser executado em várias fases, que podem ser combinadas e executadas em simultaneidade. O processo de tradução é erroneamente chamado de compilação, que na verdade é uma de suas fases.
+
+As fases que compõem o tradutor, ou seja, iniciando na leitura do programa-fonte (linguagem de alto nível) e terminando com a geração do código executável (entendido pela máquina), são: Compilação, Montagem, Carga e Ligação:
+- **Compilador:** O compilador analisa o código-fonte e estando tudo OK, o converte para um código Assembly (da máquina hospedeira).
+
+- **Montador:** O montador traduz o código Assembly para o código de máquina intermediário (código-objeto), que não é executável pelo computador. o código-objeto pode ser relocável, ou seja, carregado em qualquer posição de memória ou absoluto, carregado em um endereço de memória específico. A opção realocável é mais comum e mais vantajosa.
+
+- **Ligador:** O ligado liga (ou linka) o código-objeto relocável com as rotinas bibliotecas (outros objetos, rotinas do SO, DLLs etc.), usadas nos códigos-fontes. Essa ligação gera o código executável.
+
+- **Carregador:** O carregador é que torna o código-objeto em relocável.
+
+#### Compilador
+É o elemento central do processo de tradução, responsável pelo custo de compilação, visto no modulo anterior. Em função dessa relevância, muitas vezes o processo como um todo é erroneamente chamado de compilação, uma vez que o ambiente integrado das linguagens atuais já integra todos os componentes (montador, compilador, carregador e ligador) quando necessário. O projeto da linguagem tem no compilador a sua figura central.
+
+Vamos entender cada fase da compilação:
+- **Análise léxica:** Identifica os tokens (elementos da linguagem), desconsidera partes do código-fonte, como espaços em branco e comentários e gera a Tabela de símbolos, com todos esses tokens, que são identificadores de variáveis, de procedimentos, de funções, comandos, expressões etc.
+
+- **Análise sintática:** Verifica se os tokens são estruturas sintáticas (exemplos: expressões e comandos) válidas, aplicando as regras gramaticais definidas no projeto da linguagem.
+
+- **Análise semântica:** Verifica se as estruturas sintáticas possuem sentido. Por exemplo, verifica se um identificador de variável ou constante é usado adequadamente, se operandos e operadores são compatíveis. Monta a árvore de derivação para formação das expressões.
+
+- **Gerador de código intermediário, otimizador de código e gerador de código:** Em distintas fase geram o programa-alvo ou o programa-objeto. O Gerador de código intermediário, contém toda a informação para gerar o código-objeto. Já o otimizador, tem por objetivo eliminar redundâncias do código intermediário e tornar o objeto mais enxuto e eficiente.
+
+- **Tratador de erros:** Em todas as fases existem erros: léxicos, sintáticos e semânticos. Um bom compilador apresenta uma boa tratativa de erros.
+
+- **Gerenciador da tabela de simbolos:** Mantém a tabela de símbolos atualizada a cada passo do compilador.
+
+As principais características dos compiladores são:
+- Gerar código-objeto mais otimizado.
+- Execução mais rápida que o processo de interpretação.
+- Traduz um mesmo comando apenas uma vez, mesmo que usado em várias partes do programa – tanto iterações como repetição de código.
+- Processo de correção de erros e depuração é mais demorado.
+- A programação final (código-objeto) é maior.
+- O programa-objeto gerado é dependente de plataforma — processador + SO (Sistema Operacional) — necessitando de um compilador diferente para cada família de processadores/sistema operacional.
+
+### Interpretação
+Na conversão por interpretação, cada comando do programa-fonte é traduzido e executado (um a um) imediatamente. O interpretador traduz um comando de cada vez e chama uma rotina para completar a sua execução.
+
+O interpretador é um programa que executa repetidamente a seguinte sequência:
+1. Obter a próxima instrução do código-fonte.
+2. Interpretar a instrução (conversão para comandos em linguagem de máquina).
+3. Executar a instrução.
+
+Perceba que o procedimento, acima descrito, é bastante similar àquele executado por computadores que implementam a máquina de Von Neumann, na execução de uma instrução, conforme a seguir:
+- Obter a próxima instrução.
+- CI → endereço da próxima instrução. CI = contador de instruções.
+- RI → instrução a ser executada. RI = registrador de instruções.
+- Decodificar a instrução.
+- Executar a instrução.
+
+Dentre as principais características do interpretador, podemos citar:
+- Atua a cada vez que o programa precisa ser executado.
+- Não produz programa-objeto persistente.
+- Não traduz instruções que nunca são executadas.
+- O resultado da conversão é instantâneo: resultado da execução do comando ou exibição de erro – interpretador puro.
+- Útil ao processo de depuração de código devido a mensagens de erros em tempo de execução (tanto análise sintática como semântica).
+- Execução mais lenta do que outros processos de tradução (compilação), pois toda vez que o mesmo programa é executado, os mesmos passos de interpretação são executados.
+- Consome menos memória.
+- O Código-fonte é portátil.
+- Não é gerado um código de máquina.
+- Pode executar o comando em alto nível diretamente ou gerar um código intermediário, que neste caso é interpretado por uma máquina virtual (VM). – Interpretador híbrido.
+- Se a máquina virtual foi desenvolvida para diferentes plataformas, temos a portabilidade do código-fonte. Este é o caso da linguagem Java.
+
+### Tradução X Interpretação
+#### Tradutores
+| Vantagens | Desvantagens |
+| --------- | ------------ |
+| Execução mais rápida | Várias etapas de conversão |
+| Permite estrutura de programas mais complexas | Programação final é maior, necessitando de mais memória para a sua execução |
+| Permite a otimização de código | Processo de correção de erros e depuração é mais demorado |
+
+#### Interpretadores
+| Vantagens | Desvantagens |
+| --------- | ------------ |
+| Depuração é mais simples | Execução do programa é mais lenta |
+| Consome menos memória | Estrutura de dados demasiado simples |
+| Resultado imediato do programa (ou parte dele) | Necessário fornecer o código fonte ao utilizador |
+
+### Sistemas Híbridos
+O processo híbrido de implementação de uma linguagem de programação combina a execução rápida dos tradutores (compiladores) com a portabilidade dos interpretadores. O segredo é a geração de um código intermediário mais facilmente interpretável, porém não preso a uma plataforma (SO/Hardware).
+
+Esse código intermediário não é específico para uma plataforma, possibilitando aos programas já compilados para esse código serem portados em diferentes plataformas, sem alterar e nem fazer nada. Para cada plataforma desejada devemos ter um interpretador desse código.
+
+## Referências
+BORGES, Luiz Eduardo. Python para Desenvolvedores. 2. ed. Rio de Janeiro: Edição do Autor, 2010.
+
+SEBESTA, R. W. Conceitos de Linguagens de Programação. Tradução de João Eduardo Nobrega Tortello. 11. ed. Porto Alegre: Bookman, 2018. Disponível na biblioteca virtual da Estácio.
+
+VAREJÃO, F. M. Linguagem de Programação: conceitos e técnicas. 2ª reimpressão. Rio de Janeiro: Elsevier, 2004.
+
+DIJKSTRA EW. A Discipline of Programming. Prentice Hall Inc;1976. 217.
