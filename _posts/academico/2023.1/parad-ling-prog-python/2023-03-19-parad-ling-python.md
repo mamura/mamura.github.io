@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Paradigmas e linguagem Python"
-tree: "Paradigmoas e linguagem Python"
+tree: "Paradigmas e linguagem Python"
 image: ''
 date:   2023-03-19 14:31:27
 tags:
