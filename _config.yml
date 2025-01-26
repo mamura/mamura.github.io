@@ -1,70 +1,74 @@
-# Site settings
-title: Mamura - Web Developer
-description: "Um blog sobre tecnologia e desenvolvimento web"
-baseurl: "" # for test: remove string '/space-jekyll-template' to ''
-url: "https://mamura.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
-
-# User settings
-username: Mamura
-user_title: Developer
-email: marcio.mota@gmail.com
-twitter_username: mamura
-github_username:  mamura
-gplus_username:  mamura
-linkedin_public_url: https://www.linkedin.com/in/marciomota-mamura # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
-#disqus_username: loremipsum
-profile_picture: https://64.media.tumblr.com/5af2d302eeee685f71ad8a7a21bdec87/40575cd88a172a71-6f/s1280x1920/b5608704429bd92414c776b4be1556054cbda0d7.jpg
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
+# Site
+name: "Mamura"
+title: "Mamura"
+description: >-
+  Cookbooks | receitas rápidas | artigos de TI
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: ""
+google_analytics: 'UA-46278016-1'
+disqus: 'demowebsite'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+include: ["_pages"]
 permalink: /:title/
 
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
+# Authors
+authors:
+  mamura:
+    name: Mamura
+    display_name: Mamura
+    gravatar: dfe1d0b0578ad95b4796e9900db7bc6762a317171e81de4468cefcb64ccaa05a
+    avatar: 'assets/images/avatar.png'
+    email: marcio.mota@gmail.com
+    web: https://www.mamura.github.io
+    twitter: https://twitter.com/mamura
+    description: "Programador web com mais de 15 anos de experiência."
 
-# Links to include in menu navigation
-links:
-  section_1:
-    - title: home
-      url: /
-      key_trigger: 1
-    - title: my posts
-      url: /posts
-      key_trigger: 2
-    - title: series
-      url: /series
-      key_trigger: 3
-    - title: tags
-      url: /tags
-      key_trigger: 4
-    - title: about me
-      url: /about
-      key_trigger: 5
-  section_2:
-    - title: github
-      url: http://www.github.com/mamura
-      new_tab: true
-      key_trigger: g
-    - title: twitter
-      url: http://www.twitter.com/mamura
-      key_trigger: t
-    - title: search
-      url: ""
-      key_trigger: s #WARNING: search only works with "s"
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
 
-# projects in header index
-projects:
-  - name: fluany
-    url: https://github.com/fluany/fluany
-  - name: vim-frontend
-    url: https://github.com/victorvoid/vim-frontend
-  - name: generator-capybara
-    url: https://github.com/victorvoid/generator-capybara 
+#Collections
+collections:
+  academico:
+    output: true
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+# Resume
+resume_avatar: "true"
+resume_name: "Marcio Mota"
+resume_title: "Fullstack | PHP | Nodejs | Java"
+resume_contact_email: "marcio.mota@gmail.com"
