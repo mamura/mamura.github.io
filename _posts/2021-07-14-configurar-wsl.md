@@ -6,8 +6,8 @@ categories: [cookbooks]
 tags: [recipe, wsl, localhost, homeserver, linux, ubuntu]
 image: 'assets/images/wsl.png'
 description: 'Configurando WSL em uma máquina Windows para programadores'
-featured: true
-hidden: true
+featured: false
+hidden: false
 date:   2021-07-14 00:06:31
 rating: 4
 ---
