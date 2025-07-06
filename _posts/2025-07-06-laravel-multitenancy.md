@@ -4,7 +4,7 @@ title:  "Criando um projeto Laravel 11 com suporte a Multitenancy"
 author: mamura
 categories: [cookbooks]
 tags: [recipe, laravel, multitenancy, sanctum, spatie]
-image: 'assets/images/nginx-https.jpg'
+image: 'assets/images/laravel-multitenancy.jpg'
 description: 'Montando um Homeserver'
 featured: true
 hidden: true
