@@ -1,0 +1,393 @@
+---
+title: "Curriculo"
+layout: resume
+permalink: "/curriculo.html"
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  
+    <!-- Google font typography settings - defined in _config.yml -->
+    {% if site.resume_theme == 'default' %}
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" type='text/css'>
+    {% endif %}
+  
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/resume.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+  </head>
+
+  <body class="theme-default">
+    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="telephone" content="+55 85981876535"/>
+        <meta itemprop="address" content="Rua Pedro Sampaio, 148. FOrtaleza-Ce | Brasil"/>
+    
+        <header class="page-header">
+            <img src="{{ site.baseurl }}/assets/images/avatar2.png" alt="my photo" class="avatar no-print" itemprop="image">
+        
+            <h1 class="header-name" itemprop="name">Marcio Mota</h1>
+
+            <div class="header-contact-info">
+                <p>
+                    Rua Pedro Sampaio, 148 - Fortaleza-Ce | Brasil • marcio.mota@gmail.com <br />
+                    +55 85 98187-6535 • @mamura
+                </p>
+            </div>
+
+            <div class="title-bar no-print">
+                <h2 class="header-title" itemprop="jobTitle">Fullstack | PHP | Node </h2>
+                <ul class="icon-links">
+                    <li class="icon-link-item">
+                        <a href="https://github.com/mamura" class="icon-link" itemprop="sameAs">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve" width="28">
+                            <path id="GitHub" fill-rule="evenodd" clip-rule="evenodd" fill="#D1CECC" d="M14.01,0C6.27,0-0.01,6.28-0.01,14.02
+                            c0,6.19,4.02,11.45,9.59,13.3c0.7,0.13,0.96-0.3,0.96-0.68c0-0.33-0.01-1.21-0.02-2.38c-3.9,0.85-4.72-1.88-4.72-1.88
+                            c-0.64-1.62-1.56-2.05-1.56-2.05c-1.27-0.87,0.1-0.85,0.1-0.85c1.41,0.1,2.15,1.44,2.15,1.44c1.25,2.14,3.28,1.52,4.08,1.16
+                            c0.13-0.91,0.49-1.52,0.89-1.87c-3.11-0.35-6.38-1.56-6.38-6.93c0-1.53,0.55-2.78,1.44-3.76C6.37,9.17,5.89,7.74,6.65,5.81
+                            c0,0,1.18-0.38,3.85,1.44c1.12-0.31,2.32-0.47,3.51-0.47c1.19,0.01,2.39,0.16,3.51,0.47c2.68-1.81,3.85-1.44,3.85-1.44
+                            c0.76,1.93,0.28,3.35,0.14,3.71c0.9,0.98,1.44,2.23,1.44,3.76c0,5.38-3.28,6.57-6.4,6.92c0.5,0.43,0.95,1.29,0.95,2.6
+                            c0,1.87-0.02,3.39-0.02,3.84c0,0.37,0.25,0.81,0.96,0.67c5.56-1.86,9.58-7.11,9.58-13.3C28.03,6.28,21.75,0,14.01,0z"/>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="icon-link-item">
+                        <a href="https://twitter.com/mamura" class="icon-link" itemprop="sameAs">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve" width="28">
+                            <path id="Twitter" fill="#D1CECC" d="M14,0C6.27,0,0,6.27,0,14s6.27,14,14,14s14-6.27,14-14S21.73,0,14,0z M20.69,10.57
+                            c0.01,0.15,0.01,0.3,0.01,0.45c0,4.56-3.47,9.82-9.82,9.82c-1.95,0-3.76-0.57-5.29-1.55c0.27,0.03,0.54,0.05,0.82,0.05
+                            c1.62,0,3.11-0.55,4.29-1.48c-1.51-0.03-2.79-1.03-3.23-2.4c0.21,0.04,0.43,0.06,0.65,0.06c0.31,0,0.62-0.04,0.91-0.12
+                            c-1.58-0.32-2.77-1.71-2.77-3.39c0-0.01,0-0.03,0-0.04c0.47,0.26,1,0.41,1.56,0.43c-0.93-0.62-1.54-1.68-1.54-2.87
+                            c0-0.63,0.17-1.23,0.47-1.74c1.7,2.09,4.25,3.46,7.12,3.61c-0.06-0.25-0.09-0.52-0.09-0.79c0-1.91,1.55-3.45,3.45-3.45
+                            c0.99,0,1.89,0.42,2.52,1.09c0.79-0.15,1.53-0.44,2.19-0.84c-0.26,0.81-0.81,1.48-1.52,1.91c0.7-0.08,1.36-0.27,1.98-0.54
+                            C21.95,9.47,21.37,10.08,20.69,10.57z"/>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="icon-link-item">
+                        <a href="https://www.linkedin.com/in/marciomota-mamura" class="icon-link" itemprop="sameAs">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve" width="28">
+                            <path id="LinkedIn" fill="#D1CECC" d="M18.82,15.09v3.61h-2.09v-3.37c0-0.85-0.3-1.42-1.06-1.42c-0.58,0-0.92,0.39-1.07,0.77
+                            c-0.06,0.13-0.07,0.32-0.07,0.51v3.52h-2.09c0,0,0.03-5.71,0-6.3h2.09v0.89c0,0.01-0.01,0.01-0.01,0.02h0.01V13.3
+                            c0.28-0.43,0.77-1.04,1.89-1.04C17.79,12.25,18.82,13.16,18.82,15.09z M9.18,18.7h2.09v-6.3H9.18V18.7z M10.24,9.36
+                            c-0.72,0-1.19,0.47-1.19,1.09c0,0.61,0.45,1.09,1.16,1.09h0.01c0.73,0,1.18-0.48,1.18-1.09C11.39,9.84,10.95,9.36,10.24,9.36z
+                            M28,14c0,7.73-6.27,14-14,14S0,21.73,0,14S6.27,0,14,0S28,6.27,28,14z M20.93,8.02c0-0.55-0.46-1-1.02-1H8.09
+                            c-0.57,0-1.02,0.45-1.02,1v11.96c0,0.55,0.46,1,1.02,1h11.82c0.57,0,1.02-0.45,1.02-1V8.02z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="executive-summary" itemprop="description">
+                <p>
+                    Líder Técnico Experiente com histórico comprovado na Fundação Hemominas, hábil em navegar por desafios técnicos e aprimorar a eficiência do sistema. Destacou-se em Metodologia Ágil e desenvolvimento PHP, melhorando significativamente os resultados do projeto. Hábil em promover o crescimento da equipe e otimizar o desempenho do produto, demonstrando liderança e conhecimento técnico.
+                </p>
+            </div>
+
+            <a href="mailto:marcio.mota@gmail.com" class="contact-button no-print" itemprop="email">Contato</a>
+        </header>
+
+        <section class="content-section">
+            <header class="section-header">
+                <h2>Experiências</h2>
+            </header>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">IEBT Innovation</h3>
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Fev, 2025 - Mai, 2025</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Atuei no desenvolvimento do sistema de empréstimo consignado para o PicPay.</li>
+                        <li>Trabalhei com arquitetura baseada em Clean Code e Laravel na camada de apresentação (API).</li>
+                        <li>Integração do sistema com o ecossistema do PicPay.</li>
+                        <li>Frontend desenvolvido em React, como uma aplicação separada (SPA).</li>
+                        <li>Responsável pelo módulo de comissionamento, incluindo regras de negócio, persistência, validações e endpoints de integração.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Laravel, MySQL, Docker, React, Github</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Fundação Hemominas</h3>
+                <h4 class="resume-item-details" itemprop="description">Lider Técnico &bull; Set, 2022 - Nov, 2024</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Guiei a equipe através de obstáculos técnicos com conhecimento dos detalhes do sistema.</li>
+                        <li>Investiguei problemas de software solucionando problemas e analisando sistemas</li>
+                        <li>Estive em contato com a alta liderança para discutir riscos e oportunidades de projeto, operacionais e estratégicos.</li>
+                        <li>Realizei solução de problemas de aplicativos relatados por clientes ou usuários.</li>
+                        <li>Revisei os documentos de requisitos quanto à integridade e precisão antes da implementação.</li>
+                        <li>Desenvolvi estratégias técnicas para melhorar a satisfação e a eficiência do cliente.</li>
+                        <li>Forneci orientação técnica aos membros da equipe sobre decisões de design de produtos, práticas de codificação, metodologias de teste e procedimentos de depuração.</li>
+                        <li>Orientei desenvolvedores juniores em linguagens de programação como PHP, Javascript, HTML5, CSS3, etc.</li>
+                        <li>Participei de reuniões do Agile Scrum para revisar o progresso dos sprints e discutir os bloqueios.</li>
+                        <li>Otimizei aplicativos existentes refatorando código ou implementando novas tecnologias</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Laravel, MySQL, Oracle, Docker, Git, Jira</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Leoa</h3>
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Out, 2020 - Nov, 2022</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Implementando as novas regras da receita federal todos os anos para a declaração do 
+                            imposto de renda.</li>
+                        <li>Investiguei problemas de software solucionando problemas e analisando sistemas</li>
+                        <li>Remodelagem do sistma interno de operações.</li>
+                        <li>Criação de um novo produto para afiliados</li>
+                    </ul>
+
+                    <span> Tecnologias:  PHP, YII, MySQL, Docker</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">RB Serviços</h3>
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Mar, 2021 - Jul, 2022</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Mantendo o sistema financeiro da empresa. (Sistema legado)</li>
+                        <li>Desenvolvendo a API para integração com aplicações externas.</li>
+                        <li>Propondo novas arquiteturas dos sistemas e processos de desenvolvimento.</li>
+                        <li>Especializando funcionalidades das novas regras de negócios que apareciam para cada 
+                            novo fornecedor ou cliente.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Node, ExtJs, MySQL, Laravel</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">PrimeIT</h3>
+                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Mar, 2022 - Mai, 2022</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Implementando um programa javascript que cuidava de diversos requisitos de acessibilide dos sites do Ministério da Saúde de Portugal.</li>
+                        <li>Nessa ocasião atuei como analista de sistemas e programador javascript.</li>
+                        <li>Desenvolvi a camada base do EasyApp, que pegava os módulos de cada requisito de acessibilidade e incorporava nos sites do ministério da saúde.</li>
+                    </ul>
+
+                    <span> Tecnologias: VanilaJs, Wordpress</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Prefeitura de Sobral</h3>
+                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Jun, 2018 - Fev, 2019</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Implementando sistemas de gestão pública na área corporativa, atuando principalmente na área de finanças, educação e saúde.</li>
+                        <li>Liderando brainstormings e decisões de arquitetura de software, fornecendo sugestões técnicas e incentivando os desenvolvedores a projetar as melhores soluções.</li>
+                        <li> Liderando o desenvolvimento do sistema de licitações e gestão de contratos. Levantando os requisitos do sistema com os usuários e especificando o processo para o sistema.</li>
+                        <li>Criação de um processo de desenvolvimento de software que agiliza as entregas de produtos.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Laravel, Java, Primefaces, Postgresql</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Prefeitura de Fortaleza</h3>
+                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Jun, 2018 - Fev, 2019</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Implementando sistemas de gestão pública na área corporativa, atuando principalmente na área de finanças, educação e saúde.</li>
+                        <li>Liderando brainstormings e decisões de arquitetura de software, fornecendo sugestões técnicas e incentivando os desenvolvedores a projetar as melhores soluções.</li>
+                        <li> Liderando o desenvolvimento do sistema de licitações e gestão de contratos. Levantando os requisitos do sistema com os usuários e especificando o processo para o sistema.</li>
+                        <li>Criação de um processo de desenvolvimento de software que agiliza as entregas de produtos.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Laravel, Java, Primefaces, Postgresql</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Grupo Rabelo</h3>
+                <h4 class="resume-item-details" itemprop="description">Analista de E-commerce &bull; 2012 - 2013</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Acompanhei o progresso de projetos por meio do uso de sistemas de tickets como Jira e Trello, ao mesmo tempo em que fornecia atualizações de status.</li>
+                        <li>Projetei e implementei bancos de dados (Oracle, PostgreSQL, MySQL, MariaDB) para vários sites e sistemas internos de gestão, com ênfase na otimização de desempenho.</li>
+                        <li>Auxiliei no processo de integração de novos desenvolvedores, ajudando-os a se acostumarem com a base de código existente.</li>
+                        <li>Forneci suporte técnico aos clientes sobre problemas ou dúvidas no site por telefone ou e-mail.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Slim, Magento Postgresql</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Sistema Verdes Mares de Comunicação</h3>
+                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; 2010 - 2012</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Realizei teste funcionais de aplicativos de software para garantir a operação adequada.</li>
+                        <li>Forneci orientação técnica sobre novas implementações e melhorias do sistema.</li>
+                        <li>Realizei atividades de análise, design e desenvolvimento de sistemas em suporte a processos de negócios.</li>
+                        <li>Forneci suporte a aplicativos e solução de problemas complexos de aplicativos de software.</li>
+                        <li>Utilizei princípios da metodologia Agile durante todo o ciclo de vida de desenvolvimento de software.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Doctrine, CodeIgniter, MySQL</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">NOIX Internet</h3>
+                <h4 class="resume-item-details" itemprop="description">Gerente de Desenvolvimento &bull; 2008 - 2010</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Colaborei com os gerentes comerciais com a definção de escopos e objetivos para os produtos e novas funcionalidades.</li>
+                        <li>Criei planos detalhados de projetos incluindo timelines, recursos necessários, etc.</li>
+                        <li>Garanti, junto a equipe de desenvolvimento, a conformidade com as melhores práticas do setor, como Metodologia Ágil e princípios SCRUM.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Magento, Joomla, Javascript, Postgresql</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Tribunal de Contas do Ceará</h3>
+                <h4 class="resume-item-details" itemprop="description">PHP Developer &bull; 2005 - 2009</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Desenvolvi, testei e mantive aplicativos web usando PHP, MySQL, HTML5, CSS3 e JavaScript.</li>
+                        <li>Criei sites dinâmicos que interagem com os usuários coletando dados de formulários, bancos de dados e APIs.</li>
+                        <li>Projetei interfaces de usuário para aplicativos web utilizando tecnologias HTML5, CSS3, jQuery e AJAX.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Symfony, Postgresql, Wordpress</span>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Prefeitura Municipal de Fortaleza</h3>
+                <h4 class="resume-item-details" itemprop="description">Fullstack PHP Developer &bull; 2002 - 2005</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Colaborei com outros desenvolvedores para projetar APIs de serviços web RESTful.</li>
+                        <li>Gerenciei a implantação de aplicativos web em vários servidores.</li>
+                        <li>Colaborei com outros desenvolvedores para projetar APIs de serviços web RESTful.</li>
+                        <li>Foram resolvidos problemas de compatibilidade entre navegadores com código CSS e JavaScript.</li>
+                        <li>Escalabilidade aprimorada de aplicativos por meio da otimização de consultas e refatoração da base de código.</li>
+                        <li>Esquemas de banco de dados projetados para armazenar grandes volumes de dados de forma eficiente.</li>
+                    </ul>
+
+                    <span> Tecnologias: PHP, Wordpress, Postgresql, Oracle, Zend Framework, Java, ASP</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <header class="section-header">
+              <h2>Educação</h2>
+            </header>
+            
+            <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+              <h3 class="resume-item-title" itemprop="name">Faculdades Estácio</h3>
+              <h4 class="resume-item-details group" itemprop="description">Análise e Desenvolvimento de Sistemas &bull; 2018 - 2020</h4>
+              <h5 class="resume-item-details award-title" itemprop="description"></h5>
+              <p class="resume-item-copy" itemprop="description">
+                <ul class="resume-item-list">
+                  
+                </ul>
+    
+              <p class="resume-item-copy"></p>
+            </div>
+        </section>
+
+        <section class="content-section">
+
+            <header class="section-header">
+                <h2>Cursos e Formações</h2>
+            </header>
+            <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
+                <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
+                <h4 class="resume-item-details" itemprop="description">Ferramentas essenciais para Devs &bull; 2025</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Git e GitHub: compartilhando e colaborando em projetos</li>
+                        <li>Git e GitHub: dominando controle de versão de código</li>
+                        <li>Terminal: aprenda comandos para executar tarefas</li>
+                        <li>Windows Prompt: utilizando o CMD</li>
+                        <li>Expressões Regulares: faça buscas, validações e substituições de textos</li>
+                        <li>Swagger: documentando suas APIs</li>
+                        <li>NGINX: servidor Web, Proxy Reverso e API Gateway</li>
+                        <li>NGINX Parte 2: performance, FastCGI e HTTPS</li>
+                        <li>VSCode: aprendendo dicas e truques</li>
+                        <li>ChatGPT e programação: aumente sua produtividade</li>
+                        <li>ChatGPT: otimizando a qualidade dos resultados</li>
+                        <li>GitHub Copilot e ChatGPT: impulsionando seu desenvolvimento com IA</li>
+                        <li>Padrões de API: do HTTP à modelagem de APIs</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
+                <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
+                <h4 class="resume-item-details" itemprop="description">Formação Tech Lead &bull; 2024</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>Profissão Tech Lead: conhecendo a liderança técnica</li>
+                        <li>Tech Lead: construindo práticas e rotinas de gestão</li>
+                        <li>Tech Lead: gerindo pessoas e guiando para alta performance</li>
+                        <li>Tech Lead: desenvolvendo habilidades de comunicação</li>
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
+                <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
+                <h4 class="resume-item-details" itemprop="description">Formação Aprenda a programar em JavaScript com foco no back-end &bull; 2022</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>JavaScript: utilizando tipos, variáveis e funções</li>
+                        <li>JavaScript: conhecendo arrays</li>
+                        <li>JavaScript: conhecendo objetos</li>
+                        <li>JavaScript com Node.js: criando sua primeira biblioteca</li>
+                        <li>JavaScript: programação Orientada a Objetos</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
+                <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
+                <h4 class="resume-item-details" itemprop="description">Aprenda a programar em PHP &bull; 2022</h4>
+                <p class="resume-item-copy">
+                    <ul>
+                        <li>PHP: conceitos, lidando com dados, loops e mais</li>
+                        <li>Avançando com PHP: Arrays, Strings, Função e Web</li>
+                        <li>PHP: manipulando coleções com Arrays</li>
+                        <li>PHP Strings: manipulando textos com PHPe</li>
+                        <li>Orientação a Objetos com PHP: Classes, métodos e atributos</li>
+                        <li>Avançando com Orientação a Objetos com PHP: Herança, Polimorfismo e Interfaces</li>
+                        <li>PHP I/O: trabalhando com arquivos e streams</li>
+                        <li>PHP Exceptions: tratamento de erros</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p class="footer-line">Feito por <a href="http://twitter.com/mamura">@mamura</a>. </p>
+          </footer>
+    </div>
+  </body>
+  </html>
