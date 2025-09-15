@@ -7,7 +7,7 @@ tags: [recipe, nginx, localhost, homeserver, linux, ubuntu, https, tls]
 image: 'assets/images/nginx-https.jpg'
 description: 'Montando um Homeserver'
 featured: false
-hidden: true
+hidden: false
 date:   2025-01-20 00:06:31
 rating: 4.5
 ---
