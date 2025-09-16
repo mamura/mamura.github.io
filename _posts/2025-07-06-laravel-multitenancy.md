@@ -6,8 +6,8 @@ categories: [cookbooks]
 tags: [recipe, laravel, multitenancy, sanctum, spatie]
 image: 'assets/images/laravel-multitenancy.png'
 description: 'Laravel Multitenancy'
-featured: true
-hidden: true
+featured: false
+hidden: false
 date:   2025-07-06 00:06:31
 rating: 5
 ---
