@@ -55,13 +55,14 @@ composer require --dev pestphp/pest:^3.0
 
 ## Entendendo faixas de versão (SemVer)
 
-{:.table .table-striped}| **Sintaxe** | **Permite...** | **Exemplo de intervalo** |
+| **Sintaxe** | **Permite...** | **Exemplo de intervalo** |
 | :-----------: | :---------------------------------: | :------------------------: |
 | `^1.2` | minor/patch (mantém major) | `>=1.2.0 <2.0.0` |
 | `~1.2` | patch dentro do minor | `>=1.2.0 <1.3.0` |
 | `>=1.2` | qualquer versão a partir de `1.2` | `>=1.2.0` |
 | `1.2.*` | qualquer patch da `1.2` | `>=1.2.0 <1.3.0` |
 | `1.2.3` | versão exata (evite em libs) | `==1.2.3` |
+{:.table .table-striped}
 
 ## Estabilidade
 - Sufixos: `@RC`, `@beta`, `@alpha`, `@dev` (quanto mais à direita, menos estável).
