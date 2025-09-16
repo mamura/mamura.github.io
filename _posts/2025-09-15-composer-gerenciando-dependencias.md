@@ -14,6 +14,7 @@ rating: 5
 Como escolher versões, instalar, atualizar, remover pacotes e manter seu projeto saudável com comandos, fluxos e dicas de troubleshooting.
 
 > **Para quem é?** Devs **PHP** que já usam Composer no dia a dia e querem dominar versionamento, atualização segura e diagnóstico de conflitos (com exemplos “mão na massa”).
+
 # Por que isso importa
 Um `composer.json` bem definido e um `composer.lock` versionado são a base de ambiente reprodutíveis. Saber gerenciar dependências evita que um simples `update` quebre a aplicação ou que você fique preso a versões antigas. Além disso, entender faixas de versão (SemVer) e o solver do Composer ajuda a prever impactos com confiança.
 
@@ -36,6 +37,7 @@ Um `composer.json` bem definido e um `composer.lock` versionado são a base de a
 }
 ```
 > **Dica:** `"config.sort-packages": true` mantém o `composer.json` organizado automaticamente.
+
 # Adicionando pacotes
 - **Produção:**
 ```bash
@@ -53,13 +55,14 @@ composer require --dev pestphp/pest:^3.0
 
 ## Entendendo faixas de versão (SemVer)
 
-| **Sintaxe** | **Permite...**                    | **Exemplo de intervalo** |
+| **Sintaxe** | **Permite...** | **Exemplo de intervalo** |
 | ----------- | --------------------------------- | ------------------------ |
-| `^1.2`      | minor/patch (mantém major)        | `>=1.2.0 <2.0.0`         |
-| `~1.2`      | patch dentro do minor             | `>=1.2.0 <1.3.0`         |
-| `>=1.2`     | qualquer versão a partir de `1.2` | `>=1.2.0`                |
-| `1.2.*`     | qualquer patch da `1.2`           | `>=1.2.0 <1.3.0`         |
-| `1.2.3`     | versão exata (evite em libs)      | `==1.2.3`                |
+| `^1.2` | minor/patch (mantém major) | `>=1.2.0 <2.0.0` |
+| `~1.2` | patch dentro do minor | `>=1.2.0 <1.3.0` |
+| `>=1.2` | qualquer versão a partir de `1.2` | `>=1.2.0` |
+| `1.2.*` | qualquer patch da `1.2` | `>=1.2.0 <1.3.0` |
+| `1.2.3` | versão exata (evite em libs) | `==1.2.3` |
+
 ## Estabilidade
 - Sufixos: `@RC`, `@beta`, `@alpha`, `@dev` (quanto mais à direita, menos estável).
 - Projeto inteiro:
