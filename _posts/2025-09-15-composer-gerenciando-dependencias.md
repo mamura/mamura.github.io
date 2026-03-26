@@ -53,9 +53,7 @@ composer require --dev pestphp/pest:^3.0
 > 	- Sempre especifique *faixas de versão* (ex.: ^1.2) em vez de uma versão fixa.
 > 	- Commits atômicos: "require X", depois "ajuste código para X".
 
-## Entendendo faixas de versão (SemVer)
-
-| **Sintaxe** | **Permite...** | **Exemplo de intervalo** |
+## Entendendo faixas de versão (SemVer| **Sintaxe** | **Permite...** | **Exemplo de intervalo** |
 | :-----------: | :---------------------------------: | :------------------------: |
 | `^1.2` | minor/patch (mantém major) | `>=1.2.0 <2.0.0` |
 | `~1.2` | patch dentro do minor | `>=1.2.0 <1.3.0` |
