@@ -7,8 +7,8 @@ tags: [artigo, php, cookbook, composer]
 image: 'assets/images/composer.png'
 description: 'Composer - Gerenciando dependências'
 date:   2025-09-16 06:08:31
-featured: true
-hidden: true
+featured: false
+hidden: false
 rating: 5
 ---
 Como escolher versões, instalar, atualizar, remover pacotes e manter seu projeto saudável com comandos, fluxos e dicas de troubleshooting.

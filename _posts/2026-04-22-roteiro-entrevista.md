@@ -6,8 +6,8 @@ categories: [cookbooks]
 tags: [recipe, entrevista, roteiro, dica, emprego, programador, senior]
 image: 'assets/images/roteiro-entrevista.jpg'
 description: 'Como explicar arquitetura complexa em entrevista sem mostrar código'
-featured: false
-hidden: false
+featured: true
+hidden: true
 date:   2026-04-20 13:06:31
 rating: 5
 ---
