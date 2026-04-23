@@ -8,7 +8,7 @@ image: 'assets/images/roteiro-entrevista.jpg'
 description: 'Como explicar arquitetura complexa em entrevista sem mostrar código'
 featured: true
 hidden: true
-date:   2026-04-22 13:06:31
+date: 2026-04-22 13:06:31
 rating: 5
 ---
 Explicar arquitetura em uma entrevista técnica pode ser um desafio. Principalmente quando você não pode expor código por questões de confidencialidade.
