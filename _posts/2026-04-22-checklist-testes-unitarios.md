@@ -8,7 +8,7 @@ image: 'assets/images/checklist.jpg'
 description: 'Checklist de testes de unidade com Pest para Jobs & Services no Laravel'
 featured: true
 hidden: true
-date: 2026-04-22 13:06:31
+date: 2026-04-25 16:08:44
 rating: 5
 ---
 Testar uma aplicação Laravel vai muito além de verificar se uma rota retorna status 200.
