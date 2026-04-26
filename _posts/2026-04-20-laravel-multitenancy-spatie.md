@@ -2,7 +2,7 @@
 layout: post
 title:  "Multitenancy no Laravel com Spatie e Sanctum (Database por Tenant)"
 author: mamura
-categories: [cookbooks]
+categories: [artigos]
 tags: [recipe, laravel, multitenancy, sanctum, spatie]
 image: 'assets/images/laravel-multitenancy.png'
 description: 'Multitenancy no Laravel com Spatie e Sanctum (Database por Tenant)'

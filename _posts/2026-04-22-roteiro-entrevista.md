@@ -2,7 +2,7 @@
 layout: post
 title:  "Roteiro entrevista"
 author: mamura
-categories: [cookbooks]
+categories: [artigos]
 tags: [recipe, entrevista, roteiro, dica, emprego, programador, senior]
 image: 'assets/images/roteiro-entrevista.jpg'
 description: 'Como explicar arquitetura complexa em entrevista sem mostrar código'
