@@ -9,41 +9,41 @@ permalink: "/curriculo.html"
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
+
     <!-- Google font typography settings - defined in _config.yml -->
     {% if site.resume_theme == 'default' %}
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" type='text/css'>
     {% endif %}
-  
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
+
+    <meta name="description" content="Desenvolvedor Fullstack com experiência em React, Next.js, TypeScript, PHP, Laravel, APIs REST, dashboards, sistemas corporativos e arquitetura modular.">
+
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/resume.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
-  </head>
+</head>
 
-  <body class="theme-default">
+<body class="theme-default">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="telephone" content="+55 85981876535"/>
-        <meta itemprop="address" content="Rua Pedro Sampaio, 148. FOrtaleza-Ce | Brasil"/>
-    
+        <meta itemprop="address" content="Rua Pedro Sampaio, 148. Fortaleza-CE | Brasil"/>
+
         <header class="page-header">
             <img src="{{ site.baseurl }}/assets/images/avatar3.png" alt="my photo" class="avatar no-print" itemprop="image">
-        
+
             <h1 class="header-name" itemprop="name">Marcio Mota</h1>
 
             <div class="header-contact-info">
                 <p>
-                    Rua Pedro Sampaio, 148 - Fortaleza-Ce | Brasil • marcio.mota@gmail.com <br />
+                    Rua Pedro Sampaio, 148 - Fortaleza-CE | Brasil • marcio.mota@gmail.com <br />
                     +55 85 98187-6535 • @mamura
                 </p>
             </div>
 
             <div class="title-bar no-print">
-                <h2 class="header-title" itemprop="jobTitle">Fullstack | PHP | Node </h2>
+                <h2 class="header-title" itemprop="jobTitle">Fullstack Developer | React | Next.js | TypeScript | PHP/Laravel</h2>
                 <ul class="icon-links">
                     <li class="icon-link-item">
                         <a href="https://github.com/mamura" class="icon-link" itemprop="sameAs">
@@ -59,7 +59,7 @@ permalink: "/curriculo.html"
                             </svg>
                         </a>
                     </li>
-                
+
                     <li class="icon-link-item">
                         <a href="https://twitter.com/mamura" class="icon-link" itemprop="sameAs">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -74,7 +74,7 @@ permalink: "/curriculo.html"
                             </svg>
                         </a>
                     </li>
-                
+
                     <li class="icon-link-item">
                         <a href="https://www.linkedin.com/in/marciomota-mamura" class="icon-link" itemprop="sameAs">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -93,16 +93,10 @@ permalink: "/curriculo.html"
 
             <div class="executive-summary" itemprop="description">
                 <p>
-                    Desenvolvedor PHP Sênior com mais de 20 anos de experiência em sistemas corporativos de alta criticidade, atuando com manutenção e evolução de aplicações legadas e desenvolvimento de novas soluções.
+                    Desenvolvedor Fullstack com forte experiência em aplicações web, atuando principalmente com React, Next.js, TypeScript, PHP e Laravel. Experiência na construção de interfaces administrativas, SPAs, dashboards, consumo de APIs REST, integração frontend/backend, componentização, autenticação, Docker e arquitetura modular.
                 </p>
                 <p>
-                    Experiência sólida com PHP (7.x e 8.x), bancos relacionais (Oracle, MySQL e PostgreSQL) e construção de queries SQL complexas e otimizadas para ambientes de alta volumetria.
-                </p>
-                <p>
-                    Atuação em projetos com arquitetura modular, integração entre sistemas e definição de soluções técnicas, com forte foco em performance, estabilidade e qualidade.
-                </p>
-                <p>
-                    Experiência com Symfony, APIs REST e ambientes corporativos, além de atuação remota com alta autonomia.
+                    Atuo desde a concepção técnica até a entrega, com foco em código limpo, organização de componentes, performance, manutenibilidade e boa experiência do usuário. Também possuo experiência como líder técnico, apoiando decisões de arquitetura, revisão de código, organização de entregas e evolução de sistemas legados.
                 </p>
             </div>
 
@@ -111,278 +105,334 @@ permalink: "/curriculo.html"
 
         <section class="content-section">
             <header class="section-header">
+                <h2>Competências principais</h2>
+            </header>
+
+            <div class="resume-item">
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>React, Next.js, JavaScript e TypeScript.</li>
+                        <li>Componentização, props, estados, hooks, composição de interfaces e organização de componentes reutilizáveis.</li>
+                        <li>Consumo de APIs REST, autenticação, tratamento de erros, integração frontend/backend e fluxo de dados em aplicações web.</li>
+                        <li>Tailwind CSS, HTML, CSS, responsividade e construção de dashboards administrativos.</li>
+                        <li>PHP, Laravel, arquitetura modular, APIs, sistemas legados e regras de negócio complexas.</li>
+                        <li>Docker, Git, GitHub, MySQL, PostgreSQL, Oracle, MongoDB e Redis.</li>
+                        <li>Clean Code, refatoração, testes automatizados, revisão de código e liderança técnica.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <header class="section-header">
+                <h2>Projetos em destaque</h2>
+            </header>
+
+            <div class="resume-item">
+                <h3 class="resume-item-title">Bem Pertim</h3>
+                <h4 class="resume-item-details">Aplicação web com Next.js, React, TypeScript e Tailwind CSS</h4>
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>Desenvolvimento de aplicação web responsiva voltada para descoberta de negócios locais.</li>
+                        <li>Construção de interface pública com Next.js, componentização em React e estilização com Tailwind CSS.</li>
+                        <li>Implementação de mapa interativo, layout mobile-first, fluxo inicial de cadastro de empresas e deploy na Vercel.</li>
+                    </ul>
+
+                    <span>Tecnologias: Next.js, React, TypeScript, Tailwind CSS, Vercel, Docker</span>
+                </div>
+            </div>
+
+            <div class="resume-item">
+                <h3 class="resume-item-title">Floresta</h3>
+                <h4 class="resume-item-details">Sistema corporativo com Laravel, Next.js e arquitetura modular</h4>
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>Desenvolvimento de sistema corporativo com backend Laravel e frontend Next.js organizado em módulos.</li>
+                        <li>Criação de interfaces administrativas, dashboards, filtros, autenticação e consumo de APIs REST.</li>
+                        <li>Integração com sistemas legados, bancos relacionais e serviços internos, mantendo foco em manutenibilidade e evolução gradual.</li>
+                    </ul>
+
+                    <span>Tecnologias: Next.js, React, TypeScript, Laravel, Docker, MySQL, PostgreSQL, MongoDB</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <header class="section-header">
                 <h2>Experiências</h2>
             </header>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Dr. Consulta</h3>
-                <h4 class="resume-item-details" itemprop="description">
-                    Senior PHP Developer (AMS) &bull; Out, 2025 - Atual
-                </h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer (AMS) &bull; Out, 2025 - Mar, 2026</h4>
+                <div class="resume-item-copy">
                     <ul>
                         <li>Atuação em suporte AMS (Application Management Services), realizando atendimentos de nível N2 e N3 em sistemas corporativos críticos.</li>
                         <li>Manutenção e evolução de sistemas legados, incluindo correções, melhorias e implementação de novas funcionalidades.</li>
-                        <li>Participação em múltiplos projetos estratégicos como Floresta, S2 (sistema legado), Sensrit e plataforma de Assinatura Digital.</li>
+                        <li>Participação em múltiplos projetos estratégicos como Floresta, S2, Sensrit e plataforma de Assinatura Digital.</li>
+                        <li>Criação e evolução de interfaces administrativas e dashboards com Next.js, React e TypeScript.</li>
+                        <li>Integração entre frontend e APIs REST, com foco em fluxo de dados, estados de tela, filtros, paginação e tratamento de erros.</li>
                         <li>Investigação e resolução de incidentes em produção com foco em performance, estabilidade e integridade dos dados.</li>
-                        <li>Construção e otimização de queries SQL em bancos relacionais, incluindo Oracle.</li>
-                        <li>Atuação com integração entre sistemas e APIs, garantindo consistência e confiabilidade dos dados.</li>
-                        <li>Colaboração com times multidisciplinares na análise de problemas e definição de soluções técnicas.</li>
+                        <li>Construção e otimização de queries SQL em bancos relacionais, incluindo Oracle e MySQL.</li>
                         <li>Atuação remota com autonomia na condução de demandas críticas e priorização de incidentes.</li>
                     </ul>
 
-                    <span>
-                        Tecnologias: PHP, Laravel, Oracle, MySQL, MongoDB, Docker, APIs REST, SQL
-                    </span>
-                </p>
+                    <span>Tecnologias: React, Next.js, TypeScript, PHP, Laravel, Oracle, MySQL, MongoDB, Docker, APIs REST, SQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Zerodox</h3>
                 <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Mai, 2025 - Out, 2025</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Atuei na manutenção e evolução de sistema legado em PHP, garantindo estabilidade e continuidade operacional.</li>
-                        <li>Implementei novas funcionalidades e melhorias evolutivas no sistema de gestão de documentos.</li>
-                        <li>Realizei otimizações de performance em processamento e consultas SQL.</li>
-                        <li>Integração com serviços externos (AWS S3, OCR) e APIs internas.</li>
-                        <li>Refatoração de componentes Vue 2 visando melhoria de performance e manutenibilidade.</li>
+                        <li>Manutenção e evolução de sistema legado em PHP, garantindo estabilidade e continuidade operacional.</li>
+                        <li>Implementação de novas funcionalidades e melhorias evolutivas no sistema de gestão de documentos.</li>
+                        <li>Refatoração de componentes Vue 2 visando melhoria de performance, organização de código e manutenibilidade.</li>
+                        <li>Integração com serviços externos, incluindo AWS S3, OCR e APIs internas.</li>
+                        <li>Otimização de consultas SQL, processamento de arquivos e fluxos de documentos.</li>
                         <li>Aumento da cobertura de testes em sistema legado.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Laravel, MySQL, Docker, Vuejs, ElasticSearch, Github</span>
-                </p>
+                    <span>Tecnologias: PHP, Laravel, MySQL, Docker, Vue.js, Elasticsearch, GitHub, AWS S3, OCR</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">IEBT Innovation</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Fev, 2025 - Mai, 2025</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior Fullstack Developer &bull; Fev, 2025 - Mai, 2025</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Desenvolvimento de sistema de empréstimo consignado em ambiente corporativo.</li>
-                        <li>Construção de APIs com foco em integração com ecossistema do PicPay.</li>
-                        <li>Implementação de regras de negócio complexas no módulo de comissionamento.</li>
-                        <li>Atuação com arquitetura baseada em Clean Code e separação de responsabilidades.</li>
+                        <li>Atuação no desenvolvimento de sistema de empréstimo consignado em ambiente corporativo.</li>
+                        <li>Desenvolvimento e manutenção de APIs em Laravel, seguindo boas práticas de arquitetura, validação e separação de responsabilidades.</li>
+                        <li>Trabalho em aplicação frontend com React, estruturada como SPA separada da API.</li>
+                        <li>Implementação de integrações entre frontend e backend, consumo de endpoints, tratamento de estados e regras de negócio.</li>
+                        <li>Responsabilidade pelo módulo de comissionamento, incluindo regras, persistência, validações e endpoints de integração.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Laravel, MySQL, Docker, React, Github</span>
-                </p>
+                    <span>Tecnologias: React, JavaScript, PHP, Laravel, MySQL, Docker, GitHub</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Fundação Hemominas</h3>
-                <h4 class="resume-item-details" itemprop="description">Lider Técnico &bull; Set, 2022 - Nov, 2024</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Líder Técnico / Fullstack Developer &bull; Set, 2022 - Nov, 2024</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Atuação como líder técnico em sistema corporativo crítico com banco Oracle.</li>
-                        <li>Análise e otimização de queries SQL em ambiente de alta volumetria.</li>
-                        <li>Investigação e resolução de problemas em produção com foco em performance e estabilidade.</li>
-                        <li>Evolução de sistemas legados garantindo integridade e continuidade operacional.</li>
-                        <li>Definição de estratégias técnicas e revisão de arquitetura.</li>
-                        <li>Mentoria técnica e apoio a desenvolvedores.</li>
+                        <li>Atuação como líder técnico em sistemas corporativos, apoiando decisões de arquitetura, organização de entregas e evolução de sistemas legados.</li>
+                        <li>Orientação de desenvolvedores em boas práticas de desenvolvimento, revisão de código, depuração e organização técnica.</li>
+                        <li>Manutenção e evolução de aplicações web com PHP, Laravel, JavaScript, HTML e CSS.</li>
+                        <li>Refatoração de funcionalidades existentes para melhorar manutenção, clareza do código, performance e estabilidade.</li>
+                        <li>Análise e otimização de queries SQL em ambiente de alta volumetria com banco Oracle.</li>
+                        <li>Participação em cerimônias ágeis, levantamento técnico de requisitos e análise de riscos.</li>
+                        <li>Apoio à integração entre sistemas, banco de dados e interfaces utilizadas por usuários internos.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Laravel, MySQL, Oracle, Docker, Git, Jira</span>
-                </p>
+                    <span>Tecnologias: PHP, Laravel, JavaScript, HTML, CSS, MySQL, Oracle, Docker, Git, Jira</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Leoa</h3>
                 <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Out, 2020 - Nov, 2022</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Manutenção e evolução de sistema legado relacionado à Receita Federal.</li>
-                        <li>Implementação de regras fiscais complexas com impacto em larga escala.</li>
-                        <li>Refatoração de sistemas internos para melhoria de performance e organização.</li>
+                        <li>Atuação na evolução de sistemas relacionados à declaração de imposto de renda, acompanhando mudanças anuais de regras da Receita Federal.</li>
+                        <li>Implementação de regras fiscais complexas, correções e melhorias em sistemas internos.</li>
+                        <li>Participação na remodelagem do sistema interno de operações.</li>
+                        <li>Desenvolvimento de funcionalidades para novo produto voltado a afiliados.</li>
+                        <li>Análise de problemas, manutenção de código legado e melhoria de processos internos.</li>
                     </ul>
 
-                    <span> Tecnologias:  PHP, YII, MySQL, Docker</span>
-                </p>
+                    <span>Tecnologias: PHP, Yii, MySQL, Docker, JavaScript</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">RB Serviços</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Mar, 2021 - Jul, 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer / Backend Developer &bull; Mar, 2021 - Jul, 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Manutenção de sistema financeiro legado em ambiente corporativo.</li>
-                        <li>Desenvolvimento de APIs para integração com sistemas externos.</li>
-                        <li>Definição de arquitetura e melhorias de processos de desenvolvimento.</li>
+                        <li>Atuação em contrato/projeto simultâneo com foco em manutenção e evolução de sistema financeiro legado.</li>
+                        <li>Desenvolvimento de APIs para integração com aplicações externas.</li>
+                        <li>Proposição de melhorias de arquitetura e organização do processo de desenvolvimento.</li>
+                        <li>Implementação de regras específicas de negócio para novos fornecedores e clientes.</li>
+                        <li>Trabalho com integrações backend, banco de dados e manutenção de sistemas críticos.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Node, ExtJs, MySQL, Laravel</span>
-                </p>
+                    <span>Tecnologias: PHP, Laravel, Node.js, ExtJS, MySQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">PrimeIT</h3>
-                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Mar, 2022 - Mai, 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">JavaScript Developer / Analista de Sistemas &bull; Mar, 2022 - Mai, 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implementando um programa javascript que cuidava de diversos requisitos de acessibilide dos sites do Ministério da Saúde de Portugal.</li>
-                        <li>Nessa ocasião atuei como analista de sistemas e programador javascript.</li>
-                        <li>Desenvolvi a camada base do EasyApp, que pegava os módulos de cada requisito de acessibilidade e incorporava nos sites do ministério da saúde.</li>
+                        <li>Atuação em projeto pontual com JavaScript voltado a requisitos de acessibilidade em sites do Ministério da Saúde de Portugal.</li>
+                        <li>Desenvolvimento de módulos frontend reutilizáveis para incorporação em páginas existentes.</li>
+                        <li>Trabalho com manipulação de DOM, compatibilidade entre navegadores e integração com WordPress.</li>
+                        <li>Apoio à estruturação da camada base do EasyApp, responsável por carregar recursos de acessibilidade nos sites.</li>
                     </ul>
 
-                    <span> Tecnologias: VanilaJs, Wordpress</span>
-                </p>
+                    <span>Tecnologias: JavaScript, Vanilla JS, WordPress, HTML, CSS</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura de Sobral</h3>
                 <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Jun, 2018 - Fev, 2019</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implementando sistemas de gestão pública na área corporativa, atuando principalmente na área de finanças, educação e saúde.</li>
-                        <li>Liderando brainstormings e decisões de arquitetura de software, fornecendo sugestões técnicas e incentivando os desenvolvedores a projetar as melhores soluções.</li>
-                        <li> Liderando o desenvolvimento do sistema de licitações e gestão de contratos. Levantando os requisitos do sistema com os usuários e especificando o processo para o sistema.</li>
-                        <li>Criação de um processo de desenvolvimento de software que agiliza as entregas de produtos.</li>
+                        <li>Atuação em sistemas de gestão pública nas áreas corporativa, financeira, educação e saúde.</li>
+                        <li>Participação em decisões técnicas e levantamento de requisitos com usuários.</li>
+                        <li>Liderança no desenvolvimento de funcionalidades para sistemas de licitações e gestão de contratos.</li>
+                        <li>Contribuição para a organização do processo de desenvolvimento e melhoria das entregas.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Laravel, Java, Primefaces, Postgresql</span>
-                </p>
+                    <span>Tecnologias: PHP, Laravel, Java, PrimeFaces, PostgreSQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura de Fortaleza</h3>
-                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; Jun, 2018 - Fev, 2019</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Analista de Sistemas / Fullstack Developer &bull; Período a confirmar</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implementando sistemas de gestão pública na área corporativa, atuando principalmente na área de finanças, educação e saúde.</li>
-                        <li>Liderando brainstormings e decisões de arquitetura de software, fornecendo sugestões técnicas e incentivando os desenvolvedores a projetar as melhores soluções.</li>
-                        <li> Liderando o desenvolvimento do sistema de licitações e gestão de contratos. Levantando os requisitos do sistema com os usuários e especificando o processo para o sistema.</li>
-                        <li>Criação de um processo de desenvolvimento de software que agiliza as entregas de produtos.</li>
+                        <li>Atuação em sistemas internos de gestão pública, manutenção de aplicações web e suporte a usuários.</li>
+                        <li>Desenvolvimento e evolução de funcionalidades em sistemas administrativos.</li>
+                        <li>Integração com bancos de dados relacionais e apoio à sustentação de sistemas legados.</li>
+                        <li>Recomendação: substituir o campo “Período a confirmar” pela data real antes de publicar o currículo.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Laravel, Java, Primefaces, Postgresql</span>
-                </p>
+                    <span>Tecnologias: PHP, Laravel, JavaScript, PostgreSQL, Oracle</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Grupo Rabelo</h3>
                 <h4 class="resume-item-details" itemprop="description">Analista de E-commerce &bull; 2012 - 2013</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Projeto e modelagem de bancos relacionais (Oracle, PostgreSQL, MySQL).</li>
-                        <li>Otimização de queries SQL com foco em performance e escalabilidade.</li>
-                        <li>Suporte técnico e evolução de sistemas internos.</li>
+                        <li>Atuação na manutenção e evolução de soluções de e-commerce.</li>
+                        <li>Acompanhamento de projetos com ferramentas de gestão como Jira e Trello.</li>
+                        <li>Modelagem e otimização de bancos de dados para sites e sistemas internos.</li>
+                        <li>Apoio a novos desenvolvedores na adaptação à base de código existente.</li>
+                        <li>Suporte técnico a usuários e clientes internos.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Slim, Magento Postgresql</span>
-                </p>
+                    <span>Tecnologias: PHP, Slim, Magento, PostgreSQL, MySQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Sistema Verdes Mares de Comunicação</h3>
                 <h4 class="resume-item-details" itemprop="description">Analista de Sistemas &bull; 2010 - 2012</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Realizei teste funcionais de aplicativos de software para garantir a operação adequada.</li>
-                        <li>Forneci orientação técnica sobre novas implementações e melhorias do sistema.</li>
-                        <li>Realizei atividades de análise, design e desenvolvimento de sistemas em suporte a processos de negócios.</li>
-                        <li>Forneci suporte a aplicativos e solução de problemas complexos de aplicativos de software.</li>
-                        <li>Utilizei princípios da metodologia Agile durante todo o ciclo de vida de desenvolvimento de software.</li>
+                        <li>Desenvolvimento, manutenção e testes de aplicações web de suporte a processos internos.</li>
+                        <li>Análise, design e desenvolvimento de sistemas em suporte a processos de negócios.</li>
+                        <li>Resolução de problemas complexos em aplicações existentes.</li>
+                        <li>Orientação técnica sobre novas implementações e melhorias do sistema.</li>
+                        <li>Utilização de práticas ágeis durante o ciclo de desenvolvimento de software.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Doctrine, CodeIgniter, MySQL</span>
-                </p>
+                    <span>Tecnologias: PHP, Doctrine, CodeIgniter, MySQL, JavaScript</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">NOIX Internet</h3>
                 <h4 class="resume-item-details" itemprop="description">Gerente de Desenvolvimento &bull; 2008 - 2010</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Colaborei com os gerentes comerciais com a definção de escopos e objetivos para os produtos e novas funcionalidades.</li>
-                        <li>Criei planos detalhados de projetos incluindo timelines, recursos necessários, etc.</li>
-                        <li>Garanti, junto a equipe de desenvolvimento, a conformidade com as melhores práticas do setor, como Metodologia Ágil e princípios SCRUM.</li>
+                        <li>Colaboração com áreas comerciais na definição de escopo e objetivos de produtos digitais.</li>
+                        <li>Planejamento de entregas, recursos e cronogramas de projetos.</li>
+                        <li>Coordenação da equipe de desenvolvimento na adoção de boas práticas, Scrum e organização técnica.</li>
+                        <li>Atuação em projetos web com PHP, CMSs e e-commerce.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Magento, Joomla, Javascript, Postgresql</span>
-                </p>
+                    <span>Tecnologias: PHP, Magento, Joomla, JavaScript, PostgreSQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Tribunal de Contas do Ceará</h3>
                 <h4 class="resume-item-details" itemprop="description">PHP Developer &bull; 2005 - 2009</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Desenvolvimento de aplicações utilizando Symfony em ambiente corporativo.</li>
-                        <li>Criação e manutenção de sistemas web com integração a banco de dados.</li>
-                        <li>Implementação de funcionalidades com foco em estabilidade e manutenção.</li>
+                        <li>Desenvolvimento, testes e manutenção de aplicações web com PHP, JavaScript, HTML e CSS.</li>
+                        <li>Criação de interfaces web dinâmicas com formulários, banco de dados e integrações.</li>
+                        <li>Trabalho com jQuery, AJAX e estruturação de páginas web.</li>
+                        <li>Apoio à manutenção e evolução de sistemas internos.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Symfony, Postgresql, Wordpress</span>
-                </p>
+                    <span>Tecnologias: PHP, Symfony, PostgreSQL, WordPress, JavaScript, jQuery</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura Municipal de Fortaleza</h3>
                 <h4 class="resume-item-details" itemprop="description">Fullstack PHP Developer &bull; 2002 - 2005</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Desenvolvimento de sistemas corporativos com alto volume de dados.</li>
-                        <li>Otimização de consultas SQL e modelagem de banco de dados (Oracle, PostgreSQL).</li>
-                        <li>Desenvolvimento de APIs e integração entre sistemas.</li>
+                        <li>Desenvolvimento de aplicações web e sistemas internos.</li>
+                        <li>Criação de APIs, serviços web e integrações entre sistemas.</li>
+                        <li>Implantação de aplicações em servidores e suporte à operação.</li>
+                        <li>Resolução de problemas de compatibilidade entre navegadores com CSS e JavaScript.</li>
+                        <li>Otimização de consultas e refatoração de partes da base de código para melhorar escalabilidade.</li>
                     </ul>
 
-                    <span> Tecnologias: PHP, Wordpress, Postgresql, Oracle, Zend Framework, Java, ASP</span>
-                </p>
+                    <span>Tecnologias: PHP, JavaScript, HTML, CSS, PostgreSQL, Oracle, Zend Framework, Java, ASP</span>
+                </div>
             </div>
         </section>
 
         <section class="content-section">
             <header class="section-header">
-              <h2>Educação</h2>
+                <h2>Educação</h2>
             </header>
-            
+
             <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-              <h3 class="resume-item-title" itemprop="name">Faculdades Estácio</h3>
-              <h4 class="resume-item-details group" itemprop="description">Análise e Desenvolvimento de Sistemas &bull; 2018 - 2020</h4>
-              <h5 class="resume-item-details award-title" itemprop="description"></h5>
-              <p class="resume-item-copy" itemprop="description">
-                <ul class="resume-item-list">
-                  
-                </ul>
-    
-              <p class="resume-item-copy"></p>
+                <h3 class="resume-item-title" itemprop="name">Faculdades Estácio</h3>
+                <h4 class="resume-item-details group" itemprop="description">Análise e Desenvolvimento de Sistemas &bull; 2018 - 2020</h4>
             </div>
         </section>
 
         <section class="content-section">
-
             <header class="section-header">
                 <h2>Cursos e Formações</h2>
             </header>
+
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Aprenda a programar em Python com Orientação a Objetos &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>Python: crie a sua primeira aplicação</li>
                         <li>Python: aplicando a Orientação a Objetos</li>
                         <li>Python: avance na Orientação a Objetos e consuma API</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Aprenda a programar em PHP com Orientação a Objetos &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>PHP: criando sua aplicação</li>
                         <li>PHP: evolua seu conhecimento e organize seu código</li>
                         <li>PHP: conheça a programação Orientada a Objetos</li>
                         <li>PHP: use Interfaces, Namespaces, Traits e Exceções</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Ferramentas essenciais para Devs &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>Git e GitHub: compartilhando e colaborando em projetos</li>
                         <li>Git e GitHub: dominando controle de versão de código</li>
@@ -398,26 +448,26 @@ permalink: "/curriculo.html"
                         <li>GitHub Copilot e ChatGPT: impulsionando seu desenvolvimento com IA</li>
                         <li>Padrões de API: do HTTP à modelagem de APIs</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Formação Tech Lead &bull; 2024</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>Profissão Tech Lead: conhecendo a liderança técnica</li>
                         <li>Tech Lead: construindo práticas e rotinas de gestão</li>
                         <li>Tech Lead: gerindo pessoas e guiando para alta performance</li>
                         <li>Tech Lead: desenvolvendo habilidades de comunicação</li>
                     </ul>
-                </p>
+                </div>
             </div>
-            
+
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Formação Aprenda a programar em JavaScript com foco no back-end &bull; 2022</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>JavaScript: utilizando tipos, variáveis e funções</li>
                         <li>JavaScript: conhecendo arrays</li>
@@ -425,30 +475,30 @@ permalink: "/curriculo.html"
                         <li>JavaScript com Node.js: criando sua primeira biblioteca</li>
                         <li>JavaScript: programação Orientada a Objetos</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Aprenda a programar em PHP &bull; 2022</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>PHP: conceitos, lidando com dados, loops e mais</li>
                         <li>Avançando com PHP: Arrays, Strings, Função e Web</li>
                         <li>PHP: manipulando coleções com Arrays</li>
-                        <li>PHP Strings: manipulando textos com PHPe</li>
+                        <li>PHP Strings: manipulando textos com PHP</li>
                         <li>Orientação a Objetos com PHP: Classes, métodos e atributos</li>
                         <li>Avançando com Orientação a Objetos com PHP: Herança, Polimorfismo e Interfaces</li>
                         <li>PHP I/O: trabalhando com arquivos e streams</li>
                         <li>PHP Exceptions: tratamento de erros</li>
                     </ul>
-                </p>
+                </div>
             </div>
         </section>
 
         <footer class="page-footer">
-            <p class="footer-line">Feito por <a href="http://twitter.com/mamura">@mamura</a>. </p>
-          </footer>
+            <p class="footer-line">Feito por <a href="http://twitter.com/mamura">@mamura</a>.</p>
+        </footer>
     </div>
-  </body>
-  </html>
+</body>
+</html>
