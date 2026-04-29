@@ -1,49 +1,49 @@
 ---
 title: "Resume"
-layout: resume
+layout: curriculo
 permalink: "/resume.html"
 ---
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
+
     <!-- Google font typography settings - defined in _config.yml -->
     {% if site.resume_theme == 'default' %}
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" type='text/css'>
     {% endif %}
-  
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
+
+    <meta name="description" content="Fullstack Developer experienced in React, Next.js, TypeScript, PHP, Laravel, REST APIs, dashboards, corporate systems and modular architecture.">
+
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/resume.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
-  </head>
+</head>
 
-  <body class="theme-default">
+<body class="theme-default">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="telephone" content="+55 85981876535"/>
-        <meta itemprop="address" content="Rua Pedro Sampaio, 148. FOrtaleza-Ce | Brasil"/>
-    
+        <meta itemprop="address" content="Rua Pedro Sampaio, 148. Fortaleza-CE | Brazil"/>
+
         <header class="page-header">
-            <img src="{{ site.baseurl }}/assets/images/avatar2.png" alt="my photo" class="avatar no-print" itemprop="image">
-        
+            <img src="{{ site.baseurl }}/assets/images/avatar3.png" alt="my photo" class="avatar no-print" itemprop="image">
+
             <h1 class="header-name" itemprop="name">Marcio Mota</h1>
 
             <div class="header-contact-info">
                 <p>
-                    148 Pedro Sampaio St – Fortaleza, CE – Brazil • marcio.mota@gmail.com <br />
+                    Rua Pedro Sampaio, 148 - Fortaleza-CE | Brazil • marcio.mota@gmail.com <br />
                     +55 85 98187-6535 • @mamura
                 </p>
             </div>
 
             <div class="title-bar no-print">
-                <h2 class="header-title" itemprop="jobTitle">Fullstack | PHP | Node </h2>
+                <h2 class="header-title" itemprop="jobTitle">Fullstack Developer | React | Next.js | TypeScript | PHP/Laravel</h2>
                 <ul class="icon-links">
                     <li class="icon-link-item">
                         <a href="https://github.com/mamura" class="icon-link" itemprop="sameAs">
@@ -59,7 +59,7 @@ permalink: "/resume.html"
                             </svg>
                         </a>
                     </li>
-                
+
                     <li class="icon-link-item">
                         <a href="https://twitter.com/mamura" class="icon-link" itemprop="sameAs">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -74,7 +74,7 @@ permalink: "/resume.html"
                             </svg>
                         </a>
                     </li>
-                
+
                     <li class="icon-link-item">
                         <a href="https://www.linkedin.com/in/marciomota-mamura" class="icon-link" itemprop="sameAs">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -93,7 +93,10 @@ permalink: "/resume.html"
 
             <div class="executive-summary" itemprop="description">
                 <p>
-                    Experienced Technical Leader with a strong background in managing complex software projects, optimizing system efficiency, and driving product improvements. Proficient in Agile methodologies, PHP development, and cross-functional team leadership. Demonstrates a consistent ability to deliver high-impact solutions, foster team growth, and align technical strategies with business goals.
+                    Fullstack Developer with strong experience in web applications, mainly working with React, Next.js, TypeScript, PHP and Laravel. Experienced in building administrative interfaces, SPAs, dashboards, REST API consumption, frontend/backend integration, component-based architecture, authentication, Docker and modular architecture.
+                </p>
+                <p>
+                    I work from technical planning to delivery, focusing on clean code, component organization, performance, maintainability and good user experience. I also have experience as a technical leader, supporting architecture decisions, code reviews, delivery organization and legacy system modernization.
                 </p>
             </div>
 
@@ -102,331 +105,400 @@ permalink: "/resume.html"
 
         <section class="content-section">
             <header class="section-header">
-                <h2>Experiências</h2>
+                <h2>Core Skills</h2>
+            </header>
+
+            <div class="resume-item">
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>React, Next.js, JavaScript and TypeScript.</li>
+                        <li>Component-based development, props, state, hooks, UI composition and reusable component organization.</li>
+                        <li>REST API consumption, authentication, error handling, frontend/backend integration and data flow in web applications.</li>
+                        <li>Tailwind CSS, HTML, CSS, responsive design and administrative dashboard development.</li>
+                        <li>PHP, Laravel, modular architecture, APIs, legacy systems and complex business rules.</li>
+                        <li>Docker, Git, GitHub, MySQL, PostgreSQL, Oracle, MongoDB and Redis.</li>
+                        <li>Clean Code, refactoring, automated testing, code review and technical leadership.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <header class="section-header">
+                <h2>Featured Projects</h2>
+            </header>
+
+            <div class="resume-item">
+                <h3 class="resume-item-title">Bem Pertim</h3>
+                <h4 class="resume-item-details">Web application with Next.js, React, TypeScript and Tailwind CSS</h4>
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>Development of a responsive web application focused on local business discovery.</li>
+                        <li>Creation of a public interface using Next.js, React componentization and Tailwind CSS styling.</li>
+                        <li>Implementation of an interactive map, mobile-first layout, initial company registration flow and Vercel deployment.</li>
+                    </ul>
+
+                    <span>Technologies: Next.js, React, TypeScript, Tailwind CSS, Vercel, Docker</span>
+                </div>
+            </div>
+
+            <div class="resume-item">
+                <h3 class="resume-item-title">Floresta</h3>
+                <h4 class="resume-item-details">Corporate system with Laravel, Next.js and modular architecture</h4>
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>Development of a corporate system with a Laravel backend and a modular Next.js frontend.</li>
+                        <li>Creation of administrative interfaces, dashboards, filters, authentication and REST API integrations.</li>
+                        <li>Integration with legacy systems, relational databases and internal services, focusing on maintainability and gradual evolution.</li>
+                    </ul>
+
+                    <span>Technologies: Next.js, React, TypeScript, Laravel, Docker, MySQL, PostgreSQL, MongoDB</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <header class="section-header">
+                <h2>Experience</h2>
             </header>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-                <h3 class="resume-item-title" itemprop="name">Zerodox</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Fev, 2025 - Mai, 2025</h4>
-                <p class="resume-item-copy">
+                <h3 class="resume-item-title" itemprop="name">Dr. Consulta</h3>
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer (AMS) &bull; Oct, 2025 - Mar, 2026</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Worked on the development of an internal management system.</li>
-                        <li>Worked on legacy system maintenance.</li>
-                        <li>Created new features for the document management system.</li>
-                        <li>Integrated with AWS file storage and OCR services.</li>
-                        <li>Refactored Vue 2 components for optimization and performance improvements.</li>
-                        <li>Increased test coverage for the legacy system.</li>
+                        <li>Worked in AMS (Application Management Services), handling N2 and N3 support for critical corporate systems.</li>
+                        <li>Maintained and evolved legacy systems, including bug fixes, improvements and new features.</li>
+                        <li>Contributed to multiple strategic projects such as Floresta, S2, Sensrit and a Digital Signature platform.</li>
+                        <li>Created and evolved administrative interfaces and dashboards using Next.js, React and TypeScript.</li>
+                        <li>Integrated frontend applications with REST APIs, focusing on data flow, screen states, filters, pagination and error handling.</li>
+                        <li>Investigated and resolved production incidents with a focus on performance, stability and data integrity.</li>
+                        <li>Built and optimized SQL queries in relational databases, including Oracle and MySQL.</li>
+                        <li>Worked remotely with autonomy in critical demands and incident prioritization.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Laravel, MySQL, ElasticSearch Docker, Vuejs, GitHub</span>
-                </p>
+                    <span>Technologies: React, Next.js, TypeScript, PHP, Laravel, Oracle, MySQL, MongoDB, Docker, REST APIs, SQL</span>
+                </div>
+            </div>
+
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                <h3 class="resume-item-title" itemprop="name">Zerodox</h3>
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; May, 2025 - Oct, 2025</h4>
+                <div class="resume-item-copy">
+                    <ul>
+                        <li>Maintained and evolved a legacy PHP system, ensuring stability and operational continuity.</li>
+                        <li>Implemented new features and improvements in a document management system.</li>
+                        <li>Refactored Vue 2 components to improve performance, code organization and maintainability.</li>
+                        <li>Integrated external services, including AWS S3, OCR and internal APIs.</li>
+                        <li>Optimized SQL queries, file processing and document workflows.</li>
+                        <li>Increased test coverage in a legacy system.</li>
+                    </ul>
+
+                    <span>Technologies: PHP, Laravel, MySQL, Docker, Vue.js, Elasticsearch, GitHub, AWS S3, OCR</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">IEBT Innovation</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Fev, 2025 - Mai, 2025</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior Fullstack Developer &bull; Feb, 2025 - May, 2025</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Worked on the development of a payroll loan system for PicPay.</li>
-                        <li>Applied Clean Code architecture using Laravel in the presentation layer (API).</li>
-                        <li>Integrated the system into PicPay's ecosystem.</li>
-                        <li>Frontend built with React as a standalone SPA.</li>
-                        <li>Responsible for the commission module, including business rules, persistence, validations, and service integration endpoints.</li>
+                        <li>Worked on the development of a payroll loan system in a corporate environment.</li>
+                        <li>Developed and maintained Laravel APIs, following good practices for architecture, validation and separation of responsibilities.</li>
+                        <li>Worked on a React frontend application structured as an SPA separated from the API.</li>
+                        <li>Implemented frontend/backend integrations, endpoint consumption, state handling and business rules.</li>
+                        <li>Owned the commission module, including rules, persistence, validations and integration endpoints.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Laravel, MySQL, Docker, React, GitHub</span>
-                </p>
+                    <span>Technologies: React, JavaScript, PHP, Laravel, MySQL, Docker, GitHub</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Fundação Hemominas</h3>
-                <h4 class="resume-item-details" itemprop="description">Tech Lead &bull; Sep, 2022 - Nov, 2024</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Technical Lead / Fullstack Developer &bull; Sep, 2022 - Nov, 2024</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Led the team through technical challenges with in-depth system knowledge.</li>
-                        <li>Investigated and resolved software issues through system analysis.</li>
-                        <li>Collaborated with upper management to discuss project risks and opportunities.</li>
-                        <li>Resolved application issues reported by users or clients.</li>
-                        <li>Reviewed requirement documents for completeness and accuracy before implementation.</li>
-                        <li>Developed technical strategies to enhance customer satisfaction and operational efficiency.</li>
-                        <li>Provided technical guidance to the team on product design, coding practices, testing methodologies, and debugging procedures.</li>
-                        <li>Mentored junior developers in PHP, JavaScript, HTML5, CSS3, and other technologies.</li>
-                        <li>Participated in Agile Scrum meetings to review sprint progress and discuss blockers.</li>
-                        <li>Optimized existing applications by refactoring code and implementing new technologies.</li>
+                        <li>Worked as a technical lead in corporate systems, supporting architecture decisions, delivery organization and legacy system evolution.</li>
+                        <li>Guided developers on development best practices, code reviews, debugging and technical organization.</li>
+                        <li>Maintained and evolved web applications using PHP, Laravel, JavaScript, HTML and CSS.</li>
+                        <li>Refactored existing features to improve maintainability, code clarity, performance and stability.</li>
+                        <li>Analyzed and optimized SQL queries in high-volume Oracle database environments.</li>
+                        <li>Participated in agile ceremonies, technical requirement gathering and risk analysis.</li>
+                        <li>Supported integrations between systems, databases and internal user interfaces.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Laravel, MySQL, Oracle, Docker, Git, Jira</span>
-                </p>
+                    <span>Technologies: PHP, Laravel, JavaScript, HTML, CSS, MySQL, Oracle, Docker, Git, Jira</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Leoa</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Out, 2020 - Nov, 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Oct, 2020 - Nov, 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implemented yearly updates for federal tax declaration rules.</li>
-                        <li>Investigated and resolved software issues through system analysis.</li>
-                        <li>Redesigned the internal operations system.</li>
-                        <li>Created a new product for affiliates.</li>
+                        <li>Worked on the evolution of systems related to income tax filing, following annual tax rule changes from the Brazilian Federal Revenue Service.</li>
+                        <li>Implemented complex tax rules, fixes and improvements in internal systems.</li>
+                        <li>Participated in the redesign of the internal operations system.</li>
+                        <li>Developed features for a new affiliate-focused product.</li>
+                        <li>Analyzed problems, maintained legacy code and improved internal processes.</li>
                     </ul>
 
-                    <span> Technologies: PHP, YII, MySQL, Docker</span>
-                </p>
+                    <span>Technologies: PHP, Yii, MySQL, Docker, JavaScript</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">RB Serviços</h3>
-                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer &bull; Mar, 2021 - Jul, 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Senior PHP Developer / Backend Developer &bull; Mar, 2021 - Jul, 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Maintained the company's financial system (legacy system).</li>
-                        <li>Developed an API for integration with external applications.</li>
-                        <li>Proposed new system architectures and development processes.</li>
-                        <li>Specialized functionalities according to new business rules for each supplier or client.</li>
+                        <li>Worked on a simultaneous contract/project focused on maintaining and evolving a legacy financial system.</li>
+                        <li>Developed APIs for integration with external applications.</li>
+                        <li>Proposed architecture improvements and enhancements to the development process.</li>
+                        <li>Implemented specific business rules for new vendors and clients.</li>
+                        <li>Worked with backend integrations, databases and critical system maintenance.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Node, ExtJs, MySQL, Laravel</span>
-                </p>
+                    <span>Technologies: PHP, Laravel, Node.js, ExtJS, MySQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">PrimeIT</h3>
-                <h4 class="resume-item-details" itemprop="description">Systems Analyst &bull; Mar, 2022 - Mai, 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">JavaScript Developer / Systems Analyst &bull; Mar, 2022 - May, 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Developed a JavaScript program to address accessibility requirements for Portugal’s Ministry of Health websites.</li>
-                        <li>Acted as a systems analyst and JavaScript developer.</li>
-                        <li>Created the base layer for EasyApp, integrating accessibility modules into the Ministry’s websites.</li>
+                        <li>Worked on a short-term JavaScript project focused on accessibility requirements for websites from the Ministry of Health of Portugal.</li>
+                        <li>Developed reusable frontend modules to be embedded into existing pages.</li>
+                        <li>Worked with DOM manipulation, cross-browser compatibility and WordPress integration.</li>
+                        <li>Supported the structure of the EasyApp base layer, responsible for loading accessibility resources into websites.</li>
                     </ul>
 
-                    <span> Technologies: Vanilla JS, WordPress</span>
-                </p>
+                    <span>Technologies: JavaScript, Vanilla JS, WordPress, HTML, CSS</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura de Sobral</h3>
-                <h4 class="resume-item-details" itemprop="description">Systems Analyst &bull; Jun, 2018 - Fev, 2019</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Systems Analyst &bull; Jun, 2018 - Feb, 2019</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implemented public management systems in finance, education, and health areas.</li>
-                        <li>Led brainstorms and architectural decisions, encouraging best design practices.</li>
-                        <li>Led the development of bidding and contract management systems, gathering requirements and defining system processes.</li>
-                        <li>Created a development process to streamline product deliveries.</li>
+                        <li>Worked on public management systems in corporate, finance, education and healthcare areas.</li>
+                        <li>Participated in technical decisions and requirement gathering with users.</li>
+                        <li>Led the development of features for bidding and contract management systems.</li>
+                        <li>Contributed to the organization of the development process and delivery improvements.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Laravel, Java, Primefaces, PostgreSQL</span>
-                </p>
+                    <span>Technologies: PHP, Laravel, Java, PrimeFaces, PostgreSQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura de Fortaleza</h3>
-                <h4 class="resume-item-details" itemprop="description">Systems Analyst &bull; Jun, 2018 - Fev, 2019</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Systems Analyst / Fullstack Developer &bull; Period to be confirmed</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Implemented public management systems in finance, education, and health areas.</li>
-                        <li>Led brainstorms and architectural decisions, encouraging best design practices.</li>
-                        <li>Led the development of bidding and contract management systems, gathering requirements and defining system processes.</li>
-                        <li>Created a development process to streamline product deliveries.</li>
+                        <li>Worked on internal public management systems, web application maintenance and user support.</li>
+                        <li>Developed and evolved features in administrative systems.</li>
+                        <li>Integrated relational databases and supported legacy system maintenance.</li>
+                        <li>Recommendation: replace “Period to be confirmed” with the actual dates before publishing the resume.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Laravel, Java, Primefaces, PostgreSQL</span>
-                </p>
+                    <span>Technologies: PHP, Laravel, JavaScript, PostgreSQL, Oracle</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Grupo Rabelo</h3>
                 <h4 class="resume-item-details" itemprop="description">E-commerce Analyst &bull; 2012 - 2013</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Monitored project progress using tools like Jira and Trello, providing regular status updates.</li>
-                        <li>Designed and implemented databases (Oracle, PostgreSQL, MySQL, MariaDB) for websites and internal systems, focusing on performance optimization.</li>
-                        <li>Assisted in onboarding new developers to familiarize them with the existing codebase.</li>
-                        <li>Provided technical support to customers via phone and email.</li>
+                        <li>Worked on the maintenance and evolution of e-commerce solutions.</li>
+                        <li>Managed projects using tools such as Jira and Trello.</li>
+                        <li>Designed and optimized databases for websites and internal systems.</li>
+                        <li>Supported new developers during onboarding into the existing codebase.</li>
+                        <li>Provided technical support to users and internal clients.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Slim, Magento, PostgreSQL</span>
-                </p>
+                    <span>Technologies: PHP, Slim, Magento, PostgreSQL, MySQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Sistema Verdes Mares de Comunicação</h3>
                 <h4 class="resume-item-details" itemprop="description">Systems Analyst &bull; 2010 - 2012</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Performed functional testing of software applications.</li>
+                        <li>Developed, maintained and tested web applications supporting internal processes.</li>
+                        <li>Worked on analysis, design and system development to support business processes.</li>
+                        <li>Resolved complex issues in existing applications.</li>
                         <li>Provided technical guidance on new implementations and system improvements.</li>
-                        <li>Analyzed, designed, and developed systems to support business processes.</li>
-                        <li>Provided application support and resolved complex software issues.</li>
-                        <li>Used Agile methodology throughout the software development lifecycle.</li>
+                        <li>Used agile practices throughout the software development lifecycle.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Doctrine, CodeIgniter, MySQL</span>
-                </p>
+                    <span>Technologies: PHP, Doctrine, CodeIgniter, MySQL, JavaScript</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">NOIX Internet</h3>
-                <h4 class="resume-item-details" itemprop="description">Development Manage &bull; 2008 - 2010</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Development Manager &bull; 2008 - 2010</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Collaborated with business managers to define scopes and product features.</li>
-                        <li>Created detailed project plans including timelines and resource allocation.</li>
-                        <li>Ensured development team followed best practices like Agile methodology and Scrum principles.</li>
+                        <li>Collaborated with business teams to define scope and goals for digital products.</li>
+                        <li>Planned deliveries, resources and project timelines.</li>
+                        <li>Coordinated the development team in adopting best practices, Scrum and technical organization.</li>
+                        <li>Worked on web projects with PHP, CMS platforms and e-commerce.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Magento, Joomla, JavaScript, PostgreSQL</span>
-                </p>
+                    <span>Technologies: PHP, Magento, Joomla, JavaScript, PostgreSQL</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Tribunal de Contas do Ceará</h3>
                 <h4 class="resume-item-details" itemprop="description">PHP Developer &bull; 2005 - 2009</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Developed, tested, and maintained web applications using PHP, MySQL, HTML5, CSS3, and JavaScript.</li>
-                        <li>Created dynamic websites that interacted with users through forms, databases, and APIs.</li>
-                        <li>Designed web interfaces using HTML5, CSS3, jQuery, and AJAX.</li>
+                        <li>Developed, tested and maintained web applications with PHP, JavaScript, HTML and CSS.</li>
+                        <li>Created dynamic web interfaces with forms, databases and integrations.</li>
+                        <li>Worked with jQuery, AJAX and web page structure.</li>
+                        <li>Supported the maintenance and evolution of internal systems.</li>
                     </ul>
 
-                    <span> Technologies: PHP, Symfony, PostgreSQL, WordPress</span>
-                </p>
+                    <span>Technologies: PHP, Symfony, PostgreSQL, WordPress, JavaScript, jQuery</span>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                 <h3 class="resume-item-title" itemprop="name">Prefeitura Municipal de Fortaleza</h3>
                 <h4 class="resume-item-details" itemprop="description">Fullstack PHP Developer &bull; 2002 - 2005</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Collaborated with other developers to design RESTful web service APIs.</li>
-                        <li>Managed deployment of web applications on multiple servers.</li>
-                        <li>Resolved cross-browser compatibility issues using CSS and JavaScript solutions.</li>
-                        <li>Improved application scalability by optimizing queries and refactoring code.</li>
-                        <li>Designed database schemas to efficiently store large volumes of data.</li>
+                        <li>Developed web applications and internal systems.</li>
+                        <li>Created APIs, web services and system integrations.</li>
+                        <li>Deployed applications to servers and supported operations.</li>
+                        <li>Resolved cross-browser compatibility issues using CSS and JavaScript.</li>
+                        <li>Optimized queries and refactored parts of the codebase to improve scalability.</li>
                     </ul>
 
-                    <span> Technologies: PHP, WordPress, PostgreSQL, Oracle, Zend Framework, Java, ASP</span>
-                </p>
+                    <span>Technologies: PHP, JavaScript, HTML, CSS, PostgreSQL, Oracle, Zend Framework, Java, ASP</span>
+                </div>
             </div>
         </section>
 
         <section class="content-section">
             <header class="section-header">
-              <h2>Education</h2>
+                <h2>Education</h2>
             </header>
-            
+
             <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-              <h3 class="resume-item-title" itemprop="name">Estácio University</h3>
-              <h4 class="resume-item-details group" itemprop="description">Systems Analysis and Development &bull; 2018 - 2022</h4>
-              <h5 class="resume-item-details award-title" itemprop="description"></h5>
-              <p class="resume-item-copy" itemprop="description">
-                <ul class="resume-item-list">
-                  
-                </ul>
-    
-              <p class="resume-item-copy"></p>
+                <h3 class="resume-item-title" itemprop="name">Faculdades Estácio</h3>
+                <h4 class="resume-item-details group" itemprop="description">Systems Analysis and Development &bull; 2018 - 2020</h4>
             </div>
         </section>
 
         <section class="content-section">
-
             <header class="section-header">
                 <h2>Courses and Training</h2>
             </header>
+
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
-                <h4 class="resume-item-details" itemprop="description">Learn to program in PHP with Object Orientation &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Learn Python Programming with Object-Oriented Programming &bull; 2025</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Python: Create your first application</li>
-                        <li>Python: Applying Object Orientation</li>
-                        <li>Python: Advance Object Orientation and consume APIs</li>
+                        <li>Python: create your first application</li>
+                        <li>Python: applying Object-Oriented Programming</li>
+                        <li>Python: advance in Object-Oriented Programming and consume APIs</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
-                <h4 class="resume-item-details" itemprop="description">Learn to program in PHP with Object Orientation &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Learn PHP Programming with Object-Oriented Programming &bull; 2025</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>PHP: Creating your application</li>
-                        <li>PHP: Improve your knowledge and organize your code</li>
-                        <li>PHP: Learn about Object-Oriented Programming</li>
-                        <li>PHP: Use Interfaces, Namespaces, Traits, and Exceptions</li>
+                        <li>PHP: creating your application</li>
+                        <li>PHP: evolve your knowledge and organize your code</li>
+                        <li>PHP: learn Object-Oriented Programming</li>
+                        <li>PHP: use Interfaces, Namespaces, Traits and Exceptions</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
                 <h4 class="resume-item-details" itemprop="description">Essential Tools for Developers &bull; 2025</h4>
-                <p class="resume-item-copy">
+                <div class="resume-item-copy">
                     <ul>
                         <li>Git and GitHub: sharing and collaborating on projects</li>
-                        <li>Git and GitHub: mastering version control</li>
-                        <li>Terminal: learn commands to automate tasks</li>
+                        <li>Git and GitHub: mastering code version control</li>
+                        <li>Terminal: learn commands to execute tasks</li>
                         <li>Windows Prompt: using CMD</li>
-                        <li>Regular Expressions: search, validate, and replace text</li>
+                        <li>Regular Expressions: search, validate and replace text</li>
                         <li>Swagger: documenting your APIs</li>
-                        <li>NGINX: Web Server, Reverse Proxy, and API Gateway</li>
-                        <li>NGINX Part 2: performance, FastCGI, and HTTPS</li>
+                        <li>NGINX: Web Server, Reverse Proxy and API Gateway</li>
+                        <li>NGINX Part 2: performance, FastCGI and HTTPS</li>
                         <li>VSCode: tips and tricks</li>
-                        <li>ChatGPT and Programming: boost your productivity</li>
+                        <li>ChatGPT and programming: increase your productivity</li>
                         <li>ChatGPT: optimizing result quality</li>
-                        <li>GitHub Copilot and ChatGPT: enhancing development with AI</li>
-                        <li>API Design Patterns: from HTTP to API modeling</li>
+                        <li>GitHub Copilot and ChatGPT: boosting your development with AI</li>
+                        <li>API Patterns: from HTTP to API modeling</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
-                <h4 class="resume-item-details" itemprop="description">Tech Lead Training Program &bull; 2024</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Tech Lead Training &bull; 2024</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>Tech Lead Career: understanding technical leadership</li>
-                        <li>Tech Lead: establishing management practices and routines</li>
-                        <li>Tech Lead: managing people and driving high performance</li>
+                        <li>Tech Lead career: understanding technical leadership</li>
+                        <li>Tech Lead: building management practices and routines</li>
+                        <li>Tech Lead: managing people and guiding them toward high performance</li>
                         <li>Tech Lead: developing communication skills</li>
                     </ul>
-                </p>
+                </div>
             </div>
-            
+
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
-                <h4 class="resume-item-details" itemprop="description">Learn to Program in JavaScript (Back-End Focus) &bull; 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">JavaScript Programming with a Backend Focus &bull; 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>JavaScript: using types, variables, and functions</li>
-                        <li>JavaScript: understanding arrays</li>
-                        <li>JavaScript: understanding objects</li>
+                        <li>JavaScript: using types, variables and functions</li>
+                        <li>JavaScript: learning arrays</li>
+                        <li>JavaScript: learning objects</li>
                         <li>JavaScript with Node.js: creating your first library</li>
                         <li>JavaScript: Object-Oriented Programming</li>
                     </ul>
-                </p>
+                </div>
             </div>
 
             <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Course">
                 <h3 class="resume-item-title" itemprop="name"><a href="https://www.alura.com.br/">Alura</a></h3>
-                <h4 class="resume-item-details" itemprop="description">Learn to Program in PHP &bull; 2022</h4>
-                <p class="resume-item-copy">
+                <h4 class="resume-item-details" itemprop="description">Learn PHP Programming &bull; 2022</h4>
+                <div class="resume-item-copy">
                     <ul>
-                        <li>PHP: concepts, handling data, loops, and more</li>
-                        <li>Advancing with PHP: Arrays, Strings, Functions, and Web</li>
+                        <li>PHP: concepts, working with data, loops and more</li>
+                        <li>Advancing with PHP: Arrays, Strings, Functions and Web</li>
                         <li>PHP: manipulating collections with Arrays</li>
-                        <li>PHP Strings: handling text in PHP</li>
-                        <li>Object-Oriented Programming with PHP: classes, methods, and attributes</li>
-                        <li>Advanced OOP in PHP: inheritance, polymorphism, and interfaces</li>
+                        <li>PHP Strings: manipulating text with PHP</li>
+                        <li>Object-Oriented Programming with PHP: Classes, methods and attributes</li>
+                        <li>Advancing in Object-Oriented Programming with PHP: Inheritance, Polymorphism and Interfaces</li>
                         <li>PHP I/O: working with files and streams</li>
                         <li>PHP Exceptions: error handling</li>
                     </ul>
-                </p>
+                </div>
             </div>
         </section>
 
         <footer class="page-footer">
-            <p class="footer-line">Feito por <a href="http://twitter.com/mamura">@mamura</a>. </p>
-          </footer>
+            <p class="footer-line">Made by <a href="http://twitter.com/mamura">@mamura</a>.</p>
+        </footer>
     </div>
-  </body>
-  </html>
+</body>
+</html>
