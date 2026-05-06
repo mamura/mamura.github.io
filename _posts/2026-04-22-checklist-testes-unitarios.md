@@ -6,8 +6,8 @@ categories: [cookbooks, artigos]
 tags: [recipe, entrevista, roteiro, dica, emprego, programador, senior]
 image: 'assets/images/checklist.jpg'
 description: 'Checklist de testes de unidade com Pest para Jobs & Services no Laravel'
-featured: true
-hidden: true
+featured: false
+hidden: false
 date: 2026-04-25 16:08:44
 rating: 5
 ---
