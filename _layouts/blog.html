@@ -23,7 +23,7 @@ title: Blog
     </div>
 
     <div class="row listrecent">
-        {% for post in site.posts limit:6 %}
+        {% for post in site.posts limit:12 %}
             {% if post.hidden == false %}
                 {% include postbox.html %}
             {% endif %}
