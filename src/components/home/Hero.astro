@@ -1,0 +1,59 @@
+---
+import RotatingRole from './RotatingRole';
+import ParticleBackground from './ParticleBackground';
+import HeroPhoto from './HeroPhoto';
+
+const technologies = [
+  'PHP',
+  'TypeScript',
+  'Java',
+  'Arquitetura',
+  'Liderança Técnica',
+];
+---
+<section id="home" aria-labelledby="hero-title" class="relative overflow-hidden bg-hero">
+  <ParticleBackground client:load />
+  <div class="m-container relative z-10 flex min-h-[calc(100svh-4rem)] gap-8 sm:gap-10 lg:py-0">
+    <div class="mx-auto flex w-full flex-col items-center justify-center text-center sm:items-start sm:text-left">
+      <h1 id="hero-title" class="hero-title hero-title-outline hero-enter uppercase">
+        Marcio Mota
+      </h1>
+
+      <div class="hero-enter hero-delay-1 mt-8 mb-4 w-full max-w-[420px] sm:max-w-[590px]">
+        <RotatingRole client:load />
+      </div>
+
+      <div class="flex flex-wrap hero-enter hero-delay-2 justify-center gap-1 font-body text-xs font-semibold uppercase tracking-[0.12em] text-white/70 sm:justify-start sm:text-sm">
+        {
+          technologies.map((technology, index) => (
+            <>
+              <span>{technology}</span>
+
+              {
+                index < technologies.length - 1 && (
+                  <span
+                    aria-hidden="true"
+                    class="text-white/30"
+                  >
+                    ·
+                  </span>
+                )
+              }
+            </>
+          ))
+        }
+      </div>
+
+      <div class="mt-8 flex items-center hero-enter hero-delay-3 border-b border-white/50 px-3 py-2 transition-opacity duration-200 hover:opacity-70">
+        <div class="items-center gap-8 lg:flex">
+          <a href="#projetos">
+            <span class="text-sm font-semibold">Conheça meu trabalho</span> ↗
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <HeroPhoto client:load />
+    
+  </div>
+</section>

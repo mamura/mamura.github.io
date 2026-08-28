@@ -1,0 +1,208 @@
+---
+const articles = [
+  {
+    title:
+      'Como uso IA para acelerar o desenvolvimento sem perder qualidade',
+    category: 'IA + Desenvolvimento',
+    date: '28 Ago 2026',
+    image: '/images/articles/gestao-ti.png',
+    href: '#',
+  },
+  {
+    title:
+      'TypeScript além dos tipos: decisões que melhoram o código',
+    category: 'TypeScript',
+    date: '18 Ago 2026',
+    image: '/images/articles/laravel-multitenancy.png',
+    href: '#',
+  },
+  {
+    title:
+      'Arquitetura de software para projetos que precisam crescer',
+    category: 'Arquitetura',
+    date: '02 Ago 2026',
+    image: '/images/articles/roteiro-entrevista.jpg',
+    href: '#',
+  },
+];
+---
+
+<section id="artigos" aria-labelledby="articles-title" class="bg-secondary py-24 lg:py-32"> 
+  <div class="m-container">
+    <header>
+      <span
+        class="
+          font-body
+          text-xs
+          font-semibold
+          uppercase
+          tracking-[0.14em]
+          text-white/80
+        "
+      >
+        05 / Artigos
+      </span>
+
+      <h2
+        id="articles-title"
+        class="
+          mt-6
+          font-heading
+          text-3xl
+          font-bold
+          text-white
+          md:text-4xl
+        "
+      >
+        Artigos em destaque
+      </h2>
+    </header>
+
+    <div
+      class="
+        mt-16
+        grid
+        grid-cols-1
+        gap-x-8
+        gap-y-14
+        md:grid-cols-2
+        lg:grid-cols-3
+      "
+    >
+      {
+        articles.map((article) => (
+          <article class="group">
+            <a
+              href={article.href}
+              class="block"
+            >
+              <div
+                class="
+                  relative
+                  aspect-[4/3]
+                  overflow-hidden
+                  bg-white/5
+                "
+              >
+                <img
+                  src={article.image}
+                  alt=""
+                  loading="lazy"
+                  class="
+                    h-full
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-500
+                    ease-out
+                    group-hover:scale-[1.035]
+                  "
+                />
+
+                <div
+                  class="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    bg-black/0
+                    transition-colors
+                    duration-500
+                    group-hover:bg-black/10
+                  "
+                />
+              </div>
+
+              <h3
+                class="
+                  mt-6
+                  max-w-[95%]
+                  font-heading
+                  text-xl
+                  font-semibold
+                  leading-[1.3]
+                  text-white
+                  transition-colors
+                  duration-300
+                  group-hover:text-white/75
+                "
+              >
+                {article.title}
+              </h3>
+
+              <div
+                class="
+                  mt-5
+                  flex
+                  flex-wrap
+                  items-center
+                  gap-2
+                  font-body
+                  text-[11px]
+                  font-medium
+                  uppercase
+                  tracking-[0.08em]
+                "
+              >
+                <span class="text-accent">
+                  {article.category}
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  class="text-white/25"
+                >
+                  |
+                </span>
+
+                <time class="text-white/45">
+                  {article.date}
+                </time>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="mt-14 flex justify-end">
+      <a
+        href="/artigos"
+        class="
+          group
+          inline-flex
+          items-center
+          gap-2
+          font-body
+          text-sm
+          font-semibold
+          text-white/70
+          transition-colors
+          duration-300
+          hover:text-white
+        "
+      >
+        <span>Ver todos os artigos</span>
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="
+            h-4
+            w-4
+            transition-transform
+            duration-300
+            group-hover:translate-x-1
+          "
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14" />
+          <path d="m13 6 6 6-6 6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

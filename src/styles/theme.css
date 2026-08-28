@@ -1,0 +1,44 @@
+@theme {
+  /* Brand */
+
+  --color-primary: #013952;
+
+  /* Background */
+
+  --color-background: #17191A;
+
+  /* Text */
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d6e0e5;
+  --color-content: #17191A;
+  --color-surface: #1A1C1D;
+  --color-secondary: #1A1C1D;
+
+  /* Border */
+
+  --color-border: rgba(255, 255, 255, 0.5);
+
+  /* Layout spacing */
+
+  --space-container-inline: clamp(20px, 4vw, 24px);
+
+  --space-section-y: clamp(48px, 5vw, 72px);
+  --space-section-y-compact: clamp(56px, 6vw, 96px);
+
+  --space-badge-to-heading: clamp(24px, 3vw, 40px);
+  --space-heading-to-description: clamp(24px, 3vw, 40px);
+  --space-header-to-content: clamp(40px, 5vw, 64px);
+
+  --space-grid-gap: clamp(16px, 2vw, 20px);
+
+  --space-card-padding: clamp(24px, 2.5vw, 32px);
+  --space-card-content-gap: clamp(12px, 1.5vw, 16px);
+}
+
+@utility m-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--space-container-inline);
+}

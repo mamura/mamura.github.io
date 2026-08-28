@@ -1,0 +1,231 @@
+---
+const contacts = [
+  {
+    label: 'LinkedIn',
+    value: '/marciomota-mamura',
+    href: 'https://linkedin.com/in/marciomota-mamura',
+    icon: '/images/linkedin-40.svg',
+  },
+  {
+    label: 'Github',
+    value: '/mamura',
+    href: 'https://github.com/mamura',
+    icon: '/images/github-40.svg',
+  },
+  {
+    label: 'E-mail',
+    value: 'contato@mamura.dev',
+    href: 'mailto:contato@mamura.dev',
+    icon: '/images/mail-40.svg',
+  },
+];
+---
+
+<section id="contato" aria-labelledby="contact-title" class="relative overflow-hidden bg-[#0b0b0b]">
+  <!-- Background -->
+  <div
+    class="
+      absolute
+      inset-x-0
+      top-0
+      h-[420px]
+      bg-[url('/images/noite-sertao.jpg')]
+      bg-cover
+      bg-bottom
+    "
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- Transição da imagem para o footer -->
+  <div
+    class="
+      pointer-events-none
+      absolute
+      inset-x-0
+      top-0
+      h-[420px]
+      bg-gradient-to-b
+      from-black/20
+      via-black/35
+      to-[#0b0b0b]
+    "
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative m-container py-14 lg:py-16 lg:pb-20">
+    <!-- Section label -->
+    <span
+      class="
+        font-body
+        text-xs
+        font-semibold
+        uppercase
+        tracking-[0.14em]
+        text-white/80
+      "
+    >
+      06 / Contato
+    </span>
+
+    <!-- Contact content -->
+    <div
+      class="
+        mt-16
+        grid
+        gap-10
+        lg:grid-cols-[280px_1fr]
+        lg:items-center
+        lg:gap-16
+      "
+    >
+      <!-- Introduction -->
+      <div>
+        <h2
+          id="contact-title"
+          class="
+            font-heading
+            text-3xl
+            font-bold
+            uppercase
+            text-white
+          "
+        >
+          Vamos conversar
+        </h2>
+
+        <p
+          class="
+            mt-4
+            max-w-[280px]
+            font-body
+            text-sm
+            leading-relaxed
+            text-white/75
+          "
+        >
+          Estou sempre interessado em boas conversas sobre software, produto e
+          tecnologia.
+        </p>
+      </div>
+
+      <!-- Contact panel -->
+      <div
+        class="
+          grid
+          gap-6
+          rounded-2xl
+          border
+          border-white/15
+          bg-white/10
+          p-6
+          backdrop-blur-md
+          sm:grid-cols-3
+          lg:px-8
+          lg:py-7
+        "
+      >
+        {
+          contacts.map((contact) => {
+            const isExternal = contact.href.startsWith('http');
+
+            return (
+              <a
+                href={contact.href}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                aria-label={contact.label}
+                class="
+                  group
+                  block
+                  border-white/10
+                  sm:border-r
+                  sm:pr-6
+                  sm:last:border-r-0
+                  sm:last:pr-0
+                "
+              >
+                <!-- Icon -->
+                <div
+                  class="
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-white/85
+                    transition-transform
+                    duration-300
+                    ease-out
+                    group-hover:-translate-y-1
+                  "
+                >
+                  <img
+                    src={contact.icon}
+                    alt=""
+                    aria-hidden="true"
+                    class="
+                      h-6
+                      w-6
+                      object-contain
+                    "
+                  />
+                </div>
+
+                <!-- Label -->
+                <h3
+                  class="
+                    mt-3
+                    font-body
+                    text-base
+                    font-semibold
+                    text-white
+                  "
+                >
+                  {contact.label}
+                </h3>
+
+                <!-- Value -->
+                <p
+                  class="
+                    mt-2
+                    font-body
+                    text-sm
+                    text-white/65
+                    transition-colors
+                    duration-300
+                    group-hover:text-white
+                  "
+                >
+                  {contact.value}
+                </p>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="
+        mt-12
+        border-t
+        border-white/20
+        pt-5
+        font-body
+        text-sm
+        text-white/75
+      "
+    >
+      <p>
+        © {new Date().getFullYear()} Marcio Mota
+      </p>
+
+      <p class="mt-2 text-white/65">
+        Software Engineer
+      </p>
+    </footer>
+  </div>
+</section>

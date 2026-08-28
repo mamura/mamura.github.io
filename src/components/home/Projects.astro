@@ -1,0 +1,146 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import Reveal from '../ui/Reveal';
+
+const projects = [
+  
+  {
+    type: 'Ferramenta',
+    title: 'VS Code Component Generator',
+    description:
+      'Ferramenta para acelerar a criação de componentes e reduzir tarefas repetitivas no desenvolvimento.',
+    technologies: ['TypeScript', 'Node.js', 'VS Code API'],
+    image: '/images/projects/vscode.png',
+    href: '/projetos/component-generator',
+  },
+  {
+    type: 'Projeto',
+    title: 'Bacurim',
+    description:
+      'Produto voltado à organização e compreensão financeira de pequenos negócios.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    image: '/images/projects/bacurim.png',
+    href: '/projetos/bacurim',
+  },
+  {
+    type: 'Open Source',
+    title: 'Obsidian MCP',
+    description:
+      'Integração entre um vault do Obsidian e modelos de linguagem usando Model Context Protocol.',
+    technologies: ['TypeScript', 'Node.js', 'MCP'],
+    image: '/images/projects/obsidian.png',
+    href: '/projetos/obsidian-mcp',
+  },
+  {
+    type: 'Experiência',
+    title: 'Vitru Educação',
+    description:
+      'Desenvolvimento e evolução de sistemas acadêmicos para gestão de alunos e banco de questões.',
+    technologies: ['Java', 'PHP', 'Angular'],
+    image: '/images/projects/vitru.png',
+    href: '/projetos',
+  },
+  {
+    type: 'Experiência',
+    title: 'Dr. Consulta',
+    description:
+      'Manutenção e evolução de sistemas críticos para gestão de clínicas, atendimentos e serviços médicos.',
+    technologies: ['PHP', 'Oracle', 'Typescript'],
+    image: '/images/projects/drconsulta.png',
+    href: '/projetos',
+  },
+  {
+    type: 'Experiência',
+    title: 'PicPay - Crédito Consignado',
+    description:
+      'Atuação no desenvolvimento de APIs, integrações e funcionalidades para uma plataforma financeira.',
+    technologies: ['Laravel', 'React', 'TypeScript'],
+    image: '/images/projects/picpay.png',
+    href: '/projetos/picpay-consignado',
+  },
+];
+---
+
+<section
+  id="projetos"
+  aria-labelledby="projects-title"
+  class="bg-secondary"
+>
+  <div class="m-container py-20 lg:py-24">
+    <Reveal client:visible>
+      <div class="flex items-center justify-between">
+        <span
+          id="projects-title"
+          class="
+            font-body
+            text-xs
+            font-semibold
+            uppercase
+            tracking-[0.14em]
+            text-white/60
+          "
+        >
+          02 / Projetos
+        </span>
+
+        <a
+          href="/projetos"
+          class="
+            group
+            inline-flex
+            items-center
+            gap-2
+            border-b
+            border-white/40
+            pb-1
+            font-body
+            text-xs
+            font-semibold
+            uppercase
+            tracking-[0.12em]
+            text-white
+            transition-opacity
+            duration-200
+            hover:opacity-70
+          "
+        >
+          <span>Ver todos</span>
+
+          <span
+            aria-hidden="true"
+            class="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              group-hover:translate-y-1
+            "
+          >
+            ↘
+          </span>
+        </a>
+      </div>
+    </Reveal>
+
+    <div
+      class="
+        mt-10
+        grid
+        grid-cols-1
+        gap-4
+        md:grid-cols-2
+        lg:grid-cols-3
+      "
+    >
+      {
+        projects.map((project, index) => (
+          <Reveal
+            client:visible
+            delay={index * 0.12}
+          >
+            <ProjectCard {...project} />
+          </Reveal>
+        ))
+      }
+    </div>
+  </div>
+</section>

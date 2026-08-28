@@ -1,0 +1,108 @@
+---
+import Reveal from '../ui/Reveal';
+import VerticalReveal from '../ui/VerticalReveal';
+---
+
+<section
+  id="sobre"
+  aria-labelledby="about-title"
+  class="bg-content"
+>
+  <div
+    class="
+      m-container
+      grid
+      gap-12
+      py-20
+      lg:grid-cols-[1fr_1px_1fr]
+      lg:gap-10
+      lg:py-24
+    "
+  >
+    <Reveal client:visible delay={0.32}>
+      <div class="flex flex-col justify-start">
+        <span
+          class="
+            font-body
+            text-xs
+            font-semibold
+            uppercase
+            tracking-[0.14em]
+            text-white/60
+          "
+        >
+          01 / Sobre
+        </span>
+
+        <h2
+          id="about-title"
+          class="
+            heading-xl
+            mt-8
+            max-w-[520px]
+            uppercase
+            text-white/95
+          "
+        >
+          Mais de duas décadas construindo software
+        </h2>
+      </div>
+    </Reveal>
+
+    <VerticalReveal client:visible />
+
+    <Reveal
+      client:visible
+      delay={0.25}
+    >
+      <div class="flex max-w-[520px] flex-col justify-start">
+        <p class="body-md text-white/70">
+          Minha carreira começou no desenvolvimento de sistemas web e evoluiu
+          através de diferentes tecnologias, produtos e responsabilidades.
+        </p>
+
+        <p class="body-md mt-6 text-white/70">
+          Hoje atuo entre desenvolvimento, arquitetura de software e liderança
+          técnica, trabalhando na construção e evolução de sistemas complexos.
+        </p>
+
+        <a
+          href="/sobre"
+          class="
+              group
+              mt-8
+              inline-flex
+              w-fit
+              items-center
+              gap-2
+              border-b
+              border-white/50
+              px-2
+              py-2
+              font-body
+              text-sm
+              font-semibold
+              text-white
+              transition-opacity
+              duration-200
+              hover:opacity-70
+          "
+          >
+          <span>Conheça minha trajetória</span>
+
+          <span
+              aria-hidden="true"
+              class="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              group-hover:translate-y-1
+              "
+          >
+              ↘
+          </span>
+          </a>
+      </div>
+    </Reveal>
+  </div>
+</section>

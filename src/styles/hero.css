@@ -1,0 +1,69 @@
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-image-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-image-enter {
+  opacity: 0;
+  animation: hero-image-enter 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 100ms;
+}
+
+.hero-delay-2 {
+  animation-delay: 200ms;
+}
+
+.hero-delay-3 {
+  animation-delay: 300ms;
+}
+
+.hero-delay-image {
+  animation-delay: 350ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-image-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@utility bg-hero {
+    background: #013952;
+    background: linear-gradient(315deg,rgba(0, 29, 46, 100) 51%, rgba(35, 96, 124, 1) 100%);
+}
+
+@utility hero-title-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.65);
+  text-stroke: 1px rgba(255, 255, 255, 0.65);
+}
