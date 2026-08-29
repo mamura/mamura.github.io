@@ -1,0 +1,44 @@
+---
+import '@/styles/global.css';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: {
+        slug: 'php-backend',
+      },
+    },
+    {
+      params: {
+        slug: 'typescript-fullstack',
+      },
+    },
+  ];
+}
+
+const { slug } = Astro.params;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <title>Currículo segmentado | Marcio Mota</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Currículo segmentado</h1>
+
+      <p>
+        Slug:
+        <strong>{slug}</strong>
+      </p>
+    </main>
+  </body>
+</html>

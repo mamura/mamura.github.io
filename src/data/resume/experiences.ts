@@ -213,7 +213,7 @@ export const experiences: Experience[] = [
 
     company: 'Stefanini',
 
-    role: 'Líder Técnico / Senior Fullstack Developer',
+    role: 'Líder Técnico / Senior Full stack Developer',
 
     period: {
       start: '2022-09',
@@ -665,7 +665,7 @@ export const experiences: Experience[] = [
 
     company: 'Prefeitura Municipal de Fortaleza',
 
-    role: 'Fullstack PHP Developer',
+    role: 'Full stack PHP Developer',
 
     period: {
       start: '2002',

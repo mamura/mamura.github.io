@@ -841,12 +841,19 @@ a.resume-header__contact:hover {
 @media print {
   @page {
     size: A4;
-    margin: 12mm 14mm;
+    margin: 12mm 14mm 14mm;
   }
 
   html,
   body {
-    background: #ffffff;
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff !important;
+  }
+
+  body {
+    font-size: 10pt;
   }
 
   .resume {
@@ -857,126 +864,447 @@ a.resume-header__contact:hover {
     margin: 0;
     padding: 0;
 
-    background: #ffffff;
-    color: #000000;
+    background: #ffffff !important;
+    color: #111111;
 
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 
+  /*
+   * Elementos exclusivos da versão web
+   */
   .no-print,
   .resume-navigation,
   .resume-header__download {
     display: none !important;
   }
 
-  .m-container {
+  /*
+   * Remove as margens do container do site.
+   * O espaçamento do PDF passa a ser controlado pelo @page.
+   */
+  .resume .m-container {
+    width: 100%;
     max-width: none;
+
+    margin: 0;
     padding-inline: 0;
   }
 
+  /*
+   * Header
+   */
   .resume-header {
     padding-top: 0;
   }
 
   .resume-header__content {
-    padding: 0 0 12pt;
+    gap: 12pt;
+
+    padding: 0 0 10pt;
   }
 
   .resume-header__identity h1 {
-    font-size: 26pt;
+    font-size: 25pt;
+    line-height: 1;
 
-    color: #000000;
+    color: #111111;
   }
 
   .resume-header__role {
+    margin-top: 5pt;
+
+    font-size: 11pt;
+
     color: #013952;
   }
 
-  .resume-header__role span,
-  .resume-header__stack,
-  .resume-header__contact,
-  .resume-header__contact svg {
+  .resume-header__role span {
+    color: #555555;
+  }
+
+  .resume-header__stack {
+    margin-top: 5pt;
+
+    font-size: 8.5pt;
+    line-height: 1.4;
+
     color: #333333;
   }
 
   .resume-header__contacts {
-    padding-bottom: 10pt;
+    gap: 6pt 14pt;
 
-    border-bottom-color: #bbbbbb;
+    padding-bottom: 9pt;
+
+    border-bottom: 0.5pt solid #bfc7cb;
   }
 
-  .resume-overview {
-    padding-top: 14pt;
-    padding-bottom: 18pt;
-  }
+  .resume-header__contact {
+    font-size: 8pt;
 
-  .resume-section__heading {
-    margin-bottom: 10pt;
-  }
-
-  .resume-section__heading svg {
-    color: #013952;
-  }
-
-  .resume-section__heading h2 {
-    color: #000000;
-  }
-
-  .resume-summary__content p,
-  .resume-skills__group span,
-  .resume-experience__period,
-  .resume-experience__context,
-  .resume-experience__highlights,
-  .resume-previous-experience__period,
-  .resume-previous-experience__context,
-  .resume-previous-experience__technologies,
-  .resume-projects__content p,
-  .resume-education__item p,
-  .resume-education__item span,
-  .resume-training__item {
     color: #333333;
   }
 
-  .resume-experience__header p,
-  .resume-previous-experience__role {
-    color: #013952;
+  .resume-header__contact svg {
+    color: #333333;
   }
 
-  .resume-experience__item,
-  .resume-previous-experience__item,
-  .resume-projects-education__sidebar {
-    border-color: #cccccc;
+  .resume-header__brand-icon {
+    width: 11pt;
+    height: 11pt;
   }
 
-  .resume-experience,
-  .resume-previous-experience,
-  .resume-projects-education {
-    padding-bottom: 18pt;
-  }
-
-  .resume-experience__item {
-    padding-block: 14pt;
-
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .resume-previous-experience__item,
-  .resume-projects__item,
-  .resume-education__item,
-  .resume-training__item {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
+  /*
+   * Títulos das seções
+   */
   .resume-section__heading {
+    gap: 6pt;
+
+    margin-bottom: 9pt;
+
     break-after: avoid;
     page-break-after: avoid;
   }
 
-  a {
+  .resume-section__heading svg {
+    width: 13pt;
+    height: 13pt;
+
+    color: #013952;
+  }
+
+  .resume-section__heading h2 {
+    font-size: 8.5pt;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+
+    color: #111111;
+  }
+
+  /*
+   * Overview
+   */
+  .resume-overview {
+    padding-top: 12pt;
+    padding-bottom: 16pt;
+  }
+
+  .resume-overview__grid {
+    grid-template-columns: 1.08fr 0.92fr;
+
+    gap: 24pt;
+  }
+
+  .resume-summary__content {
+    gap: 7pt;
+  }
+
+  .resume-summary__content p {
+    font-size: 8.5pt;
+    line-height: 1.45;
+
+    color: #333333;
+  }
+
+  .resume-skills {
+    gap: 6pt;
+  }
+
+  .resume-skills__group {
+    gap: 1pt;
+  }
+
+  .resume-skills__group strong {
+    font-size: 7.8pt;
+
+    color: #111111;
+  }
+
+  .resume-skills__group span {
+    font-size: 7.6pt;
+    line-height: 1.35;
+
+    color: #333333;
+  }
+
+  /*
+   * Experiência profissional
+   */
+  .resume-experience {
+    padding-bottom: 16pt;
+  }
+
+  .resume-experience__item {
+    grid-template-columns: 78pt minmax(0, 1fr);
+
+    gap: 18pt;
+
+    padding-block: 11pt;
+
+    border-color: #c9ced1;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-experience__period {
+    padding-top: 1pt;
+
+    font-size: 7pt;
+    line-height: 1.35;
+
+    color: #444444;
+  }
+
+  .resume-experience__header h3 {
+    font-size: 9pt;
+    line-height: 1.25;
+
+    color: #111111;
+  }
+
+  .resume-experience__header p {
+    margin-top: 2pt;
+
+    font-size: 8pt;
+    line-height: 1.3;
+
+    color: #013952;
+  }
+
+  .resume-experience__context {
+    margin-top: 6pt;
+
+    font-size: 7.6pt;
+    line-height: 1.4;
+
+    color: #333333;
+  }
+
+  .resume-experience__highlights {
+    gap: 2pt;
+
+    margin-top: 6pt;
+    padding-left: 11pt;
+
+    font-size: 7.5pt;
+    line-height: 1.38;
+
+    color: #333333;
+  }
+
+  .resume-experience__highlights li::marker {
+    color: #013952;
+  }
+
+  .resume-experience__technologies {
+    margin-top: 6pt;
+
+    font-size: 6.8pt;
+    line-height: 1.35;
+
+    color: #222222;
+  }
+
+  /*
+   * Experiência anterior
+   */
+  .resume-previous-experience {
+    padding-bottom: 16pt;
+  }
+
+  .resume-previous-experience__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 22pt;
+
+    border-color: #c9ced1;
+  }
+
+  .resume-previous-experience__item {
+    grid-template-columns: 62pt minmax(0, 1fr);
+
+    gap: 8pt;
+
+    padding-block: 7pt;
+
+    border-color: #c9ced1;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-previous-experience__period {
+    font-size: 6.5pt;
+
+    color: #444444;
+  }
+
+  .resume-previous-experience__content h3 {
+    font-size: 7.6pt;
+
+    color: #111111;
+  }
+
+  .resume-previous-experience__role {
+    margin-top: 1pt;
+
+    font-size: 7pt;
+
+    color: #013952;
+  }
+
+  .resume-previous-experience__context {
+    margin-top: 3pt;
+
+    font-size: 6.4pt;
+    line-height: 1.35;
+
+    color: #444444;
+  }
+
+  .resume-previous-experience__technologies {
+    margin-top: 3pt;
+
+    font-size: 6.2pt;
+    line-height: 1.3;
+
+    color: #444444;
+  }
+
+  /*
+   * Projetos + Educação
+   */
+  .resume-projects-education {
+    padding-bottom: 0;
+  }
+
+  .resume-projects-education__grid {
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 20pt;
+  }
+
+  .resume-projects-education__sidebar {
+    gap: 12pt;
+
+    padding-left: 20pt;
+
+    border-color: #c9ced1;
+  }
+
+  .resume-projects__list {
+    gap: 7pt;
+  }
+
+  .resume-projects__item {
+    grid-template-columns: 26pt minmax(0, 1fr);
+
+    gap: 7pt;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-projects__icon {
+    width: 26pt;
+    height: 26pt;
+
+    border-radius: 4pt;
+  }
+
+  .resume-projects__content h3 {
+    font-size: 7.4pt;
+  }
+
+  .resume-projects__content p {
+    margin-top: 1pt;
+
+    font-size: 6.4pt;
+    line-height: 1.35;
+
+    color: #333333;
+  }
+
+  /*
+   * Educação
+   */
+  .resume-education__item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-education__item h3 {
+    font-size: 7pt;
+
+    color: #111111;
+  }
+
+  .resume-education__item p,
+  .resume-education__item span {
+    font-size: 6.4pt;
+
+    color: #444444;
+  }
+
+  /*
+   * Formação complementar
+   */
+  .resume-training__list {
+    gap: 3pt;
+  }
+
+  .resume-training__item {
+    grid-template-columns: 26pt minmax(0, 1fr) auto;
+
+    gap: 4pt;
+
+    font-size: 6.2pt;
+    line-height: 1.3;
+
+    color: #444444;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-training__name {
+    color: #111111;
+  }
+
+  /*
+   * Links
+   *
+   * Evita que navegadores adicionem a URL depois
+   * dos links ao imprimir.
+   */
+  a,
+  a:visited {
     color: inherit;
     text-decoration: none;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  /*
+   * Evita títulos isolados no final da página.
+   */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /*
+   * Mantém listas mais previsíveis na paginação.
+   */
+  li {
+    orphans: 2;
+    widows: 2;
   }
 }
