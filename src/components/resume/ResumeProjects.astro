@@ -1,0 +1,35 @@
+---
+import { FolderGit2 } from 'lucide-react';
+
+import { projects } from '@/data/resume/projects';
+---
+
+<section class="resume-projects">
+  <div class="resume-section__heading">
+    <FolderGit2
+      size={20}
+      strokeWidth={1.8}
+      aria-hidden="true"
+    />
+
+    <h2>PROJETOS EM DESTAQUE</h2>
+  </div>
+
+  <div class="resume-projects__list">
+    {
+      projects.map((project) => (
+        <article class="resume-projects__item">
+          <div class="resume-projects__icon">
+            <span>{project.name.charAt(0)}</span>
+          </div>
+
+          <div class="resume-projects__content">
+            <h3>{project.name}</h3>
+
+            <p>{project.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

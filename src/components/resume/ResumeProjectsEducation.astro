@@ -1,0 +1,20 @@
+---
+import ResumeProjects from './ResumeProjects.astro';
+import ResumeEducation from './ResumeEducation.astro';
+import ResumeTraining from './ResumeTraining.astro';
+---
+
+<section class="resume-projects-education">
+  <div class="m-container">
+    <div class="resume-projects-education__grid">
+      <div class="resume-projects-education__projects">
+        <ResumeProjects />
+      </div>
+
+      <div class="resume-projects-education__sidebar">
+        <ResumeEducation />
+        <ResumeTraining />
+      </div>
+    </div>
+  </div>
+</section>

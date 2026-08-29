@@ -1,0 +1,33 @@
+---
+import { GraduationCap } from 'lucide-react';
+
+import { education } from '@/data/resume/education';
+---
+
+<section class="resume-education">
+  <div class="resume-section__heading">
+    <GraduationCap
+      size={20}
+      strokeWidth={1.8}
+      aria-hidden="true"
+    />
+
+    <h2>EDUCAÇÃO</h2>
+  </div>
+
+  <div class="resume-education__list">
+    {
+      education.map((item) => (
+        <article class="resume-education__item">
+          <h3>{item.course}</h3>
+
+          <p>{item.institution}</p>
+
+          <span>
+            {item.period.start} — {item.period.end ?? 'Atual'}
+          </span>
+        </article>
+      ))
+    }
+  </div>
+</section>

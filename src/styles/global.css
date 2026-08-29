@@ -10,6 +10,7 @@
 @import "./theme.css";
 @import "./typography.css";
 @import "./hero.css";
+@import "./resume.css";
 
 html {
   background: var(--color-background);

@@ -1,0 +1,90 @@
+---
+import { History } from 'lucide-react';
+
+import { experiences } from '@/data/resume/experiences';
+
+const previousExperiences = experiences.filter(
+  (experience) => !experience.featured,
+);
+
+const monthNames = [
+  'Jan',
+  'Fev',
+  'Mar',
+  'Abr',
+  'Mai',
+  'Jun',
+  'Jul',
+  'Ago',
+  'Set',
+  'Out',
+  'Nov',
+  'Dez',
+];
+
+function formatDate(date: string) {
+  if (!date.includes('-')) {
+    return date;
+  }
+
+  const [year, month] = date.split('-');
+
+  return `${monthNames[Number(month) - 1]} ${year}`;
+}
+
+function formatPeriod(start: string, end?: string) {
+  const startLabel = formatDate(start);
+  const endLabel = end ? formatDate(end) : 'Atual';
+
+  return `${startLabel} — ${endLabel}`;
+}
+---
+
+<section class="resume-previous-experience">
+  <div class="m-container">
+    <div class="resume-section__heading">
+      <History
+        size={20}
+        strokeWidth={1.8}
+        aria-hidden="true"
+      />
+
+      <h2>EXPERIÊNCIA ANTERIOR</h2>
+    </div>
+
+    <div class="resume-previous-experience__grid">
+      {
+        previousExperiences.map((experience) => (
+          <article class="resume-previous-experience__item">
+            <div class="resume-previous-experience__period">
+              {formatPeriod(
+                experience.period.start,
+                experience.period.end,
+              )}
+            </div>
+
+            <div class="resume-previous-experience__content">
+              <h3>{experience.company}</h3>
+
+              <p class="resume-previous-experience__role">
+                {experience.role}
+              </p>
+
+              {
+                experience.context && (
+                  <p class="resume-previous-experience__context">
+                    {experience.context}
+                  </p>
+                )
+              }
+
+              <p class="resume-previous-experience__technologies">
+                {experience.technologies.join(' · ')}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

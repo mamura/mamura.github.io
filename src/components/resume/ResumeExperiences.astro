@@ -1,0 +1,98 @@
+---
+import { Briefcase } from 'lucide-react';
+
+import { experiences } from '@/data/resume/experiences';
+
+const featuredExperiences = experiences.filter(
+  (experience) => experience.featured,
+);
+
+const monthNames = [
+  'Jan',
+  'Fev',
+  'Mar',
+  'Abr',
+  'Mai',
+  'Jun',
+  'Jul',
+  'Ago',
+  'Set',
+  'Out',
+  'Nov',
+  'Dez',
+];
+
+function formatDate(date: string) {
+  if (!date.includes('-')) {
+    return date;
+  }
+
+  const [year, month] = date.split('-');
+
+  return `${monthNames[Number(month) - 1]} ${year}`;
+}
+
+function formatPeriod(start: string, end?: string) {
+  const startLabel = formatDate(start);
+  const endLabel = end ? formatDate(end) : 'Atual';
+
+  return `${startLabel} — ${endLabel}`;
+}
+---
+
+<section class="resume-experience">
+  <div class="m-container">
+    <div class="resume-section__heading">
+      <Briefcase
+        size={20}
+        strokeWidth={1.8}
+        aria-hidden="true"
+      />
+
+      <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+    </div>
+
+    <div class="resume-experience__list">
+      {
+        featuredExperiences.map((experience) => (
+          <article class="resume-experience__item">
+            <div class="resume-experience__period">
+              {formatPeriod(
+                experience.period.start,
+                experience.period.end,
+              )}
+            </div>
+
+            <div class="resume-experience__content">
+              <header class="resume-experience__header">
+                <h3>{experience.company}</h3>
+
+                <p>{experience.role}</p>
+              </header>
+
+              {
+                experience.context && (
+                  <p class="resume-experience__context">
+                    {experience.context}
+                  </p>
+                )
+              }
+
+              <ul class="resume-experience__highlights">
+                {
+                  experience.highlights.map((highlight) => (
+                    <li>{highlight.text}</li>
+                  ))
+                }
+              </ul>
+
+              <div class="resume-experience__technologies">
+                {experience.technologies.join(' · ')}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

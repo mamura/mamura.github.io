@@ -1,0 +1,74 @@
+---
+import { Braces } from 'lucide-react';
+
+import {
+  skills,
+  type SkillCategory,
+} from '@/data/resume/skills';
+
+const categoryLabels: Record<SkillCategory, string> = {
+  language: 'Linguagens',
+  backend: 'Backend',
+  frontend: 'Frontend',
+  database: 'Banco de dados',
+  architecture: 'Arquitetura',
+  devops: 'DevOps',
+  testing: 'Qualidade',
+  leadership: 'Liderança',
+  management: 'Gestão',
+  tools: 'Ferramentas',
+};
+
+const visibleCategories: SkillCategory[] = [
+  'language',
+  'backend',
+  'frontend',
+  'database',
+  'architecture',
+  'devops',
+  'testing',
+  'leadership',
+];
+
+const groupedSkills = visibleCategories.map((category) => ({
+  category,
+  label: categoryLabels[category],
+  skills: skills
+    .filter((skill) => skill.category === category)
+    .sort((a, b) => {
+      const weight = {
+        core: 0,
+        strong: 1,
+        supporting: 2,
+      };
+
+      return weight[a.level] - weight[b.level];
+    }),
+}));
+---
+
+<section class="resume-section resume-skills-section">
+  <div class="resume-section__heading">
+    <Braces
+      size={20}
+      strokeWidth={1.8}
+      aria-hidden="true"
+    />
+
+    <h2>COMPETÊNCIAS PRINCIPAIS</h2>
+  </div>
+
+  <div class="resume-skills">
+    {
+      groupedSkills.map((group) => (
+        <div class="resume-skills__group">
+          <strong>{group.label}</strong>
+
+          <span>
+            {group.skills.map((skill) => skill.name).join(', ')}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</section>

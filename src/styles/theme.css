@@ -11,6 +11,7 @@
 
   --color-text-primary: #ffffff;
   --color-text-secondary: #d6e0e5;
+  --color-text-resume: #030912;
   --color-content: #17191A;
   --color-surface: #1A1C1D;
   --color-secondary: #1A1C1D;
@@ -41,4 +42,77 @@
   max-width: 1280px;
   margin-inline: auto;
   padding-inline: var(--space-container-inline);
+}
+
+/** Projects */
+.resume-projects {
+  padding-bottom: var(--resume-section-y);
+}
+
+.resume-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 36px);
+}
+
+.resume-projects__item {
+  padding-top: 20px;
+  border-top: 1px solid var(--resume-border);
+}
+
+.resume-projects__item h3 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: var(--resume-text-primary);
+}
+
+.resume-projects__description {
+  margin: 8px 0 0;
+
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.6;
+
+  color: var(--resume-text-secondary);
+}
+
+.resume-projects__highlights {
+  display: grid;
+  gap: 6px;
+
+  margin: 14px 0 0;
+  padding-left: 18px;
+
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.55;
+
+  color: var(--resume-text-secondary);
+}
+
+.resume-projects__highlights li::marker {
+  color: var(--color-primary);
+}
+
+.resume-projects__technologies {
+  margin: 14px 0 0;
+
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: var(--resume-text-primary);
+}
+
+@media (max-width: 768px) {
+  .resume-projects__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }

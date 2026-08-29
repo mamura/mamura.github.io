@@ -1,0 +1,36 @@
+---
+import '@/styles/global.css';
+
+import ResumeNavigation from '@/components/resume/ResumeNavigation.astro';
+import ResumeHeader from '@/components/resume/ResumeHeader.astro';
+import ResumeOverview from '@/components/resume/ResumeOverview.astro';
+import ResumeExperiences from '@/components/resume/ResumeExperiences.astro';
+import ResumePreviousExperience from '@/components/resume/ResumePreviousExperience.astro';
+import ResumeProjectsEducation from '@/components/resume/ResumeProjectsEducation.astro';
+import ResumeEducation from '@/components/resume/ResumeEducation.astro';
+import ResumeTraining from '@/components/resume/ResumeTraining.astro';
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Currículo profissional de Marcio Mota, Senior Software Engineer com experiência em PHP, Laravel, TypeScript, React, arquitetura de software e liderança técnica."/>
+
+    <title>Currículo | Marcio Mota</title>
+  </head>
+
+  <body>
+    <main class="resume">
+      <ResumeNavigation />
+      <ResumeHeader />
+      <ResumeOverview />
+      <ResumeExperiences />
+      <ResumePreviousExperience />
+      <ResumeProjectsEducation />
+    </main>
+  </body>
+</html>

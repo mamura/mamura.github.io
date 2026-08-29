@@ -1,0 +1,129 @@
+---
+import {
+  Download,
+  Globe,
+  Mail,
+  MapPin,
+} from 'lucide-react';
+
+import { profile } from '@/data/resume/profile';
+---
+
+<header class="resume-header">
+  <div class="m-container">
+    <div class="resume-header__content">
+      <div class="resume-header__identity">
+        <h1>
+          {profile.name}
+        </h1>
+
+        <p class="resume-header__role">
+          Senior Software Engineer
+
+          <span aria-hidden="true">|</span>
+
+          Full Stack Developer
+        </p>
+
+        <p class="resume-header__stack">
+          PHP
+          <span aria-hidden="true">•</span>
+
+          Laravel
+          <span aria-hidden="true">•</span>
+
+          TypeScript
+          <span aria-hidden="true">•</span>
+
+          React
+          <span aria-hidden="true">•</span>
+
+          Java
+          <span aria-hidden="true">•</span>
+
+          Software Architecture
+          <span aria-hidden="true">•</span>
+
+          Technical Leadership
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="resume-header__download no-print"
+        onclick="window.print()"
+      >
+        <Download
+          size={18}
+          strokeWidth={1.8}
+        />
+
+        Baixar PDF
+      </button>
+    </div>
+
+    <address class="resume-header__contacts">
+      <div class="resume-header__contact">
+        <MapPin size={16} />
+
+        <span>
+          {profile.location}
+        </span>
+      </div>
+
+      <a
+        href={`mailto:${profile.email}`}
+        class="resume-header__contact"
+      >
+        <Mail size={16} />
+
+        <span>
+          {profile.email}
+        </span>
+      </a>
+
+      <a
+        href={profile.website}
+        class="resume-header__contact"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Globe size={16} />
+
+        <span>
+          mamura.dev
+        </span>
+      </a>
+
+      <a
+        href={profile.github}
+        class="resume-header__contact resume-header__contact--social"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/github-40.svg"
+          alt=""
+          class="resume-header__brand-icon"
+          aria-hidden="true"
+        />
+        GitHub
+      </a>
+
+      <a
+        href={profile.linkedin}
+        class="resume-header__contact resume-header__contact--social"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/linkedin-40.svg"
+          alt=""
+          class="resume-header__brand-icon"
+          aria-hidden="true"
+        />
+        LinkedIn
+      </a>
+    </address>
+  </div>
+</header>
