@@ -76,6 +76,7 @@ export interface Experience {
 export interface Project {
   id: string;
   name: string;
+  icon: string;
   description: string;
   highlights: ExperienceHighlight[];
   technologies: string[];

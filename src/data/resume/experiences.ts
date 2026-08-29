@@ -158,7 +158,7 @@ export const experiences: Experience[] = [
 
     company: 'IEBT Innovation',
 
-    role: 'Senior Fullstack Developer',
+    role: 'Engenheiro de Software',
 
     period: {
       start: '2025-02',

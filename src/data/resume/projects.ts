@@ -6,6 +6,8 @@ export const projects: Project[] = [
 
     name: 'Floresta',
 
+    icon: '/images/projects/floresta-40.png',
+
     description:
       'Sistema corporativo desenvolvido com backend Laravel e frontend moderno, estruturado com foco em modularidade, manutenção e evolução gradual.',
 
@@ -60,6 +62,8 @@ export const projects: Project[] = [
 
     name: 'Bem Pertim',
 
+    icon: '/images/projects/bem-pertim-40.png',
+
     description:
       'Aplicação web voltada à descoberta de negócios locais, construída com foco em experiência mobile e componentes reutilizáveis.',
 
@@ -102,6 +106,8 @@ export const projects: Project[] = [
     id: 'obsidian-mcp',
 
     name: 'Obsidian MCP',
+
+    icon: '/images/projects/obsidian-mcp-40.png',
 
     description:
       'Servidor MCP desenvolvido para disponibilizar conhecimento armazenado em vaults do Obsidian para aplicações baseadas em modelos de linguagem.',

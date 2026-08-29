@@ -19,9 +19,12 @@ import { projects } from '@/data/resume/projects';
     {
       projects.map((project) => (
         <article class="resume-projects__item">
-          <div class="resume-projects__icon">
-            <span>{project.name.charAt(0)}</span>
-          </div>
+          <img
+            src={project.icon}
+            alt=""
+            class="resume-projects__icon"
+            aria-hidden="true"
+          />
 
           <div class="resume-projects__content">
             <h3>{project.name}</h3>
