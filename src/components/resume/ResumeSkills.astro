@@ -1,10 +1,18 @@
 ---
 import { Braces } from 'lucide-react';
 
-import {
-  skills,
-  type SkillCategory,
+import type {
+  Skill,
+  SkillCategory,
 } from '@/data/resume/skills';
+
+interface Props {
+  skills: Skill[];
+}
+
+const {
+  skills,
+} = Astro.props;
 
 const categoryLabels: Record<SkillCategory, string> = {
   language: 'Linguagens',
@@ -30,21 +38,24 @@ const visibleCategories: SkillCategory[] = [
   'leadership',
 ];
 
-const groupedSkills = visibleCategories.map((category) => ({
-  category,
-  label: categoryLabels[category],
-  skills: skills
-    .filter((skill) => skill.category === category)
-    .sort((a, b) => {
-      const weight = {
-        core: 0,
-        strong: 1,
-        supporting: 2,
-      };
+const groupedSkills = visibleCategories
+  .map((category) => ({
+    category,
+    label: categoryLabels[category],
 
-      return weight[a.level] - weight[b.level];
-    }),
-}));
+    skills: skills
+      .filter((skill) => skill.category === category)
+      .sort((a, b) => {
+        const weight = {
+          core: 0,
+          strong: 1,
+          supporting: 2,
+        };
+
+        return weight[a.level] - weight[b.level];
+      }),
+  }))
+  .filter((group) => group.skills.length > 0);
 ---
 
 <section class="resume-section resume-skills-section">

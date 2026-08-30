@@ -1,6 +1,8 @@
 ---
 import '@/styles/global.css';
 
+import { experiences } from '@/data/resume/experiences';
+
 import ResumeNavigation from '@/components/resume/ResumeNavigation.astro';
 import ResumeHeader from '@/components/resume/ResumeHeader.astro';
 import ResumeOverview from '@/components/resume/ResumeOverview.astro';
@@ -9,6 +11,14 @@ import ResumePreviousExperience from '@/components/resume/ResumePreviousExperien
 import ResumeProjectsEducation from '@/components/resume/ResumeProjectsEducation.astro';
 import ResumeEducation from '@/components/resume/ResumeEducation.astro';
 import ResumeTraining from '@/components/resume/ResumeTraining.astro';
+
+const featuredExperiences = experiences.filter(
+  (experience) => experience.featured,
+);
+
+const previousExperiences = experiences.filter(
+  (experience) => !experience.featured,
+);
 ---
 
 <!doctype html>
@@ -28,8 +38,8 @@ import ResumeTraining from '@/components/resume/ResumeTraining.astro';
       <ResumeNavigation />
       <ResumeHeader />
       <ResumeOverview />
-      <ResumeExperiences />
-      <ResumePreviousExperience />
+      <ResumeExperiences experiences={featuredExperiences} />
+      <ResumePreviousExperience experiences={previousExperiences} />
       <ResumeProjectsEducation />
     </main>
   </body>

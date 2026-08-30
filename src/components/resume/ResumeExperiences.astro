@@ -1,11 +1,15 @@
 ---
 import { Briefcase } from 'lucide-react';
 
-import { experiences } from '@/data/resume/experiences';
+import type { Experience } from '@/data/resume/types';
 
-const featuredExperiences = experiences.filter(
-  (experience) => experience.featured,
-);
+interface Props {
+  experiences: Experience[];
+}
+
+const {
+  experiences,
+} = Astro.props;
 
 const monthNames = [
   'Jan',
@@ -54,7 +58,7 @@ function formatPeriod(start: string, end?: string) {
 
     <div class="resume-experience__list">
       {
-        featuredExperiences.map((experience) => (
+        experiences.map((experience) => (
           <article class="resume-experience__item">
             <div class="resume-experience__period">
               {formatPeriod(
@@ -70,24 +74,48 @@ function formatPeriod(start: string, end?: string) {
                 <p>{experience.role}</p>
               </header>
 
-              {
-                experience.context && (
-                  <p class="resume-experience__context">
-                    {experience.context}
-                  </p>
-                )
-              }
-
-              <ul class="resume-experience__highlights">
+              <div class="resume-experience__engagements">
                 {
-                  experience.highlights.map((highlight) => (
-                    <li>{highlight.text}</li>
+                  experience.engagements.map((engagement) => (
+                    <section class="resume-experience__engagement">
+                      <header class="resume-experience__engagement-header">
+                        <strong>
+                          {engagement.client}
+
+                          {
+                            engagement.project && (
+                              <> — {engagement.project}</>
+                            )
+                          }
+                        </strong>
+                      </header>
+
+                      {
+                        engagement.context && (
+                          <p class="resume-experience__context">
+                            {engagement.context}
+                          </p>
+                        )
+                      }
+
+                      <ul class="resume-experience__highlights">
+                        {
+                          engagement.highlights.map((highlight) => (
+                            <li>{highlight.text}</li>
+                          ))
+                        }
+                      </ul>
+
+                      {
+                        engagement.technologies.length > 0 && (
+                          <div class="resume-experience__technologies">
+                            {engagement.technologies.join(' · ')}
+                          </div>
+                        )
+                      }
+                    </section>
                   ))
                 }
-              </ul>
-
-              <div class="resume-experience__technologies">
-                {experience.technologies.join(' · ')}
               </div>
             </div>
           </article>

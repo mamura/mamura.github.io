@@ -1,5 +1,13 @@
 ---
 import { FileText } from 'lucide-react';
+
+interface Props {
+  summary: string[];
+}
+
+const {
+  summary,
+} = Astro.props;
 ---
 
 <section class="resume-section">
@@ -14,18 +22,10 @@ import { FileText } from 'lucide-react';
   </div>
 
   <div class="resume-summary__content">
-    <p>
-        Desenvolvedor de software com ampla experiência na construção e evolução
-        de aplicações web, sistemas corporativos e produtos digitais, atuando
-        principalmente com PHP, Laravel, TypeScript e React, além de experiência
-        com Java no desenvolvimento backend.
-    </p>
-
-    <p>
-        Experiência em arquitetura de software, APIs REST, integração de sistemas,
-        bancos de dados relacionais, modernização de aplicações legadas e liderança
-        técnica, participando desde a definição da solução até sua entrega e
-        sustentação em produção.
-    </p>
-    </div>
+    {
+      summary.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))
+    }
+  </div>
 </section>

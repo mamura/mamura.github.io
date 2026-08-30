@@ -1,44 +1,76 @@
 ---
 import '@/styles/global.css';
 
+import { presets } from '@/data/resume/presets';
+import { skills } from '@/data/resume/skills';
+import { experiences } from '@/data/resume/experiences';
+
+import {
+  selectSkillsForPreset,
+  selectExperiencesForPreset,
+} from '@/data/resume/selectors';
+
+import ResumeNavigation from '@/components/resume/ResumeNavigation.astro';
+import ResumeHeader from '@/components/resume/ResumeHeader.astro';
+import ResumeOverview from '@/components/resume/ResumeOverview.astro';
+import ResumeExperiences from '@/components/resume/ResumeExperiences.astro';
+import ResumePreviousExperience from '@/components/resume/ResumePreviousExperience.astro';
+import ResumeProjectsEducation from '@/components/resume/ResumeProjectsEducation.astro';
+
 export function getStaticPaths() {
-  return [
-    {
-      params: {
-        slug: 'php-backend',
-      },
+  return presets.map((preset) => ({
+    params: {
+      slug: preset.slug,
     },
-    {
-      params: {
-        slug: 'typescript-fullstack',
-      },
+
+    props: {
+      preset,
     },
-  ];
+  }));
 }
 
-const { slug } = Astro.params;
+const { preset } = Astro.props;
+
+const selectedSkills = selectSkillsForPreset(
+  skills,
+  preset,
+);
+
+const selectedExperiences = selectExperiencesForPreset(
+  experiences,
+  preset,
+);
+
+const featuredExperiences = selectedExperiences.filter(
+  (experience) => experience.featured,
+);
+
+const previousExperiences = selectedExperiences.filter(
+  (experience) => !experience.featured,
+);
 ---
 
 <!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
 
-    <title>Currículo segmentado | Marcio Mota</title>
+    <title>{preset.title} | Marcio Mota</title>
   </head>
 
   <body>
-    <main>
-      <h1>Currículo segmentado</h1>
-
-      <p>
-        Slug:
-        <strong>{slug}</strong>
-      </p>
+    <main class="resume">
+      <ResumeNavigation />
+      <ResumeHeader positioning={preset.positioning} />
+      <ResumeOverview summary={preset.summary} skills={selectedSkills} />
+      <ResumeExperiences experiences={featuredExperiences} />
+      <ResumePreviousExperience experiences={previousExperiences} />
+      <ResumeProjectsEducation />
     </main>
   </body>
 </html>

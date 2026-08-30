@@ -7,6 +7,19 @@ import {
 } from 'lucide-react';
 
 import { profile } from '@/data/resume/profile';
+import { masterPreset } from '@/data/resume/presets';
+
+import type {
+  ResumePositioning,
+} from '@/data/resume/types';
+
+interface Props {
+  positioning?: ResumePositioning;
+}
+
+const {
+  positioning = masterPreset.positioning,
+} = Astro.props;
 ---
 
 <header class="resume-header">
@@ -18,33 +31,31 @@ import { profile } from '@/data/resume/profile';
         </h1>
 
         <p class="resume-header__role">
-          Senior Software Engineer
+          {
+            positioning.roles.map((role, index) => (
+              <>
+                {index > 0 && (
+                  <span aria-hidden="true">|</span>
+                )}
 
-          <span aria-hidden="true">|</span>
-
-          Full Stack Developer
+                {role}
+              </>
+            ))
+          }
         </p>
 
         <p class="resume-header__stack">
-          PHP
-          <span aria-hidden="true">•</span>
+          {
+            positioning.stack.map((technology, index) => (
+              <>
+                {index > 0 && (
+                  <span aria-hidden="true">•</span>
+                )}
 
-          Laravel
-          <span aria-hidden="true">•</span>
-
-          TypeScript
-          <span aria-hidden="true">•</span>
-
-          React
-          <span aria-hidden="true">•</span>
-
-          Java
-          <span aria-hidden="true">•</span>
-
-          Software Architecture
-          <span aria-hidden="true">•</span>
-
-          Technical Leadership
+                {technology}
+              </>
+            ))
+          }
         </p>
       </div>
 

@@ -39,7 +39,8 @@ export type HighlightGroup =
   | 'leadership'
   | 'management'
   | 'fullstack'
-  | 'devops';
+  | 'devops'
+  | 'database';
 
 export interface ResumePeriod {
   start: string;
@@ -59,20 +60,20 @@ export interface Experience {
   company: string;
   role: string;
   period: ResumePeriod;
+  featured?: boolean;
+  engagements: ExperienceEngagement[];
+}
 
+interface ExperienceEngagement {
+  client?: string;
+  project?: string;
   context?: string;
 
   highlights: ExperienceHighlight[];
 
   technologies: string[];
-
   areas: ResumeArea[];
-
-  contractType?: 'full-time' | 'part-time' | 'contract' | 'parallel-project';
-
-  featured?: boolean;
 }
-
 export interface Project {
   id: string;
   name: string;
@@ -107,4 +108,9 @@ export interface ResumeProfile {
     language: string;
     level: string;
   }[];
+}
+
+export interface ResumePositioning {
+  roles: string[];
+  stack: string[];
 }

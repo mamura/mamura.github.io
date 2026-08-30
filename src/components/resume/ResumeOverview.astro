@@ -1,13 +1,28 @@
 ---
 import ResumeSummary from './ResumeSummary.astro';
 import ResumeSkills from './ResumeSkills.astro';
+
+import { masterPreset } from '@/data/resume/presets';
+import { skills as masterSkills } from '@/data/resume/skills';
+
+import type { Skill } from '@/data/resume/skills';
+
+interface Props {
+  summary?: string[];
+  skills?: Skill[];
+}
+
+const {
+  summary = masterPreset.summary,
+  skills = masterSkills,
+} = Astro.props;
 ---
 
 <section class="resume-overview">
   <div class="m-container">
     <div class="resume-overview__grid">
-      <ResumeSummary />
-      <ResumeSkills />
+      <ResumeSummary summary={summary} />
+      <ResumeSkills skills={skills} />
     </div>
   </div>
 </section>

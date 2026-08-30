@@ -1,11 +1,13 @@
 ---
 import { History } from 'lucide-react';
 
-import { experiences } from '@/data/resume/experiences';
+import type { Experience } from '@/data/resume/types';
 
-const previousExperiences = experiences.filter(
-  (experience) => !experience.featured,
-);
+interface Props {
+  experiences: Experience[];
+}
+
+const { experiences: previousExperiences } = Astro.props;
 
 const monthNames = [
   'Jan',
@@ -71,16 +73,43 @@ function formatPeriod(start: string, end?: string) {
               </p>
 
               {
-                experience.context && (
-                  <p class="resume-previous-experience__context">
-                    {experience.context}
-                  </p>
-                )
-              }
+                experience.engagements.map((engagement) => (
+                  <div class="resume-previous-experience__engagement">
+                    {
+                      (engagement.client || engagement.project) && (
+                        <p class="resume-previous-experience__project">
+                          {engagement.client}
 
-              <p class="resume-previous-experience__technologies">
-                {experience.technologies.join(' · ')}
-              </p>
+                          {
+                            engagement.project && (
+                              <>
+                                {engagement.client && ' — '}
+                                {engagement.project}
+                              </>
+                            )
+                          }
+                        </p>
+                      )
+                    }
+
+                    {
+                      engagement.context && (
+                        <p class="resume-previous-experience__context">
+                          {engagement.context}
+                        </p>
+                      )
+                    }
+
+                    {
+                      engagement.technologies.length > 0 && (
+                        <p class="resume-previous-experience__technologies">
+                          {engagement.technologies.join(' · ')}
+                        </p>
+                      )
+                    }
+                  </div>
+                ))
+              }
             </div>
           </article>
         ))
