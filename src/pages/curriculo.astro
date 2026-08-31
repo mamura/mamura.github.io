@@ -29,7 +29,13 @@ const previousExperiences = experiences.filter(
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="description" content="Currículo profissional de Marcio Mota, Senior Software Engineer com experiência em PHP, Laravel, TypeScript, React, arquitetura de software e liderança técnica."/>
-
+    {import.meta.env.PROD && (
+      <script
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"52fd7be7afa3439780ca628a71be99ba"}'
+      ></script>
+    )}
     <title>Currículo | Marcio Mota</title>
   </head>
 
