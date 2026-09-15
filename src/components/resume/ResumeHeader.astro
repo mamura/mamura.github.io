@@ -4,6 +4,7 @@ import {
   Globe,
   Mail,
   MapPin,
+Phone,
 } from 'lucide-react';
 
 import { profile } from '@/data/resume/profile';
@@ -90,6 +91,17 @@ const {
 
         <span>
           {profile.email}
+        </span>
+      </a>
+
+      <a
+        href={`mailto:${profile.email}`}
+        class="resume-header__contact"
+      >
+        <Phone size={16} />
+
+        <span>
+          {profile.phone}
         </span>
       </a>
 

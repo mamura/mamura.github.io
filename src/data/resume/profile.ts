@@ -3,7 +3,7 @@ import type { ResumeProfile } from './types';
 export const profile: ResumeProfile = {
   name: 'Marcio Mota',
 
-  location: 'Fortaleza, CE — Brasil',
+  location: 'Fortaleza, CE - Brasil',
 
   email: 'marcio.mota@gmail.com',
 
