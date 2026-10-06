@@ -1,30 +1,18 @@
 ---
-const articles = [
-  {
-    title:
-      'Como uso IA para acelerar o desenvolvimento sem perder qualidade',
-    category: 'IA + Desenvolvimento',
-    date: '28 Ago 2026',
-    image: '/images/articles/gestao-ti.png',
-    href: '#',
-  },
-  {
-    title:
-      'TypeScript além dos tipos: decisões que melhoram o código',
-    category: 'TypeScript',
-    date: '18 Ago 2026',
-    image: '/images/articles/laravel-multitenancy.png',
-    href: '#',
-  },
-  {
-    title:
-      'Arquitetura de software para projetos que precisam crescer',
-    category: 'Arquitetura',
-    date: '02 Ago 2026',
-    image: '/images/articles/roteiro-entrevista.jpg',
-    href: '#',
-  },
-];
+import { getCollection } from 'astro:content';
+import { formatArticleDate } from '@/utils/date';
+
+const articles = (
+  await getCollection(
+    'articles',
+    ({ data }) => data.featured && !data.draft,
+  )
+)
+  .sort(
+    (a, b) =>
+      b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+  )
+  .slice(0, 3);
 ---
 
 <section id="artigos" aria-labelledby="articles-title" class="bg-secondary py-24 lg:py-32"> 
@@ -73,7 +61,7 @@ const articles = [
         articles.map((article) => (
           <article class="group">
             <a
-              href={article.href}
+              href={`/artigos/${article.id}`}
               class="block"
             >
               <div
@@ -85,7 +73,7 @@ const articles = [
                 "
               >
                 <img
-                  src={article.image}
+                  src={article.data.cover}
                   alt=""
                   loading="lazy"
                   class="
@@ -126,7 +114,7 @@ const articles = [
                   group-hover:text-white/75
                 "
               >
-                {article.title}
+                {article.data.title}
               </h3>
 
               <div
@@ -144,7 +132,7 @@ const articles = [
                 "
               >
                 <span class="text-accent">
-                  {article.category}
+                  {article.data.category}
                 </span>
 
                 <span
@@ -154,8 +142,8 @@ const articles = [
                   |
                 </span>
 
-                <time class="text-white/45">
-                  {article.date}
+                <time datetime={article.data.publishedAt.toISOString()}>
+                  { formatArticleDate(article.data.publishedAt) }
                 </time>
               </div>
             </a>

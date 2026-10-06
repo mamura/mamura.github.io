@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+import { formatArticleDate } from '@/utils/date';
+
+import Header from '@/components/layout/Header.astro';
+
+import '@/styles/global.css';
+import '@/styles/articles.css';
+
+const articles = (
+  await getCollection('articles', ({ data }) => !data.draft)
+).sort(
+  (a, b) =>
+    b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta
+      name="description"
+      content="Artigos sobre desenvolvimento de software, arquitetura, inteligência artificial, produto e tecnologia."
+    />
+
+    <title>Artigos | Mamura</title>
+  </head>
+
+  <body>
+    <main class="min-h-screen bg-background text-white">
+      <Header />
+
+      <section class="articles-page">
+        <div class="m-container">
+          <header class="articles-page__header">
+            <span class="articles-page__eyebrow">
+              01 / ARTIGOS
+            </span>
+
+            <h1 class="articles-page__title">
+              Ideias, experiências<br />
+              e coisas que aprendi <strong>construindo.</strong>
+            </h1>
+
+            <p class="articles-page__description">
+              Desenvolvimento de software, arquitetura, inteligência
+              artificial, produto e os problemas que aparecem no caminho.
+            </p>
+          </header>
+
+          <div class="articles-page__list">
+            {
+              articles.map((article) => (
+                <a
+                  href={`/artigos/${article.id}`}
+                  class="article-list-item"
+                >
+                  <div class="article-list-item__image-wrapper">
+                    <img
+                      src={article.data.cover}
+                      alt=""
+                      class="article-list-item__image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="article-list-item__content">
+                    <div class="article-list-item__meta">
+                      <span>{article.data.category}</span>
+
+                      <span
+                        class="article-list-item__separator"
+                        aria-hidden="true"
+                      ></span>
+
+                      <time datetime={article.data.publishedAt.toISOString()}>
+                        { formatArticleDate(article.data.publishedAt) }
+                      </time>
+                    </div>
+
+                    <h2 class="article-list-item__title">
+                      {article.data.title}
+                    </h2>
+
+                    <p class="article-list-item__description">
+                      {article.data.description}
+                    </p>
+
+                    <span class="article-list-item__link">
+                      Ler artigo →
+                    </span>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

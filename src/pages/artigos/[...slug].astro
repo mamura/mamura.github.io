@@ -1,0 +1,72 @@
+---
+import { getCollection, render } from 'astro:content';
+
+import Header from '@/components/layout/Header.astro';
+import ArticleHeader from '@/components/article/ArticleHeader.astro';
+import ArticleTags from '@/components/article/ArticleTags.astro';
+import ArticleAuthor from '@/components/article/ArticleAuthor.astro';
+import '@/styles/global.css';
+import '@/styles/article.css';
+import { calculateReadingTime } from '@/utils/readingTime';
+
+export async function getStaticPaths() {
+  const articles = await getCollection(
+    'articles',
+    ({ data }) => !data.draft,
+  );
+
+  return articles.map((article) => ({
+    params: {
+      slug: article.id,
+    },
+    props: {
+      article,
+    },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const readingTime = calculateReadingTime(article.body ?? '');
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta
+      name="description"
+      content={article.data.description}
+    />
+
+    <title>{article.data.title} | Mamura</title>
+  </head>
+
+  <body>
+    <main class="min-h-screen bg-background text-white">
+      <Header />
+      <ArticleHeader
+        title={article.data.title}
+        description={article.data.description}
+        category={article.data.category}
+        publishedAt={article.data.publishedAt}
+        cover={article.data.cover}
+        readingTime={readingTime}
+      />
+
+      <div class="m-container">
+        <article class="article-content">
+          <Content />
+        </article>
+
+        <ArticleTags tags={article.data.tags} />
+        <ArticleAuthor />
+      </div>
+    </main>
+  </body>
+</html>

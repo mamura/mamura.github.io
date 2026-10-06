@@ -1,0 +1,23 @@
+---
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <footer class="article-tags">
+      <span class="article-tags__label">Tópicos</span>
+
+      <ul class="article-tags__list">
+        {tags.map((tag) => (
+          <li class="article-tags__item">
+            {tag}
+          </li>
+        ))}
+      </ul>
+    </footer>
+  )
+}

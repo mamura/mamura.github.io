@@ -1,0 +1,73 @@
+---
+import { formatArticleDate } from '@/utils/date';
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  publishedAt: Date;
+  cover: string;
+  readingTime?: number;
+}
+
+const {
+  title,
+  description,
+  category,
+  publishedAt,
+  cover,
+  readingTime,
+} = Astro.props;
+
+const formattedDate = formatArticleDate(publishedAt);
+---
+
+<header class="article-header m-container">
+  <a
+    href="/artigos"
+    class="article-back-link"
+  >
+    ← Voltar para artigos
+  </a>
+
+  <div class="article-hero">
+    <img
+      src={cover}
+      alt=""
+      class="article-hero__image"
+    />
+
+    <div class="article-hero__overlay"></div>
+
+    <div class="article-hero__content">
+      <span class="article-hero__category">
+        {category}
+      </span>
+
+      <h1 class="article-hero__title">
+        {title}
+      </h1>
+
+      <p class="article-hero__description">
+        {description}
+      </p>
+
+      <div class="article-hero__meta">
+        <time datetime={publishedAt.toISOString()}>
+          {formattedDate}
+        </time>
+
+        {readingTime && (
+          <>
+            <span class="article-hero__separator" aria-hidden="true"></span>
+            <span>{readingTime} MIN DE LEITURA</span>
+          </>
+        )}
+
+        <span class="article-hero__separator" aria-hidden="true"></span>
+
+        <span>MARCIO MOTA</span>
+      </div>
+    </div>
+  </div>
+</header>
