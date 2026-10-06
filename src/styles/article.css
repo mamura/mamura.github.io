@@ -1,3 +1,18 @@
+/* Article layout */
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 800px) 300px;
+  justify-content: center;
+  align-items: start;
+
+  gap: clamp(48px, 6vw, 80px);
+}
+
+.article-main {
+  min-width: 0;
+}
+
 .article-header {
   padding-top: clamp(32px, 5vw, 56px);
 }
@@ -170,8 +185,6 @@
 /* Article content */
 
 .article-content {
-  width: min(100%, 800px);
-  margin-inline: auto;
   padding-block: clamp(56px, 7vw, 96px);
 
   font-family: var(--font-body);
@@ -324,7 +337,6 @@
 /* Article tags */
 
 .article-tags {
-  width: min(100%, 800px);
   margin-inline: auto;
   padding-bottom: clamp(48px, 6vw, 72px);
 
@@ -376,9 +388,6 @@
   grid-template-columns: 96px 1fr;
   gap: clamp(24px, 4vw, 32px);
 
-  width: min(100%, 800px);
-
-  margin-inline: auto;
   padding-block: clamp(48px, 6vw, 72px);
 }
 
@@ -451,4 +460,91 @@
     width: 72px;
     height: 72px;
   }
+}
+
+
+.article-sidebar {
+  padding-top: clamp(56px, 7vw, 96px);
+}
+
+.article-ad-placeholder {
+  position: sticky;
+  top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  min-height: 600px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+
+  font-family: var(--font-body);
+  text-align: center;
+
+  color: var(--color-text-secondary);
+}
+
+.article-ad-placeholder span {
+  position: absolute;
+  top: 12px;
+
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+}
+
+.article-ad-placeholder strong {
+  font-size: var(--text-body-sm);
+  font-weight: var(--font-weight-medium);
+
+  color: var(--color-text-primary);
+}
+
+.article-ad-placeholder small {
+  margin-top: 4px;
+
+  font-size: var(--text-caption);
+
+  opacity: 0.5;
+}
+
+.article-sidebar {
+  padding-top: clamp(56px, 7vw, 96px);
+}
+
+.article-ad {
+  position: sticky;
+  top: 32px;
+
+  width: 300px;
+  min-height: 250px;
+}
+
+.article-ad__label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--color-text-secondary);
+
+  opacity: 0.6;
+}
+
+.adsbygoogle {
+  width: 100%;
 }

@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header.astro';
 import ArticleHeader from '@/components/article/ArticleHeader.astro';
 import ArticleTags from '@/components/article/ArticleTags.astro';
 import ArticleAuthor from '@/components/article/ArticleAuthor.astro';
+import AdSense from '@/components/article/AdSense.astro';
 import '@/styles/global.css';
 import '@/styles/article.css';
 import { calculateReadingTime } from '@/utils/readingTime';
@@ -44,6 +45,12 @@ const readingTime = calculateReadingTime(article.body ?? '');
       content={article.data.description}
     />
 
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431355971358033"
+      crossorigin="anonymous"
+    ></script>
+
     <title>{article.data.title} | Mamura</title>
   </head>
 
@@ -60,12 +67,23 @@ const readingTime = calculateReadingTime(article.body ?? '');
       />
 
       <div class="m-container">
-        <article class="article-content">
-          <Content />
-        </article>
+        <div class="article-layout">
+          <div class="article-main">
+            <article class="article-content">
+              <Content />
+            </article>
 
-        <ArticleTags tags={article.data.tags} />
-        <ArticleAuthor />
+            <ArticleTags tags={article.data.tags} />
+            <ArticleAuthor />
+          </div>
+
+          <aside class="article-sidebar">
+            <AdSense slot="4235037636" />
+          </aside>
+        </div>
+        
+
+        
       </div>
     </main>
   </body>
