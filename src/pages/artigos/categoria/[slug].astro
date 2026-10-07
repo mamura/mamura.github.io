@@ -1,0 +1,197 @@
+---
+import { getCollection } from 'astro:content';
+
+import Header from '@/components/layout/Header.astro';
+
+import {
+  categorySlugs,
+  type ArticleCategory,
+} from '@/utils/category';
+
+import '@/styles/global.css';
+import '@/styles/articles.css';
+
+export async function getStaticPaths() {
+  return Object.entries(categorySlugs).map(
+    ([category, slug]) => ({
+      params: {
+        slug,
+      },
+      props: {
+        category,
+      },
+    }),
+  );
+}
+
+const { category } = Astro.props as {
+  category: ArticleCategory;
+};
+
+const articles = (
+  await getCollection(
+    'articles',
+    ({ data }) =>
+      !data.draft &&
+      data.category === category,
+  )
+).sort(
+  (a, b) =>
+    b.data.publishedAt.getTime() -
+    a.data.publishedAt.getTime(),
+);
+
+const pageTitle = `${category} | Mamura.dev`;
+
+const pageDescription =
+  `Artigos sobre ${category.toLowerCase()} publicados no Mamura.dev.`;
+
+const categorySlug = categorySlugs[category];
+
+const canonicalUrl = new URL(
+  `/artigos/categoria/${categorySlug}`,
+  Astro.site!,
+).toString();
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <title>{pageTitle}</title>
+
+    <meta
+      name="description"
+      content={pageDescription}
+    />
+
+    <link
+      rel="canonical"
+      href={canonicalUrl}
+    />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Mamura.dev"
+      href="/rss.xml"
+    />
+
+    {
+      import.meta.env.PROD && (
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"52fd7be7afa3439780ca628a71be99ba"}'
+        ></script>
+      )
+    }
+  </head>
+
+  <body>
+    <main class="min-h-screen bg-background text-white">
+      <Header />
+
+      <section class="articles-page">
+        <div class="m-container">
+          <header class="articles-page__header">
+            <a
+              href="/artigos"
+              class="articles-page__back"
+            >
+              ← Todos os artigos
+            </a>
+
+            <span class="articles-page__eyebrow">
+              Categoria
+            </span>
+
+            <h1>{category}</h1>
+
+            <p>
+              {articles.length}
+              {
+                articles.length === 1
+                  ? ' artigo publicado'
+                  : ' artigos publicados'
+              }
+            </p>
+          </header>
+
+          <div class="articles-list">
+            {
+              articles.map((article) => (
+                <article class="articles-list__item">
+                  <a
+                    href={`/artigos/${article.id}`}
+                    class="articles-list__image"
+                    aria-label={article.data.title}
+                  >
+                    <img
+                      src={article.data.cover}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div class="articles-list__content">
+                    <div class="articles-list__meta">
+                      <span>
+                        {article.data.category}
+                      </span>
+
+                      <span aria-hidden="true">
+                        •
+                      </span>
+
+                      <time
+                        datetime={article.data.publishedAt.toISOString()}
+                      >
+                        {
+                          article.data.publishedAt.toLocaleDateString(
+                            'pt-BR',
+                            {
+                              day: '2-digit',
+                              month: 'short',
+                              year: 'numeric',
+                              timeZone: 'UTC',
+                            },
+                          )
+                        }
+                      </time>
+                    </div>
+
+                    <h2>
+                      <a
+                        href={`/artigos/${article.id}`}
+                      >
+                        {article.data.title}
+                      </a>
+                    </h2>
+
+                    <p>
+                      {article.data.description}
+                    </p>
+
+                    <a
+                      href={`/artigos/${article.id}`}
+                      class="articles-list__link"
+                    >
+                      Ler artigo →
+                    </a>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

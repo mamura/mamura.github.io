@@ -1,10 +1,11 @@
 ---
+import { getCategorySlug, type ArticleCategory } from '@/utils/category';
 import { formatArticleDate } from '@/utils/date';
 
 interface Props {
   title: string;
   description: string;
-  category: string;
+  category: ArticleCategory;
   publishedAt: Date;
   cover: string;
   readingTime?: number;
@@ -20,6 +21,7 @@ const {
 } = Astro.props;
 
 const formattedDate = formatArticleDate(publishedAt);
+const categorySlug = getCategorySlug(category);
 ---
 
 <header class="article-header m-container">
@@ -41,7 +43,12 @@ const formattedDate = formatArticleDate(publishedAt);
 
     <div class="article-hero__content">
       <span class="article-hero__category">
-        {category}
+        <a
+          href={`/artigos/categoria/${categorySlug}`}
+          class="article-hero__category"
+        >
+          {category}
+        </a>
       </span>
 
       <h1 class="article-hero__title">

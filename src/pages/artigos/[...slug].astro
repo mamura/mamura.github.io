@@ -200,6 +200,14 @@ const jsonLd = {
       content={coverUrl}
     />
 
+    {import.meta.env.PROD && (
+      <script
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"52fd7be7afa3439780ca628a71be99ba"}'
+      ></script>
+    )}
+
     <!-- JSON-LD -->
 
     <script

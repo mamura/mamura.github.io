@@ -29,6 +29,14 @@ const articles = (
       content="Artigos sobre desenvolvimento de software, arquitetura, inteligência artificial, produto e tecnologia."
     />
 
+    {import.meta.env.PROD && (
+      <script
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"52fd7be7afa3439780ca628a71be99ba"}'
+      ></script>
+    )}
+
     <link
       rel="alternate"
       type="application/rss+xml"
