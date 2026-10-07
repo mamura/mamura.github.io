@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentId: string;
+  series: string;
+  seriesOrder: number;
+}
+
+const {
+  currentId,
+  series,
+  seriesOrder,
+} = Astro.props;
+
+const articles = (
+  await getCollection(
+    'articles',
+    ({ data }) =>
+      !data.draft &&
+      data.series === series &&
+      data.seriesOrder !== undefined
+  )
+).sort(
+  (a, b) =>
+    (a.data.seriesOrder ?? 0) -
+    (b.data.seriesOrder ?? 0)
+);
+
+const currentIndex = articles.findIndex(
+  (article) => article.id === currentId
+);
+
+const previousArticle =
+  currentIndex > 0
+    ? articles[currentIndex - 1]
+    : undefined;
+
+const nextArticle =
+  currentIndex >= 0 && currentIndex < articles.length - 1
+    ? articles[currentIndex + 1]
+    : undefined;
+---
+
+<section
+  class="article-series"
+  aria-labelledby="article-series-title"
+>
+  <header class="article-series__header">
+    <span class="article-series__eyebrow">
+      Série
+    </span>
+
+    <h2
+      id="article-series-title"
+      class="article-series__title"
+    >
+      {series}
+    </h2>
+
+    <span class="article-series__position">
+      {seriesOrder} de {articles.length}
+    </span>
+  </header>
+
+  <div class="article-series__navigation">
+    {
+      previousArticle ? (
+        <a
+          href={`/artigos/${previousArticle.id}`}
+          class="article-series__link article-series__link--previous"
+        >
+          <span class="article-series__direction">
+            ← Artigo anterior
+          </span>
+
+          <strong>
+            {previousArticle.data.title}
+          </strong>
+        </a>
+      ) : (
+        <div></div>
+      )
+    }
+
+    {
+      nextArticle && (
+        <a
+          href={`/artigos/${nextArticle.id}`}
+          class="article-series__link article-series__link--next"
+        >
+          <span class="article-series__direction">
+            Próximo artigo →
+          </span>
+
+          <strong>
+            {nextArticle.data.title}
+          </strong>
+        </a>
+      )
+    }
+  </div>
+</section>

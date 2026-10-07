@@ -13,8 +13,20 @@ const articles = defineCollection({
     description: z.string(),
     publishedAt: z.coerce.date(),
     updatedAt: z.coerce.date().optional(),
-    category: z.string(),
+
+    category: z.enum([
+      'Engenharia de Software',
+      'Inteligência Artificial',
+      'Desenvolvimento Web',
+      'Produto & Discovery',
+      'Carreira & Mercado',
+    ]),
+
     tags: z.array(z.string()).default([]),
+
+    series: z.string().optional(),
+    seriesOrder: z.number().int().positive().optional(),
+
     cover: z.string(),
     draft: z.boolean().default(false),
     featured: z.boolean().default(false),

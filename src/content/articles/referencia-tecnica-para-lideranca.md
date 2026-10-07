@@ -4,6 +4,7 @@ description: "A transição de referência técnica para liderança muda a forma
 publishedAt: 2026-09-21
 category: "Carreira & Mercado"
 series: "Tech Leadership"
+seriesOrder: 2
 tags:
   - Tech Leadership
   - Liderança Técnica

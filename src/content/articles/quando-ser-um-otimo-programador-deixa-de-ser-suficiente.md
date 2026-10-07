@@ -4,6 +4,7 @@ description: "O que muda quando a carreira técnica evolui para liderança: como
 publishedAt: 2026-09-14
 category: "Carreira & Mercado"
 series: "Tech Leadership"
+seriesOrder: 1
 tags:
   - Tech Leadership
   - Liderança Técnica
