@@ -1,40 +1,10 @@
 .tools-page {
   min-height: calc(100vh - 4rem);
-  padding-block: clamp(48px, 7vw, 96px);
   font-family: var(--font-body);
 }
 
-.tools-page__header {
-  max-width: 900px;
-  margin-bottom: var(--space-header-to-content);
-}
-
-.tools-eyebrow {
-  display: block;
-  color: var(--color-text-secondary);
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.08em;
-}
-
-.tools-page h1 {
-  margin: var(--space-badge-to-heading) 0 0;
-  font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 5vw, 4.5rem);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.12;
-  letter-spacing: -0.035em;
-  overflow-wrap: anywhere;
-}
-
-.tools-page h1 strong { font-weight: var(--font-weight-bold); }
-
-.tools-page__header p {
-  max-width: 680px;
-  margin: var(--space-heading-to-description) 0 0;
-  color: var(--color-text-secondary);
-  font-size: var(--text-lead);
-  line-height: 1.65;
+.tools-catalog {
+  padding-block: clamp(48px, 5vw, 80px);
 }
 
 .tools-grid {
