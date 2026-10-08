@@ -1,27 +1,73 @@
 ---
-import ToolsLayout from '@/layouts/ToolsLayout.astro';
 import SmartGoalGenerator from '@/components/tools/smart-goals/SmartGoalGenerator';
-import '../../../styles/smart-goals.css';
+import Header from '@/components/layout/Header.astro';
+import PageHero from '@/components/layout/PageHero.astro';
+
+import '@/styles/global.css';
+import '@/styles/hero.css';
+import '@/styles/tools.css';
+import '@/styles/smart-goals.css';
+interface Props {
+  title: string;
+  description: string;
+  bodyClass?: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+const { title, description, bodyClass, image = '/images/articles/logo.png', imageAlt = 'Mamura.dev' } = Astro.props;
+const pageTitle = `${title} | Mamura.dev`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site!);
+const imageUrl = new URL(image, Astro.site!);
 ---
 
-<ToolsLayout
-  bodyClass="smart-goals-page"
-  title="Gerador de Metas SMART"
-  description="Gerador gratuito de metas SMART: defina objetivo, indicador de sucesso e prazo, revise suas respostas e copie ou salve a meta como PDF pelo navegador."
-  image="/images/articles/metas-smart.jpg"
-  imageAlt="Ilustração sobre metas SMART"
->
-  <nav class="tools-breadcrumb" aria-label="Localização">
-    <a href="/ferramentas/">Ferramentas</a>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">Metas SMART</span>
-  </nav>
-  <header class="tools-page__header">
-    <span class="tools-eyebrow">DA INTENÇÃO AO OBJETIVO</span>
-    <h1>Gerador de <strong>Metas SMART.</strong></h1>
-    <p>Dê forma ao que você quer alcançar: um objetivo específico, mensurável, atingível, relevante e com prazo definido.</p>
-  </header>
-  <SmartGoalGenerator client:load />
-  <noscript><p>Ative o JavaScript no navegador para preencher o formulário guiado.</p></noscript>
-  <p class="smart-related"><a class="tools-text-link" href="/artigos/metas-smart">Entenda a metodologia SMART <span aria-hidden="true">→</span></a></p>
-</ToolsLayout>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl.toString()} />
+    <meta property="og:image" content={imageUrl.toString()} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:site_name" content="Mamura.dev" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="alternate" type="application/rss+xml" title="Mamura.dev" href="/rss.xml" />
+    {import.meta.env.PROD && (
+      <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"52fd7be7afa3439780ca628a71be99ba"}'></script>
+    )}
+  </head>
+  <body class={bodyClass}>
+    <a class="tools-skip-link" href="#tools-content">Pular para o conteúdo</a>
+    <Header />
+    <main id="tools-content" class="tools-page" tabindex="-1">
+      <PageHero
+        backgroundImage="/images/articles/metas-smart.jpg"
+        variant="image"
+        description="Gerador gratuito de metas SMART: defina objetivo, indicador de sucesso e prazo, revise suas respostas e copie ou salve a meta como PDF pelo navegador."
+      >
+        <Fragment slot="title">
+          Gerador de Metas <strong>SMART.</strong>
+        </Fragment>
+      </PageHero>
+
+      <div class="m-container">
+        <nav class="tools-breadcrumb" aria-label="Localização">
+          <a href="/ferramentas/">Ferramentas</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Metas SMART</span>
+        </nav>
+
+        <SmartGoalGenerator client:load />
+        <noscript><p>Ative o JavaScript no navegador para preencher o formulário guiado.</p></noscript>
+        <p class="smart-related"><a class="tools-text-link" href="/artigos/metas-smart">Entenda a metodologia SMART <span aria-hidden="true">→</span></a></p>
+      </div>
+    </main>
+  </body>
+</html>
