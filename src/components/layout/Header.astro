@@ -6,7 +6,13 @@ const navigation = [
   { label: 'Especialidades', href: '#especialidades' },
   { label: 'Artigos', href: '#artigos' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'Ferramentas', href: '/ferramentas/' },
 ];
+const isToolsPage = Astro.url.pathname.startsWith('/ferramentas');
+const items = navigation.map((item) => ({
+  ...item,
+  href: isToolsPage && item.href.startsWith('#') ? `/${item.href}` : item.href,
+}));
 ---
 
 <header class="relative z-30 w-full bg-primary border-b border-white/[0.08] shadow-[0_6px_18px_rgba(0,0,0,0.08)]">
@@ -19,7 +25,7 @@ const navigation = [
 
     <nav aria-label="Navegação principal" class="hidden items-center gap-10 text-sm font-semibold text-white lg:flex">
       {
-        navigation.map((item) => (
+        items.map((item) => (
           <a href={item.href} class="transition-opacity duration-200 hover:opacity-70">
             {item.label}
           </a>
@@ -35,6 +41,6 @@ const navigation = [
       </div>
     </div>
 
-    <MobileMenu client:load />
+    <MobileMenu client:load isToolsPage={isToolsPage} />
   </div>
 </header>

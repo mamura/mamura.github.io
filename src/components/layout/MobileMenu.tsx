@@ -1,14 +1,45 @@
-import { useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 
 const navigation = [
   { label: 'Projetos', href: '#projetos' },
   { label: 'Especialidades', href: '#especialidades' },
   { label: 'Artigos', href: '#artigos' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'Ferramentas', href: '/ferramentas/' },
 ];
 
-export default function MobileMenu() {
+export default function MobileMenu({ isToolsPage = false }: { isToolsPage?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuId = useId();
+  const container = useRef<HTMLDivElement>(null);
+  const toggleButton = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    container.current?.querySelector<HTMLAnchorElement>('nav a')?.focus();
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    const closeOnDesktop = () => { if (desktop.matches) setIsOpen(false); };
+    desktop.addEventListener('change', closeOnDesktop);
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { event.preventDefault(); setIsOpen(false); }
+      if (event.key !== 'Tab') return;
+      const focusable = container.current?.querySelectorAll<HTMLElement>('button, a[href]');
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKey);
+      desktop.removeEventListener('change', closeOnDesktop);
+      if (!desktop.matches) toggleButton.current?.focus();
+    };
+  }, [isOpen]);
 
   function toggleMenu() {
     setIsOpen((current) => !current);
@@ -19,12 +50,14 @@ export default function MobileMenu() {
   }
 
   return (
-    <div className="lg:hidden">
+    <div ref={container} className="lg:hidden" role={isOpen ? 'dialog' : undefined} aria-modal={isOpen ? true : undefined} aria-label={isOpen ? 'Menu de navegação' : undefined}>
       <button
         type="button"
+        ref={toggleButton}
         onClick={toggleMenu}
         aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
         aria-expanded={isOpen}
+        aria-controls={menuId}
         className="relative z-50 flex h-10 w-10 items-center justify-center text-white"
       >
         <span className="sr-only">
@@ -59,8 +92,9 @@ export default function MobileMenu() {
       </button>
 
       <div
+        id={menuId}
         className={`
-          fixed inset-0 z-40 bg-primary
+          fixed inset-0 z-40 overflow-y-auto bg-primary
           transition-all duration-300
           ${
             isOpen
@@ -80,7 +114,7 @@ export default function MobileMenu() {
           {navigation.map((item) => (
             <a
               key={item.href}
-              href={item.href}
+              href={isToolsPage && item.href.startsWith('#') ? `/${item.href}` : item.href}
               onClick={closeMenu}
               className="
                 font-heading

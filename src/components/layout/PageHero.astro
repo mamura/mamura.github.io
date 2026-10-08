@@ -1,0 +1,51 @@
+---
+import '@/styles/hero.css';
+
+interface Props {
+  eyebrow?: string;
+  description?: string;
+  backgroundImage?: string;
+  variant?: 'default' | 'image';
+}
+
+const {
+  eyebrow,
+  description,
+  backgroundImage,
+  variant = 'default',
+} = Astro.props;
+---
+
+<section
+  class:list={[
+    'page-hero',
+    `page-hero--${variant}`,
+  ]}
+  style={
+    backgroundImage
+      ? `--hero-background: url("${backgroundImage}")`
+      : undefined
+  }
+>
+  <div class="m-container">
+    <div class="page-hero__content">
+
+      {eyebrow && (
+        <span class="page-hero__eyebrow">
+          {eyebrow}
+        </span>
+      )}
+
+      <h1 class="page-hero__title">
+        <slot name="title" />
+      </h1>
+
+      {description && (
+        <p class="page-hero__description">
+          {description}
+        </p>
+      )}
+
+    </div>
+  </div>
+</section>

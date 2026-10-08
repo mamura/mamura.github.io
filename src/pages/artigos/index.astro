@@ -6,6 +6,8 @@ import Header from '@/components/layout/Header.astro';
 
 import '@/styles/global.css';
 import '@/styles/articles.css';
+import PageHero from '@/components/layout/PageHero.astro';
+import AdSense from '@/components/article/AdSense.astro';
 
 const articles = (
   await getCollection('articles', ({ data }) => !data.draft)
@@ -37,6 +39,14 @@ const articles = (
       ></script>
     )}
 
+    <!-- Google AdSense -->
+
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431355971358033"
+      crossorigin="anonymous"
+    ></script>
+
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -51,24 +61,18 @@ const articles = (
     <main class="min-h-screen bg-background text-white">
       <Header />
 
+      <PageHero
+        backgroundImage="/images/pages/artigos.jpg"
+        variant="image"
+        description="Desenvolvimento de software, arquitetura, inteligência artificial, produto e os problemas que aparecem no caminho."
+      >
+        <Fragment slot="title">
+          Ideias, experiências e coisas que aprendi <strong>construindo.</strong>
+        </Fragment>
+      </PageHero>
+
       <section class="articles-page">
         <div class="m-container">
-          <header class="articles-page__header">
-            <span class="articles-page__eyebrow">
-              01 / ARTIGOS
-            </span>
-
-            <h1 class="articles-page__title">
-              Ideias, experiências<br />
-              e coisas que aprendi <strong>construindo.</strong>
-            </h1>
-
-            <p class="articles-page__description">
-              Desenvolvimento de software, arquitetura, inteligência
-              artificial, produto e os problemas que aparecem no caminho.
-            </p>
-          </header>
-
           <div class="articles-page__list">
             {
               articles.map((article) => (

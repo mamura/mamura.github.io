@@ -1,0 +1,136 @@
+.smart-form {
+  max-width: 900px;
+  padding: var(--space-card-padding);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+.smart-form h2 { margin: 24px 0 16px; font-family: var(--font-heading); font-size: var(--text-heading-md); font-weight: 600; }
+.smart-form__progress, .smart-form__hint { color: var(--color-text-secondary); font-size: var(--text-body-sm); }
+.smart-form__steps { display: flex; gap: 12px; padding: 0; margin: 16px 0 24px; list-style: none; }
+.smart-form__steps li { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--color-text-secondary); }
+.smart-form__steps [aria-current="step"] { background: var(--color-primary); outline: 2px solid white; outline-offset: 3px; font-weight: 700; }
+.smart-form__question { font-weight: 600; }
+.smart-form__explanation, .smart-form__example p { color: var(--color-text-secondary); line-height: 1.75; margin-block: 12px; }
+.smart-form__example { margin-block: 20px 28px; }
+.smart-form__example summary { cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.smart-form__fields { display: grid; gap: 28px; }
+.smart-form__field label, .smart-form__deadline legend { display: block; margin-bottom: 8px; font-weight: 600; }
+.smart-form__field p { margin-block: 8px; line-height: 1.6; }
+.smart-form__field input, .smart-form__field textarea {
+  display: block; width: 100%; min-width: 0; padding: 12px;
+  border: 1px solid var(--color-text-secondary); border-radius: 4px;
+  background: var(--color-background); color: var(--color-text-primary);
+  font: inherit; line-height: 1.6; color-scheme: dark;
+}
+.smart-form__field textarea { resize: vertical; }
+.smart-form__field [aria-invalid="true"] { border-width: 2px; border-color: #ffb4ab; }
+.smart-form__error { color: #ffb4ab; font-weight: 600; }
+.smart-form__deadline { display: flex; flex-wrap: wrap; gap: 16px 24px; margin: 0 0 28px; padding: 0; border: 0; }
+.smart-form__deadline label { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
+.smart-form__deadline input { width: 20px; height: 20px; accent-color: var(--color-primary); }
+.smart-form__actions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; margin-top: 32px; }
+.smart-form__button { min-height: 44px; padding: 12px 20px; border: 1px solid var(--color-text-secondary); border-radius: 4px; background: var(--color-primary); color: white; font: inherit; font-weight: 600; cursor: pointer; }
+.smart-form__button--secondary { background: transparent; }
+.smart-form__button:hover { border-color: white; text-decoration: underline; }
+.smart-form :is(input, textarea, button, summary):focus-visible { outline: 2px solid white; outline-offset: 4px; }
+.smart-related { margin-top: 28px; }
+@media (max-width: 480px) { .smart-form__actions { flex-direction: column; } .smart-form__button { width: 100%; } }
+
+.smart-result__objective { padding: 24px; margin-block: 24px; background: var(--color-primary); border-left: 3px solid var(--color-text-primary); }
+.smart-result__objective h3 { font-family: var(--font-heading); font-weight: 600; }
+.smart-result__objective p { font-size: var(--text-lead); margin-top: 12px; }
+.smart-result__answer { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.75; }
+.smart-result__criterion { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 24px; }
+.smart-result__criterion-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.smart-result__criterion h3 { font-family: var(--font-heading); font-size: var(--text-heading-sm); font-weight: 600; }
+.smart-result__criterion dl { margin: 0; }
+.smart-result__criterion dl > div + div { margin-top: 20px; }
+.smart-result__criterion dt { color: var(--color-text-secondary); font-size: var(--text-body-sm); font-weight: 600; }
+.smart-result__criterion dd { margin: 8px 0 0; }
+.smart-result__message { min-height: 1.75em; margin-top: 16px; line-height: 1.75; }
+.smart-form__button:disabled { opacity: 0.7; cursor: wait; }
+.smart-form__privacy, .smart-form__storage-message { color: var(--color-text-secondary); font-size: var(--text-body-sm); line-height: 1.7; }
+.smart-form__privacy { margin-bottom: 12px; }
+.smart-form__storage-message:empty { margin: 0; }
+.smart-form__restore-fields { min-width: 0; margin: 0; padding: 0; border: 0; }
+.smart-form__new-goal { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+
+.smart-result__print-only { display: none; }
+.smart-result__print-help { margin-top: 16px; color: var(--color-text-secondary); font-size: var(--text-body-sm); line-height: 1.7; }
+
+@media print {
+  /* A named page overrides the global resume @page only in this context. */
+  @page smart-goal {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body.smart-goals-page {
+    page: smart-goal;
+    /* Printing must also work if the mobile menu has locked body scrolling. */
+    overflow: visible !important;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+    color: #111;
+    font-size: 11pt;
+  }
+
+  .smart-goals-page > :not(main),
+  .smart-goals-page .m-container > :not(astro-island),
+  .smart-goals-page .smart-form > :not(.smart-result),
+  .smart-goals-page .smart-result :is(button, .smart-form__actions, .smart-result__message, .smart-result__print-help, .smart-result__screen-only) {
+    display: none !important;
+  }
+
+  .smart-goals-page :is(.tools-page, .m-container, astro-island, .smart-form, .smart-result) {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #111;
+    overflow: visible;
+  }
+
+  .smart-goals-page .smart-result__print-only { display: block; }
+  .smart-goals-page .smart-result__brand { margin: 0 0 8pt; font-size: 9pt; color: #555; }
+  .smart-goals-page .smart-result h2 { margin: 0 0 18pt; font-size: 22pt; line-height: 1.25; }
+  .smart-goals-page .smart-result h3 { font-size: 12pt; line-height: 1.4; color: #111; }
+
+  .smart-goals-page .smart-result__objective {
+    margin: 0 0 16pt;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #111;
+  }
+  .smart-goals-page .smart-result__objective p { margin-top: 6pt; font-size: 12pt; }
+  .smart-goals-page .smart-result__criterion { padding-block: 12pt; border-color: #bbb; break-inside: auto; }
+  .smart-goals-page .smart-result__criterion-header { display: block; margin-bottom: 8pt; break-inside: avoid; break-after: avoid; }
+  .smart-goals-page .smart-result__criterion dt { font-size: 10pt; color: #444; }
+  .smart-goals-page .smart-result__criterion dd { margin-top: 4pt; }
+  .smart-goals-page .smart-result__criterion dl > div + div { margin-top: 10pt; }
+
+  .smart-goals-page .smart-result :is(h2, h3, dt) { break-after: avoid; page-break-after: avoid; }
+  .smart-goals-page .smart-result__answer {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow: visible;
+    max-height: none;
+    line-height: 1.55;
+    color: #111;
+    orphans: 3;
+    widows: 3;
+    break-inside: auto;
+  }
+
+  /* Normal document flow prevents a footer from overlapping long answers. */
+  .smart-goals-page .smart-result__footer { margin-top: 18pt; padding-top: 8pt; border-top: 1px solid #bbb; font-size: 8pt; color: #555; overflow-wrap: anywhere; break-inside: avoid; }
+}

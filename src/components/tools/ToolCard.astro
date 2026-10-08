@@ -1,0 +1,14 @@
+---
+import type { PublicTool } from '@/data/tools/tools';
+interface Props { tool: PublicTool }
+const { tool } = Astro.props;
+---
+
+<li>
+  <a class="tool-card" href={tool.href}>
+    <span class="tools-eyebrow">{tool.status}</span>
+    <h2>{tool.title}</h2>
+    <p>{tool.description}</p>
+    <span class="tool-card__link">Conhecer ferramenta <span aria-hidden="true">→</span></span>
+  </a>
+</li>
