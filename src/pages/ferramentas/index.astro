@@ -1,0 +1,16 @@
+---
+import ToolsLayout from '@/layouts/ToolsLayout.astro';
+import ToolCard from '@/components/tools/ToolCard.astro';
+import { tools } from '@/data/tools/tools';
+---
+
+<ToolsLayout title="Ferramentas gratuitas" description="Ferramentas gratuitas para organizar ideias e construir objetivos claros. Conheça o Gerador de Metas SMART do Mamura.dev.">
+  <header class="tools-page__header">
+    <span class="tools-eyebrow">FERRAMENTAS</span>
+    <h1>Ideias que se tornam <strong>ação.</strong></h1>
+    <p>Um espaço de ferramentas públicas para pensar melhor, organizar ideias e dar clareza aos próximos passos.</p>
+  </header>
+  <ul class="tools-grid" aria-label="Catálogo de ferramentas">
+    {tools.map((tool) => <ToolCard tool={tool} />)}
+  </ul>
+</ToolsLayout>

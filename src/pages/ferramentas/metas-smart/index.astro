@@ -1,0 +1,27 @@
+---
+import ToolsLayout from '@/layouts/ToolsLayout.astro';
+import SmartGoalGenerator from '@/components/tools/smart-goals/SmartGoalGenerator';
+import '../../../styles/smart-goals.css';
+---
+
+<ToolsLayout
+  bodyClass="smart-goals-page"
+  title="Gerador de Metas SMART"
+  description="Gerador gratuito de metas SMART: defina objetivo, indicador de sucesso e prazo, revise suas respostas e copie ou salve a meta como PDF pelo navegador."
+  image="/images/articles/metas-smart.jpg"
+  imageAlt="Ilustração sobre metas SMART"
+>
+  <nav class="tools-breadcrumb" aria-label="Localização">
+    <a href="/ferramentas/">Ferramentas</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Metas SMART</span>
+  </nav>
+  <header class="tools-page__header">
+    <span class="tools-eyebrow">DA INTENÇÃO AO OBJETIVO</span>
+    <h1>Gerador de <strong>Metas SMART.</strong></h1>
+    <p>Dê forma ao que você quer alcançar: um objetivo específico, mensurável, atingível, relevante e com prazo definido.</p>
+  </header>
+  <SmartGoalGenerator client:load />
+  <noscript><p>Ative o JavaScript no navegador para preencher o formulário guiado.</p></noscript>
+  <p class="smart-related"><a class="tools-text-link" href="/artigos/metas-smart">Entenda a metodologia SMART <span aria-hidden="true">→</span></a></p>
+</ToolsLayout>

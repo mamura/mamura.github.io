@@ -107,6 +107,14 @@ Já os **OKRs, Objectives and Key Results**, são uma abordagem de gestão de ob
 
 As três abordagens não são equivalentes, mas podem se complementar. Uma equipe pode utilizar OKRs para orientar seus resultados, um profissional pode organizar seu desenvolvimento através de um PDI e os objetivos desse plano podem ser formulados com critérios SMART. O importante é não transformar essas ferramentas em uma coleção de siglas que produz documentos bonitos, mas pouca mudança real.
 
+## Coloque a metodologia SMART em prática
+
+Entender os cinco critérios é o primeiro passo. Para ajudar a transformar uma intenção em um objetivo mais claro, desenvolvi uma ferramenta gratuita que orienta a construção de uma meta SMART, etapa por etapa.
+
+Você pode definir o objetivo, escolher evidências de sucesso e estabelecer um prazo. Ao terminar, é possível revisar as respostas, copiar a meta ou usar a impressão do navegador para salvá-la como PDF.
+
+[Acessar o Gerador de Metas SMART](/ferramentas/metas-smart/)
+
 ## O objetivo não é preencher os cinco critérios. É conseguir avançar.
 
 Talvez a principal contribuição da metodologia SMART seja nos obrigar a fazer perguntas que normalmente ignoramos quando estamos empolgados com alguma ideia. O que exatamente quero alcançar? Como vou reconhecer que estou avançando? Tenho condições de fazer isso? Por que esse objetivo importa? Quando vou avaliar os resultados?
