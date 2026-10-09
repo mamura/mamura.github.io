@@ -87,3 +87,80 @@
 @media (prefers-reduced-motion: reduce) {
   .tool-card { transition: none; }
 }
+
+
+/** Tool Page */
+.tool-header {
+  width: 100%;
+  padding-block: clamp(40px, 4vw, 64px);
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(26, 140, 184, 0.18), transparent 32%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05), transparent 20%),
+    linear-gradient(135deg, #06384b 0%, #062f40 45%, #081c25 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.tool-header__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.tool-header__content {
+  position: relative;
+  z-index: 1;
+}
+
+.tool-content {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-block: clamp(32px, 4vw, 64px);
+}
+
+.tool-header__breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-header__title {
+  max-width: 900px;
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.tool-header__description {
+  max-width: 720px;
+  margin: 20px 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-lead);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .tool-header {
+    padding-block: 32px 40px;
+  }
+
+  .tool-header__breadcrumbs {
+    margin-bottom: 24px;
+  }
+}
+
+/** Smart Goal */

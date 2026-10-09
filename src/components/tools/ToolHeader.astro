@@ -1,0 +1,51 @@
+---
+import ParticleBackground from '../home/ParticleBackground';
+
+interface Props {
+  title: string;
+  description?: string;
+  breadcrumbs?: {
+    label: string;
+    href?: string;
+  }[];
+}
+
+const {
+  title,
+  description,
+  breadcrumbs = [],
+} = Astro.props;
+---
+
+<header class="tool-header">
+    <div class="tool-header__particles" aria-hidden="true">
+        <ParticleBackground client:load />
+    </div>
+  <div class="m-container">
+    {breadcrumbs.length > 0 && (
+      <nav aria-label="Navegação estrutural">
+        <ol class="tool-header__breadcrumbs">
+          {breadcrumbs.map((item) => (
+            <li>
+              {item.href ? (
+                <a class="border-b-1" href={item.href}>{item.label}</a>
+              ) : (
+                <span class="pr-2">/</span> <span aria-current="page"> {item.label}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <h1 class="tool-header__title">
+      <slot name="title">{title}</slot>
+    </h1>
+
+    {description && (
+      <p class="tool-header__description">
+        {description}
+      </p>
+    )}
+  </div>
+</header>

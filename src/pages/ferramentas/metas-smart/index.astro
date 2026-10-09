@@ -7,6 +7,7 @@ import '@/styles/global.css';
 import '@/styles/hero.css';
 import '@/styles/tools.css';
 import '@/styles/smart-goals.css';
+import ToolHeader from '@/components/tools/ToolHeader.astro';
 interface Props {
   title: string;
   description: string;
@@ -47,26 +48,30 @@ const imageUrl = new URL(image, Astro.site!);
     <a class="tools-skip-link" href="#tools-content">Pular para o conteúdo</a>
     <Header />
     <main id="tools-content" class="tools-page" tabindex="-1">
-      <PageHero
-        backgroundImage="/images/articles/metas-smart.jpg"
-        variant="image"
-        description="Gerador gratuito de metas SMART: defina objetivo, indicador de sucesso e prazo, revise suas respostas e copie ou salve a meta como PDF pelo navegador."
+      <ToolHeader
+        title="Gerador de Metas SMART."
+        description="Transforme seus objetivos em metas claras, mensuráveis e com prazo definido."
+        breadcrumbs={[
+          {
+            label: 'Ferramentas',
+            href: '/ferramentas/',
+          },
+          {
+            label: 'Metas SMART',
+          },
+        ]}
       >
         <Fragment slot="title">
           Gerador de Metas <strong>SMART.</strong>
         </Fragment>
-      </PageHero>
+      </ToolHeader>
 
       <div class="m-container">
-        <nav class="tools-breadcrumb" aria-label="Localização">
-          <a href="/ferramentas/">Ferramentas</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">Metas SMART</span>
-        </nav>
+        <section class="tool-content">
+          <SmartGoalGenerator client:load />
+        </section>
 
-        <SmartGoalGenerator client:load />
         <noscript><p>Ative o JavaScript no navegador para preencher o formulário guiado.</p></noscript>
-        <p class="smart-related"><a class="tools-text-link" href="/artigos/metas-smart">Entenda a metodologia SMART <span aria-hidden="true">→</span></a></p>
       </div>
     </main>
   </body>
