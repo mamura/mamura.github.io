@@ -1,7 +1,7 @@
 ---
 title: "Como desenvolver um desenvolvedor sem simplesmente mandar ele fazer um curso"
 description: "Seu desenvolvedor precisa evoluir. Mandar fazer um curso resolve?"
-publishedAt: 2026-10-08
+publishedAt: 2026-10-13
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 5

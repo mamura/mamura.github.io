@@ -1,7 +1,7 @@
 ---
 title: "Metas SMART: por que “quero melhorar” não é um plano de desenvolvimento"
 description: "Você quer melhorar sua comunicação, aprender arquitetura ou desenvolver liderança. Mas como vai saber quando realmente melhorou?"
-publishedAt: 2026-10-08
+publishedAt: 2026-10-14
 category: "Carreira & Mercado"
 tags:
   - Tech Leadership
