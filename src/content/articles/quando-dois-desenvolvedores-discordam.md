@@ -12,7 +12,7 @@ tags:
   - Autonomia
   - Management 3.0
   - Desenvolvimento de Times
-cover: "/images/articles/techlead-05.png"
+cover: "/images/articles/techlead-07.png"
 draft: false
 featured: true
 ---
