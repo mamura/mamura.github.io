@@ -1,7 +1,7 @@
 ---
 title: "O Tech Lead como gestor do conhecimento"
 description: "Entenda como o Tech Lead pode distribuir conhecimento, reduzir dependências e preservar decisões técnicas sem criar burocracia desnecessária."
-publishedAt: 2026-11-16
+publishedAt: 2026-11-23
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 11
