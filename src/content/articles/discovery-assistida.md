@@ -1,7 +1,7 @@
 ---
 title: "Discovery assistida: usando IA antes de escrever código"
 description: "Como estou usando inteligência artificial para entender problemas, estruturar requisitos e tomar decisões melhores antes da implementação."
-publishedAt: 2026-09-23
+publishedAt: 2026-09-22
 category: "Inteligência Artificial"
 tags:
   - IA
