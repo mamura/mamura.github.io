@@ -1,7 +1,7 @@
 ---
 title: "Por que pedi para a IA escrever menos código enquanto me aprofundo em Spring Boot"
 description: "Como estou usando IA para aprofundar meu conhecimento em Spring Boot sem transformar aprendizado em simples aprovação de código gerado."
-publishedAt: 2026-09-16
+publishedAt: 2026-09-15
 category: "Inteligência Artificial"
 tags:
   - IA
