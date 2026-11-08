@@ -1,7 +1,7 @@
 ---
 title: "Como estou usando IA para programar sem terceirizar meu raciocínio"
 description: "Um relato prático sobre como usar inteligência artificial no desenvolvimento de software sem abrir mão de contexto, planejamento, revisão, testes e responsabilidade técnica."
-publishedAt: 2026-09-02
+publishedAt: 2026-09-04
 category: "Inteligência Artificial"
 tags:
   - IA
