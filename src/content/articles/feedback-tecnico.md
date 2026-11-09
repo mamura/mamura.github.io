@@ -1,7 +1,7 @@
 ---
 title: "Como dar feedback técnico sem transformar code review em disputa de ego"
 description: "Code review vai além de encontrar erros no código. Entenda como dar feedback técnico, evitar disputas de ego e transformar revisões em oportunidades de aprendizado, colaboração e desenvolvimento do time."
-publishedAt: 2026-10-19
+publishedAt: 2026-09-28
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 6

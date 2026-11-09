@@ -1,7 +1,7 @@
 ---
 title: "Quando dois bons desenvolvedores discordam, o Tech Lead não precisa escolher um vencedor"
 description: "Entenda como um Tech Lead pode mediar conflitos, avaliar diferentes soluções e transformar divergências em decisões melhores, sem criar disputas de ego ou comprometer a colaboração."
-publishedAt: 2026-10-26
+publishedAt: 2026-10-05
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 7

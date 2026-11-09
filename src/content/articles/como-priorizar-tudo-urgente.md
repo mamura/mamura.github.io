@@ -1,7 +1,7 @@
 ---
 title: "Como priorizar quando tudo é urgente"
 description: "Conheça critérios e práticas para priorizar tarefas, negociar prazos, reduzir interrupções e equilibrar entregas de negócio com a saúde técnica do sistema."
-publishedAt: 2026-11-09
+publishedAt: 2026-10-19
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 9

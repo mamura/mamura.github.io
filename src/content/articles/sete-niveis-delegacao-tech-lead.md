@@ -1,7 +1,7 @@
 ---
 title: "7 níveis de delegação: quanto controle um Tech Lead realmente precisa ter"
 description: "Como usar os sete níveis de delegação do Management 3.0 para decidir quando um Tech Lead deve controlar, consultar, aconselhar ou deixar a decisão com o time."
-publishedAt: 2026-10-01
+publishedAt: 2026-09-07
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 3

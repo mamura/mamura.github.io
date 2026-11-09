@@ -1,7 +1,7 @@
 ---
 title: "Quando ser um ótimo programador deixa de ser suficiente"
 description: "O que muda quando a carreira técnica evolui para liderança: como sair do papel de quem resolve tudo e passar a desenvolver autonomia, contexto e capacidade no time."
-publishedAt: 2026-09-14
+publishedAt: 2026-08-24
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 1

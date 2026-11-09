@@ -1,7 +1,7 @@
 ---
 title: "Uma rotina de gestão para Tech Leads"
 description: "Conheça uma proposta prática de rotina para Tech Leads, equilibrando acompanhamento, autonomia e qualidade técnica."
-publishedAt: 2026-11-30
+publishedAt: 2026-11-09
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 12

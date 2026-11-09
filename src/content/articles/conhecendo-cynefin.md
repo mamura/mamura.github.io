@@ -1,7 +1,7 @@
 ---
 title: "Nem todo problema técnico deve ser resolvido da mesma maneira: conhecendo o Cynefin"
 description: "Conheça o framework Cynefin e entenda como identificar quando analisar, experimentar, aplicar práticas conhecidas ou agir rapidamente para tomar melhores decisões técnicas."
-publishedAt: 2026-11-02
+publishedAt: 2026-10-12
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 8

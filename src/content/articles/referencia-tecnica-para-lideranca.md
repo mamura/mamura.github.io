@@ -1,7 +1,7 @@
 ---
 title: "O que muda quando você deixa de ser referência técnica e passa a liderar"
 description: "A transição de referência técnica para liderança muda a forma de contribuir: menos dependência das próprias entregas e mais autonomia, contexto e desenvolvimento do time."
-publishedAt: 2026-09-21
+publishedAt: 2026-08-31
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 2

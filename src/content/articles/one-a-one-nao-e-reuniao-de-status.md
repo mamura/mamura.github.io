@@ -1,7 +1,7 @@
 ---
 title: "1:1 não é reunião de status"
 description: "Se você passa a reunião inteira perguntando sobre tarefas, talvez esteja desperdiçando uma das melhores ferramentas de liderança que tem."
-publishedAt: 2026-10-07
+publishedAt: 2026-09-14
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 4

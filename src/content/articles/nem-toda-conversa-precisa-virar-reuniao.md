@@ -1,7 +1,7 @@
 ---
 title: "Nem toda conversa precisa virar uma reunião"
 description: "Entenda como equilibrar comunicação síncrona e assíncrona, reduzir interrupções e melhorar a colaboração em times de engenharia."
-publishedAt: 2026-11-16
+publishedAt: 2026-10-26
 category: "Carreira & Mercado"
 series: "Tech Leadership"
 seriesOrder: 10
