@@ -1,6 +1,6 @@
 ---
 title: "Quem decide a arquitetura quando a IA propõe a solução?"
-description: ""
+description: " Quem decide é a equipe que vai manter o sistema, e parte dessa decisão é conferir se o problema que justificaria a mudança existe mesmo. Um agente pode sugerir uma boa solução para um cenário que ele presumiu ao ler a tarefa."
 publishedAt: 2026-09-30
 category: "Engenharia de Software"
 series: "Engenharia de Software com IA"
