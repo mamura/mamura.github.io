@@ -34,9 +34,12 @@ export const masterPreset: ResumePreset = {
   },
 
   summary: [
-    'Desenvolvedor de software com ampla experiência na construção e evolução de aplicações web, sistemas corporativos e produtos digitais, atuando principalmente com PHP, Laravel, TypeScript e React, além de experiência com Java no desenvolvimento backend.',
+    'Desenvolvedor de Software com sólida experiência na concepção, arquitetura, desenvolvimento e evolução de sistemas corporativos e produtos digitais, atuando em diferentes ecossistemas tecnológicos, com destaque para PHP, Laravel, Java, Spring Boot, TypeScript, React e Angular.',
 
-    'Experiência em arquitetura de software, APIs REST, integração de sistemas, bancos de dados relacionais, modernização de aplicações legadas e liderança técnica, participando desde a definição da solução até sua entrega e sustentação em produção.',
+    'Experiência em arquitetura de software, desenvolvimento de APIs REST, integração entre sistemas, modelagem de dados, modernização de aplicações legadas e construção de soluções escaláveis e sustentáveis. Atuação tanto no backend quanto no frontend, com domínio de diferentes padrões arquiteturais e práticas de engenharia de software.',
+
+    'Vivência em liderança técnica, definição de soluções arquiteturais, orientação de desenvolvedores e tomada de decisões técnicas, participando de todas as etapas do ciclo de vida do software, desde o levantamento de requisitos e planejamento até a implementação, implantação, monitoramento e sustentação em produção. Experiência também com ambientes conteinerizados, orquestração, pipelines CI/CD e práticas de qualidade e testes automatizados.',
+    
   ],
 };
 
